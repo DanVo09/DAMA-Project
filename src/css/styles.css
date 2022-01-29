@@ -1,0 +1,46 @@
+
+/*important font file*/
+@font-face {
+    font-family: 'gelasiobold';
+    src: url('gelasio-bold-webfont.woff2') format('woff2'),
+         url('gelasio-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'gelasiobold_italic';
+    src: url('gelasio-bolditalic-webfont.woff2') format('woff2'),
+         url('gelasio-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'gelasioitalic';
+    src: url('gelasio-italic-webfont.woff2') format('woff2'),
+         url('gelasio-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+div.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'gelasioitalic', sans-serif;
+}
+
+h1{
+ font-family: 'gelasiobold', sans-serif;   
+}
