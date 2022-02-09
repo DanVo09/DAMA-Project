@@ -95,6 +95,8 @@ results
 node_modules
 .node_history
 
+src/node_modules
+
 ############################
 # Tests
 ############################
@@ -112,3 +114,5 @@ exports
 *.cache
 build
 .strapi-updater.json
+
+
