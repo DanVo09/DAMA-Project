@@ -1,7 +1,11 @@
 import "./css/reset.css"
 import "./scss/index.scss"
 
+//react dependencies
+
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+
+// react pages
 
 import HomePage from "./pages/HomePage"
 import About from "./pages/About"
@@ -15,10 +19,15 @@ import Memberships from "./pages/Memberships"
 import NewsLetter from "./pages/NewsLetter"
 import SignUp from "./pages/SignUp"
 
+// react components
+
+import Navbar from "./components/navbar/NavBar";
+
 function App() {
   return (
     <>
        <Router>
+          <Navbar />
           <Routes>
               <Route index element={<HomePage />} />
               <Route path="/about" element={<About />} /> 

@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.49.7"
+    "sass": "^1.49.7",
+    "uuidv4": "^6.2.12"
   }
 }
