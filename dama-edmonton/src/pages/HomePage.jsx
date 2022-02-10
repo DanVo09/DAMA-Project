@@ -5,7 +5,11 @@ export default function HomePage() {
 
     return (
         <>
-            <h1>I am the Home Page</h1>
+            <div className="homeContainer">
+                <div className="homeWrapper">
+                    <h1>homepage</h1>
+                </div>
+            </div>
         </>
     )
 }
