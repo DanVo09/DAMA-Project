@@ -1,11 +1,23 @@
-import React from 'react'
+
+
+import React  from 'react'
+import Navbar from '../components/navbar/NavBar'
+
 
 export default function Memberships() {
-    
 
+    
+    
     return (
         <>
-            <h1>Memberships Page</h1>
+              <Navbar/> 
+            <h1>Membership</h1>
+            
+            
+        
         </>
     )
 }
+
+
+

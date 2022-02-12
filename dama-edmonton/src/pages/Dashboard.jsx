@@ -1,11 +1,23 @@
-import React from 'react'
+
+
+import React  from 'react'
+import Navbar from '../components/navbar/NavBar'
+
 
 export default function Dashboard() {
-    
 
+    
+    
     return (
         <>
-            <h1>I am the Dashboard</h1>
+              <Navbar/> 
+            <h1>Dashboard</h1>
+            
+            
+        
         </>
     )
 }
+
+
+

@@ -1,11 +1,17 @@
 import React from 'react'
+import Navbar from '../components/navbar/NavBar'
 
 export default function Contact() {
     
 
     return (
         <>
-            <h1>Contact Page</h1>
+              <Navbar/> 
+            <h1>Contact</h1>
+            
         </>
     )
 }
+
+
+

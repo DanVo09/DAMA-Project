@@ -1,11 +1,23 @@
-import React from 'react'
+
+
+import React  from 'react'
+import Navbar from '../components/navbar/NavBar'
+
 
 export default function Events() {
-    
 
+    
+    
     return (
         <>
-            <h1>Events Page</h1>
+              <Navbar/> 
+            <h1>Events</h1>
+            
+            
+        
         </>
     )
 }
+
+
+

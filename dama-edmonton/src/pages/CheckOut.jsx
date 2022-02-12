@@ -1,11 +1,17 @@
 import React from 'react'
+import Navbar from '../components/navbar/NavBar'
 
 export default function Checkout() {
     
 
     return (
         <>
-            <h1>Checkout Page</h1>
+              <Navbar/> 
+            <h1>Check Out</h1>
+            
         </>
     )
 }
+
+
+

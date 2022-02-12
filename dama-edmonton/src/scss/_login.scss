@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.form input {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+body {
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form button {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+label {
+    margin-top: 1rem;
+}
