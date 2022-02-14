@@ -30,7 +30,7 @@ function App() {
             <Route path="/newsletter"> <Newsletter /></Route>
             <Route path="/events"> <Events /></Route>
             <Route path="/courses"> <Courses /></Route>
-            <Route path="/Contact"> <Contact /></Route>
+            <Route path="/contact"> <Contact /></Route>
         </Switch>
         </div>
       </div>
