@@ -1,8 +1,6 @@
 
 import React, {useState, useEffect} from 'react'
-import {useHistory} from 'react-router-dom'
-
-import Navbar from '../components/navbar/NavBar';
+import {useNavigate} from 'react-router-dom'
 
 
 export default function Login() {
@@ -10,7 +8,7 @@ export default function Login() {
 
     const [email,setEmail] =useState();
     const [password,setPassword] =useState();
-    const history = useHistory();
+    const history = useNavigate();
 
     useEffect(()=>{
         if(localStorage.getItem('user-info')){
@@ -42,17 +40,17 @@ export default function Login() {
 
     return (
         <>
-              <Navbar/>         
-            <h1>Login Form</h1>
-            
-            <div class="form">    
-                <label for="email">Email</label>
-                <input type="text" onChange={(e)=>setEmail(e.target.value)} name="email" />
-                <label for="name">Password</label>
-                <input type="password" onChange={(e)=>setPassword(e.target.value)} name="password" />
-                <button onClick={login}>Login</button>
-            </div>   
-        
+            <div className="login-form-container">
+                <h1>Login Form</h1>
+                
+                <div class="form">    
+                    <label for="email">Email</label>
+                    <input type="text" onChange={(e)=>setEmail(e.target.value)} name="email" />
+                    <label for="name">Password</label>
+                    <input type="password" onChange={(e)=>setPassword(e.target.value)} name="password" />
+                    <button onClick={login}>Login</button>
+                </div>   
+            </div>  
         </>
     )
 }

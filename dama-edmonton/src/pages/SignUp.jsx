@@ -1,8 +1,7 @@
 
-
 import React, {useState, useEffect} from 'react'
-import {useHistory} from 'react-router-dom'
-import Navbar from '../components/navbar/NavBar'
+import {useNavigate} from 'react-router-dom'
+
 
 export default function Register() {
 
@@ -15,7 +14,7 @@ export default function Register() {
     const [name,setName]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
-    const history = useHistory()
+    const history = useNavigate()
   
 
     async function signUp()
@@ -36,24 +35,26 @@ export default function Register() {
         result = await result.json()
         localStorage.setItem("user-info",JSON.stringify(result))
         history.push("/aboutus")
+
+        console.log(result)
         
     }
     
     return (
         <>
-            <Navbar/>        
+          <div className="signup-container">
             <h1>Register Form</h1>
-            
-            <div class="form">    
-                <label for="name">Full Name</label>
-                <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="name" />
-                <label for="email">Email</label>
-                <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} name="email" />
-                <label for="name">Password</label>
-                <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} name="password" />
-                <button onClick={signUp}>Sign Up</button>
-            </div>   
-        
+                
+                <div class="form">    
+                    <label for="name">Full Name</label>
+                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="name" />
+                    <label for="email">Email</label>
+                    <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} name="email" />
+                    <label for="name">Password</label>
+                    <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} name="password" />
+                    <button onClick={signUp}>Sign Up</button>
+                </div>   
+          </div>
         </>
     )
 }
