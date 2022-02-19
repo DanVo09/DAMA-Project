@@ -8,11 +8,11 @@ export default function Login() {
 
     const [email,setEmail] =useState();
     const [password,setPassword] =useState();
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(()=>{
         if(localStorage.getItem('user-info')){
-            history.push("/aboutus")
+            navigate("/aboutus")
         }
     })
 
@@ -31,10 +31,8 @@ export default function Login() {
         
         result = await result.json();
         localStorage.setItem("user-info",JSON.stringify(result))
-        history.push("/aboutus")
-           
-
-        
+        navigate("/aboutus")
+  
     }
 
 

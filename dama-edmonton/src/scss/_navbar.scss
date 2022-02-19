@@ -1,11 +1,16 @@
 
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: $dk-green;
+}
+
 .header-wrapper {
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    background: $dk-blue-ol;
 
     // Navbar Toggle Icon
 
@@ -94,7 +99,8 @@
         position: absolute;
         padding: 2rem 0;
         padding-left: 1rem;
-        background-color: $dk-blue-ol;
+        background-color: $dk-green-ol;
+        backdrop-filter: blur(5px);
         width: 100%;
         transition: all 0.3s ease-in-out;
 

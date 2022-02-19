@@ -1,16 +1,18 @@
-@import '_config.scss';
-@import '_utilities.scss';
-@import '_homepage.scss';
-@import '_about.scss';
-@import '_checkout.scss';
-@import '_contact.scss';
-@import '_courses.scss';
-@import '_dashboard.scss';
-@import '_events.scss';
-@import '_login.scss';
-@import '_memberships.scss';
-@import '_newsletter.scss';
-@import '_signup.scss';
-@import '_media.scss';
-@import '_navbar.scss';
+@import 'config';
+@import 'utilities';
+@import 'navbar';
+@import 'homepage';
+@import 'carousel';
+@import 'about';
+@import 'checkout';
+@import 'contact';
+@import 'courses';
+@import 'dashboard';
+@import 'events';
+@import 'login';
+@import 'memberships';
+@import 'newsletter';
+@import 'signup';
+@import 'media';
+
 

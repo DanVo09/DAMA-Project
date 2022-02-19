@@ -1,4 +1,25 @@
 .home-page-container {
     background: $home-bkg;
-    height: 1400px;
+    background-size: 180% 180%;
+    animation: gradient-animation 9s ease infinite;
+    overflow-y: scroll;
+    position: relative;
+    height: 100vh;
 } 
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.homepage-wrapper{
+    position: absolute;
+    top: 100%;
+}

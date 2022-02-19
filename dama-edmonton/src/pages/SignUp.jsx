@@ -7,14 +7,14 @@ export default function Register() {
 
     useEffect(()=>{
         if(localStorage.getItem('user-infor')){
-            history.push("/aboutus")
+            navigate("/aboutus")
         }
     })
     
     const [name,setName]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
-    const history = useNavigate()
+    const navigate = useNavigate()
   
 
     async function signUp()
@@ -34,10 +34,8 @@ export default function Register() {
 
         result = await result.json()
         localStorage.setItem("user-info",JSON.stringify(result))
-        history.push("/aboutus")
+        navigate("/aboutus")
 
-        console.log(result)
-        
     }
     
     return (
