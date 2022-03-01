@@ -1,0 +1,138 @@
+.slider-wrapper {
+    position: absolute;
+    width: 100%;
+    height: auto;
+   
+
+
+}
+.slider-container 
+{
+
+        max-width:100vw; 
+        height: 100vh;
+        position: relative;
+        overflow: auto;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      
+        //Slide Styling
+
+      .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity ease-in-out 0.4s;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .active-anim {
+        opacity: 1;
+      }
+
+      // Control Button Styling
+      
+      .btn-slide {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: #f1f1f1;
+        border: 1px solid rgba(34, 34, 34, 0.287);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        visibility: hidden;
+      }
+
+      .prev {
+        top: 50%;
+        left: 20px;
+        transform: translateY(-60%);
+      }
+      .next {
+        top: 50%;
+        right: 20px;
+        transform: translateY(-60%);
+      }
+
+      // Control Dots
+
+      .container-dots {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+
+      .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 3px solid #f1f1f1;
+        margin: 0 5px;
+        background: #f1f1f1;
+      }
+      .dot.active {
+        background: rgb(32, 32, 32);
+      }
+
+      // Slide Content
+
+      .slider-content-container {
+          position: absolute;
+          width: 100%;
+          z-index: 2;
+          top: 25%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          .slide-wrapper {
+
+            background-color: $off-white-ol;
+            color: $dk-blue;
+            padding: 1rem;
+            padding-top: 2rem 0 1rem;
+            max-width: 34rem;
+           
+
+              .slide-content{
+                    display: none;
+              }
+
+              .content-active {
+                  display: inline-block;
+              }
+
+              h1 {
+                  text-shadow: $txt-shadow-white;
+                  margin-bottom: 1rem;
+                  text-transform: uppercase;
+              }
+
+              p {
+                  font-size: 1.2rem;
+                  font-weight: bold;
+                  text-shadow: $txt-shadow-white;
+              }
+
+          }
+
+          .homeForm-container {
+              margin-top: -8rem;
+              padding: 1rem;
+
+              h3 {
+                  color: $dk-blue;
+                  text-shadow: $txt-shadow-white;
+              }
+          }
+
+         
+      }
+}
