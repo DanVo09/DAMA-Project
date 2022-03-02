@@ -86,7 +86,7 @@
 
       .slider-content-container {
           position: absolute;
-          width: 100%;
+          max-width: 34rem;
           z-index: 2;
           top: 25%;
           left: 50%;

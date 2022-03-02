@@ -40,6 +40,8 @@ export default function Carousel() {
         setSlideIndex(index)
     }
 
+// slider content display function
+
     const DisplaySignUpForm = index => {
         
         if (slideIndex === 1){
