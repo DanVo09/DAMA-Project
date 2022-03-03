@@ -8,9 +8,7 @@
     text-decoration: none;
     display: block;
     text-align: center;
+    cursor: pointer;
 
-    &:hover {
-        box-shadow: $btn-shadow;
-    }
 }
 

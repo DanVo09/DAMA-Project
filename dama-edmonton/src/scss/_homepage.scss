@@ -21,5 +21,116 @@
 
 .homepage-wrapper{
     position: absolute;
+    margin-top: 2rem;
+    padding: 2rem 1rem 10rem 1rem;
     top: 100%;
+}
+
+// education section styling
+
+.education-section {
+
+  .section-header {
+    max-width: 60rem;
+  }
+
+  .course-info-card {
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: $lt-blue;
+      max-width: 42rem;
+      border-radius: 2.85rem;
+      display: grid;
+      box-shadow: $box-embed;
+      
+     
+     
+      .card-title-content {
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        color: $yellow;
+        text-shadow: $txt-shadow-dk;
+      }
+
+      p {
+        text-shadow: $txt-shadow-dk;
+      }
+
+      .card-sub-container {
+        display: flex;
+        margin-bottom: 1rem;
+
+        .icon-container {
+          
+          .course-icon {
+            font-size: 6rem;
+            color: $yellow;
+            
+          }
+
+        }
+
+        .content-container {
+          margin-left: 1rem;
+        }
+
+        h4 {
+          font-size: 1.25rem;
+          color: $yellow;
+          text-shadow: $txt-shadow-dk;
+        }
+
+        p {
+          font-size: 0.85rem;
+          margin-bottom: 1rem;
+        }
+
+        a {
+          color: $off-white;
+          float: right;
+          text-shadow: $txt-shadow-dk;
+
+          &:hover {
+            color: $yellow;
+          }
+        }
+        
+      }
+  }
+
+  .enroll-today-card {
+    background-color: $dk-blue;
+    padding: 8rem;
+    max-width: 42rem;
+    border-radius: 2.85rem;
+    box-shadow: $box-bevel;
+    
+
+    h2 {
+      color: $yellow;
+      text-shadow: $txt-shadow-dk;
+    }
+
+    p {
+      text-shadow: $txt-shadow-dk;
+    }
+
+    .enroll-btn {
+
+      @extend %btn;
+      background-color: $lt-blue;
+      width: 18rem;
+      margin-top: 2rem;
+      float: right;
+      box-shadow: $box-bevel;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+
+  }
+
 }

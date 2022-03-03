@@ -1,7 +1,7 @@
 .slider-wrapper {
     position: absolute;
     width: 100%;
-    height: auto;
+    
    
 
 
@@ -143,11 +143,12 @@
               .form-submit {
                 @extend %btn;
                 background-color: $lt-blue;
-                color: $yellow;
+                color: $off-white;
+                box-shadow: $box-bevel;
 
                 &:hover {
-                    background-color: $yellow;
-                    color: $lt-blue;
+                    
+                    color: $yellow;
                 }
             }
 
@@ -156,13 +157,14 @@
           .carousel-link {
             @extend %btn;
             background-color: $lt-blue;
-            color: $yellow;
+            color: $off-white;
             margin-top: 2rem;
             width: 16rem;
+            box-shadow: $box-bevel;
 
             &:hover {
-                background-color: $yellow;
-                color: $lt-blue;
+               
+                color: $yellow;
             }
           }
 
