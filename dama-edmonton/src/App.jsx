@@ -12,6 +12,7 @@ import Events from "./pages/Events";
 import Newsletter from "./pages/NewsLetter";
 import Register from "./pages/SignUp";
 import Memberships from "./pages/Memberships";
+import Dashboard from "./pages/Dashboard";
 
 import Navbar from './components/navbar/NavBar'
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/aboutus" element={<About />}/>
             <Route path="/register" element={<Register />}/>
             <Route path="/memberships" element={<Memberships />}/> 
+            <Route path="/dashboard" element={<Dashboard />}/> 
             <Route path="/newsletter" element={<Newsletter />}/> 
             <Route path="/events" element={<Events />}/> 
             <Route path="/courses" element={<Courses />}/> 
