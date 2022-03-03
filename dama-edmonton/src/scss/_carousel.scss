@@ -64,7 +64,7 @@
 
       .container-dots {
         position: absolute;
-        bottom: 40px;
+        bottom: 10%;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -86,21 +86,21 @@
 
       .slider-content-container {
           position: absolute;
-          max-width: 34rem;
+          width: 100%;
+          max-width: 38rem;
+          backdrop-filter: blur(5px);
+          background-color: $off-white-ol;
+          border-radius: 0.85rem;
           z-index: 2;
-          top: 25%;
+          padding: 3rem 1rem;
+          top: 10%;
           left: 50%;
           transform: translateX(-50%);
 
           .slide-wrapper {
 
-            background-color: $off-white-ol;
             color: $dk-blue;
-            padding: 1rem;
-            padding-top: 2rem 0 1rem;
-            max-width: 34rem;
-           
-
+            
               .slide-content{
                     display: none;
               }
@@ -116,7 +116,7 @@
               }
 
               p {
-                  font-size: 1.2rem;
+                  font-size: 1.25rem;
                   font-weight: bold;
                   text-shadow: $txt-shadow-white;
               }
@@ -124,13 +124,46 @@
           }
 
           .homeForm-container {
-              margin-top: -8rem;
-              padding: 1rem;
 
+              margin-top: 2rem;
+             
               h3 {
                   color: $dk-blue;
                   text-shadow: $txt-shadow-white;
+                  text-transform: uppercase;
               }
+
+              form {
+                  margin-top: 1rem;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.85rem;
+              }
+
+              .form-submit {
+                @extend %btn;
+                background-color: $lt-blue;
+                color: $yellow;
+
+                &:hover {
+                    background-color: $yellow;
+                    color: $lt-blue;
+                }
+            }
+
+          }
+
+          .carousel-link {
+            @extend %btn;
+            background-color: $lt-blue;
+            color: $yellow;
+            margin-top: 2rem;
+            width: 16rem;
+
+            &:hover {
+                background-color: $yellow;
+                color: $lt-blue;
+            }
           }
 
          

@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import dataSlider from './dataSlider'
 import BtnSlider from './BtnSlider'
 import {Link} from 'react-router-dom'
 
-// Material UI arrows
 
 // function to control slider arrows
 
@@ -47,11 +46,10 @@ export default function Carousel() {
         if (slideIndex === 1){
         return (
             <div className="homeForm-container">
-                <h3>Signup for our Newsletter</h3>
+                <h3>Signup for our Monthly Newsletter</h3>
                 <form action="POST" name="emailSignUp">
-                    
-                    <input type="email" required/>
-                    <input type="submit" />
+                    <input type="email" required placeholder='example@email.com' className='form-input'/>
+                    <input type="submit" className='form-submit' />
                 </form>
             </div>
             
@@ -89,7 +87,7 @@ export default function Carousel() {
                                 </div>
                             )
                         })}
-                         <DisplaySignUpForm/>
+                         <DisplaySignUpForm />
                     </aside>
 
                     <BtnSlider moveSlide={nextSlide} direction={"next"} />

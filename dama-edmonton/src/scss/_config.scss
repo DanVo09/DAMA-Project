@@ -33,6 +33,10 @@ $title-font: ethnocentric, sans-serif;
 
 $txt-shadow-white: 3px 2px 4px #f2f2f2;
 
+// box shadows
+
+$btn-shadow: 4px 5px 12px black;
+
 // --------- Global Styling ----------
 
 body {
@@ -50,9 +54,9 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-    --min: 1.8em;     /* minimum value */
+    --min: 2em;     /* minimum value */
     --val: 5vw;     /* preferred value = 5% viewport width */
-    --max: 2.8em;     /* maximum value */
+    --max: 3.2em;     /* maximum value */
     font: $title-font;
 }
 

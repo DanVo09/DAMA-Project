@@ -3,9 +3,11 @@ import React from 'react'
 import Navbar from '../components/navbar/NavBar'
 import Carousel from '../components/carousel/Carousel'
 export default function HomePage() {
-    
+
 
     return (
+
+        
         <>
            
            <div className="home-page-container">
