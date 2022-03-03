@@ -1,9 +1,85 @@
 @media screen and (min-width: 550px){
 
+    // displays slider arrows for larger viewports
+
     .slider-container {
         .btn-slide {
             visibility: visible;
         }
     }
    
+}
+
+@media screen and (min-width: 670px){
+
+    .course-info-card {
+
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+       
+
+        .card-title-content {
+            grid-column: 1 / span 2;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .slider-container {
+
+        .slider-content-container {
+            left: 65%;
+        }
+
+    }
+    
+
+}
+
+@media screen and (min-width: 1200px){
+
+    // desktop navbar and header styling
+
+    .header-wrapper {
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .navBar {
+            position: static;
+            background-color: transparent;
+            padding: 0;
+
+            .navMenu {
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+        }
+
+        .cart-icon {
+            margin-left: 1rem;
+        }
+
+    }
+
+    .slider-container {
+
+        .slider-content-container {
+            left: 67%;
+        }
+
+    }
+   
+}
+
+@media screen and (min-width: 1800px){
+
+    .slider-container {
+        .container-dots {
+            bottom: 15%;
+        }
+    }
 }

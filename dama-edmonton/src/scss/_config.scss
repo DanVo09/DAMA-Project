@@ -32,6 +32,32 @@ $title-font: ethnocentric, sans-serif;
 // text shadows
 
 $txt-shadow-white: 3px 2px 4px #f2f2f2;
+$txt-shadow-dk: 3px 2px 4px #0f0f0f;
+
+// box shadows
+
+$btn-shadow: 4px 5px 12px black;
+$box-bevel: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+            rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+            rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+            rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+            rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+            rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+            rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+            rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+$box-embed: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+            rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+            rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+            rgba(0, 52, 105, 0.5) -16px -16px 36px 28px,
+            rgba(7, 52, 42, 0.5) -14px -14px 12px 28px,
+            rgba(255, 255, 255, 0.25) -12px -12px 4px 8px,
+            rgba(0, 0, 0, 0.25) 8px -8px 4px 8px,
+            rgba(0, 0, 0, 0.25) -8px 8px 4px 8px,
+            rgba(0, 0, 0, 0.25) 8px 8px 4px 8px;
+            
+
+
 
 // --------- Global Styling ----------
 
@@ -42,6 +68,14 @@ body {
     color: $off-white;
 }
 
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $off-white;
+    transition: all 0.1s ease-in-out;
+  }
+
 
 // fluid typography
 
@@ -50,9 +84,9 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-    --min: 1.8em;     /* minimum value */
+    --min: 2em;     /* minimum value */
     --val: 5vw;     /* preferred value = 5% viewport width */
-    --max: 2.8em;     /* maximum value */
+    --max: 3.2em;     /* maximum value */
     font: $title-font;
 }
 
