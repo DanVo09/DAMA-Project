@@ -1,9 +1,11 @@
+
 .footer-main {
     background-color: #07342A;
     color: white;
+    padding-top: 4rem;
 
     .flex-footer {
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
     }
 
     h2 {
@@ -37,6 +39,10 @@
         text-align: center;
         padding: 1rem;
         border-top: 1px solid white;
+        p{
+             color: white;
+        }
+       
     }
 }
 
