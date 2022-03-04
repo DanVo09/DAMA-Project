@@ -20,6 +20,7 @@
   }
 
 .homepage-wrapper{
+  
     position: absolute;
     margin-top: 2rem;
     padding: 2rem 1rem 10rem 1rem;
@@ -42,7 +43,7 @@
       border-radius: 2.85rem;
       display: grid;
       box-shadow: $box-embed;
-      
+      position: relative;
      
      
       .card-title-content {
