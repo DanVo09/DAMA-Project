@@ -3,13 +3,45 @@ import dataSlider from './dataSlider'
 import BtnSlider from './BtnSlider'
 import {Link} from 'react-router-dom'
 
-
-// function to control slider arrows
-
-
 export default function Carousel() {
     
     const [slideIndex, setSlideIndex] = useState(1)
+
+    const slideRef = useRef();
+    let slideInterval;
+    let count = 0;
+
+    // autoscroll
+
+    const autoPlay = () => {
+        count = (count + 1) % dataSlider.length;
+        if(slideIndex !== dataSlider.length)
+        {
+            setSlideIndex(count + 1)
+        }
+        else if(slideIndex === dataSlider.length)
+        {
+            setSlideIndex(5)
+        }
+    }
+
+    const startSlider = () => {
+        slideInterval = setInterval(() => {
+            autoPlay();
+        }, 4000);
+      };
+
+    useEffect(() => {
+
+        startSlider();
+        
+        return () => {
+           
+        };
+        // eslint-disable-next-line
+      }, []);
+
+    // function to move the carousel to the left or right
 
     const nextSlide = () => {
 

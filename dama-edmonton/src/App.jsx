@@ -12,11 +12,8 @@ import Events from "./pages/Events";
 import Newsletter from "./pages/NewsLetter";
 import Register from "./pages/SignUp";
 import Memberships from "./pages/Memberships";
-<<<<<<< HEAD
 import Footer from './components/footer/footer';
-=======
 import Dashboard from "./pages/Dashboard";
->>>>>>> 29de6adfbb3649f03aefc2175d3206f50fecf697
 
 import Navbar from './components/navbar/NavBar'
 

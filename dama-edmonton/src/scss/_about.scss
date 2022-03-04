@@ -1,4 +1,8 @@
-p, h2, h3, h4 {
+
+
+.about-page-wrapper {
+
+    p, h2, h3, h4 {
     color: $dk-green;
 }
 
@@ -208,4 +212,6 @@ p, h2, h3, h4 {
             }
         }
     }
+}
+
 }
