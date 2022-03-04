@@ -83,17 +83,25 @@ p, h2, h3, h4 {
         padding-top: 1rem;
         padding-bottom: 1rem;
         text-align: center;
+        a{
+            h3 {
+                padding-bottom: 1rem;
+                text-transform: capitalize;
+            }
+            img {
+                border-radius: 50%;
+            }
+            h4 {
+                 padding-top: 1rem;
+                 font-weight: bold;
+                 text-transform: capitalize;
+             }
 
-        h3 {
-            padding-bottom: 1rem;
+            p {
+                text-transform: none;
+            }
         }
-        img {
-            border-radius: 50%;
-        }
-        h4 {
-             padding-top: 1rem;
-             font-weight: bold;
-         }
+        
     }
 }
 
