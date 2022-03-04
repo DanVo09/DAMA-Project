@@ -5,13 +5,14 @@ import {Link} from 'react-router-dom'
 
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import ComputerIcon from '@mui/icons-material/Computer';
+import StorageIcon from '@mui/icons-material/Storage';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 // components
 
 import Carousel from '../components/carousel/Carousel'
 
 export default function HomePage() {
-
 
     return (
 
@@ -69,9 +70,13 @@ export default function HomePage() {
                     {/* Enroll Card */}
 
                      <div className="enroll-today-card">
-                         <h2>Enroll Today!</h2>
-                         <p>Learning curve return on investment venture marketing equity user experience responsive web design conversion bandwidth freemium ramen business model canvas lean startup</p>
-                         <Link to="/courses" className='enroll-btn'>Enroll</Link>
+                         <StorageIcon className='storage-icon'/>
+                         <PeopleAltIcon className='people-icon' />
+                         <div className="enroll-content">
+                            <h2>Enroll Today!</h2>
+                            <p>Learning curve return on investment venture marketing equity user experience responsive web design conversion bandwidth freemium ramen business model canvas lean startup</p>
+                            <Link to="/courses" className='enroll-btn'>Enroll</Link>
+                         </div>
                      </div>
 
                      {/* NAIT Card */}
@@ -80,8 +85,8 @@ export default function HomePage() {
                          <img className='nait-logo' src={process.env.PUBLIC_URL + `/assets/images/NAIT-logo.png`} alt="nait logo" />
                         <div className="nait-content">
                             <h3>Continuing Education at NAIT - DATA Science</h3>
-                            <p>Learning curve return on investment venture marketing equity user experience responsive web design conversion bandwidth freemium ramen business model canvas lean startup</p>
-                            <Link to="#">Learn More &#62;</Link>
+                            <p> This program is targeted for people with beginners in Data Science and teaches data analysis, data visualization, data mining, and machine learning. Primarily using Python</p>
+                            <a href="https://www.nait.ca/coned/data-science" target="_blank">Learn More &#62;</a>
                         </div>
                      </aside>
                   </section>

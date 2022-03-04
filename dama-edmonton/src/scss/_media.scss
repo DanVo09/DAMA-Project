@@ -1,3 +1,16 @@
+@media screen and (min-width: 470px){
+    .course-info-card {
+
+        .card-sub-container {
+            display: flex;
+
+            .content-container {
+                 margin-left: 1rem;
+              }
+        }
+    }
+}
+
 @media screen and (min-width: 550px){
 
     // displays slider arrows for larger viewports
@@ -19,12 +32,37 @@
        
 
         .card-title-content {
-            grid-column: 1 / span 2;
+            grid-column: 1 / span 1;
         }
+        
     }
 }
 
 @media screen and (min-width: 1000px){
+
+    .education-section {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .section-header{
+            grid-column: 1 / -1;
+        }
+
+        .course-info-card {
+            grid-column: 1 / span 2;
+        }
+
+        .enroll-today-card {
+            grid-column: 2 / span 2;
+
+            .enroll-content {
+                margin-left: -3rem;
+            }
+        }
+
+        .nait-con-ed-card {
+            grid-column: 1 / span 2;
+        }
+    }
 
     .slider-container {
 
@@ -33,9 +71,9 @@
         }
 
     }
-    
-
 }
+
+
 
 @media screen and (min-width: 1200px){
 
@@ -73,5 +111,19 @@
 
     }
    
+}
+
+@media screen and (min-width: 1500px){
+
+   .education-section {
+       grid-template-columns: 1fr 1fr 1fr 1.5fr;
+
+       .nait-con-ed-card {
+           grid-column: 4;
+           grid-row: 2;
+       }
+   }
+    
+
 }
 
