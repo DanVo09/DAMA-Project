@@ -1,0 +1,211 @@
+p, h2, h3, h4 {
+    color: $dk-green;
+}
+
+.banner {
+    padding: 1rem;
+    border-bottom: 1px solid $dk-green;
+    h2 {
+        text-transform: uppercase;
+    }
+    
+    p, h2, h3 {
+        text-align: center;
+    }
+
+    p {
+        padding: 1rem 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $dk-green;
+        background-color: $yellow;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+        width: fit-content;
+    }
+
+    a:active,
+    a:hover {
+        font-weight: bold;
+    }
+
+    .MissonGoal {
+        h2, h3 {
+            text-align: center;
+        }
+
+        h2 {
+            text-transform: uppercase;
+        }
+        
+        margin-top: 4rem;
+        div {
+            padding: 1rem;
+            border: 1px solid $dk-green;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            h3 {
+                background-color: $yellow;
+                border-radius: 0.5rem;
+                padding: 0.5rem 1rem;
+                width: 80%;
+                margin: 0 auto;
+                position: relative;
+                top: -2.5rem;
+            }
+        }
+    }
+}
+
+.person-profile {
+    padding: 1rem;
+    h2, h3 {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .person-profile-details {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+
+        h3 {
+            padding-bottom: 1rem;
+        }
+        img {
+            border-radius: 50%;
+        }
+        h4 {
+             padding-top: 1rem;
+             font-weight: bold;
+         }
+    }
+}
+
+.sponsors-section {
+    padding: 1rem;
+    h2 {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .banner {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div:first-of-type {
+            h2, p {
+                text-align: left;
+            }
+            a {
+                margin-right: auto;
+                margin-left: 0;
+            }
+            
+        }
+        .MissonGoal {
+            margin-top: 1rem;
+            margin-left: 6rem;
+        }
+
+    }
+
+    .person-profile-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        div {
+            width: 48%;
+            padding: 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .banner {
+        display: block;
+        margin-bottom: 15rem;
+        padding-top: 3rem;
+        div:first-of-type{
+            margin-top: 3rem;
+            h2, p {
+                text-align: center;
+            }
+    
+            a {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+       
+
+        .MissonGoal {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 0;
+            margin-top: 0;
+            position: relative;
+            bottom: -12rem;
+            z-index: 1;
+
+            div {
+                margin: 0 1rem;
+                background-color: white;
+            }
+        }
+    }
+
+    .person-profile-flex {
+        justify-content: space-around;
+        div {
+            width: 30%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1400px) {
+    .banner {
+       
+        .MissonGoal {
+           margin-left: 5rem;
+           margin-right: 5rem;
+            
+
+        }
+    }
+
+    .person-profile-flex {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        div {
+            img {
+                width: 70%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}

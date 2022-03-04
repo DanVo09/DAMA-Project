@@ -1,0 +1,17 @@
+img {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+.slick-prev::before, .slick-next::before {
+    color: black !important;
+   
+}
+
+.logo-flex {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+

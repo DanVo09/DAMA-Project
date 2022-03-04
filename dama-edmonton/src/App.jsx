@@ -12,6 +12,7 @@ import Events from "./pages/Events";
 import Newsletter from "./pages/NewsLetter";
 import Register from "./pages/SignUp";
 import Memberships from "./pages/Memberships";
+import Footer from './components/footer/footer';
 
 import Navbar from './components/navbar/NavBar'
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/courses" element={<Courses />}/> 
             <Route path="/contact" element={<Contact />}/>
         </Routes>
+        <Footer/>
     </Router>
   );
 }
