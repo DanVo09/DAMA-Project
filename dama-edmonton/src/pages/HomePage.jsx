@@ -76,14 +76,14 @@ export default function HomePage() {
 
                      {/* NAIT Card */}
 
-                     <div className="nait-con-ed-card">
+                     <aside className="nait-con-ed-card">
                          <img className='nait-logo' src={process.env.PUBLIC_URL + `/assets/images/NAIT-logo.png`} alt="nait logo" />
                         <div className="nait-content">
                             <h3>Continuing Education at NAIT - DATA Science</h3>
                             <p>Learning curve return on investment venture marketing equity user experience responsive web design conversion bandwidth freemium ramen business model canvas lean startup</p>
                             <Link to="#">Learn More &#62;</Link>
                         </div>
-                     </div>
+                     </aside>
                   </section>
 
                    {/* Events Section */}

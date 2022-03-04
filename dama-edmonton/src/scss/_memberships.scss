@@ -7,22 +7,38 @@
 }
 
 .memberships-page {
+
     margin: 0.5rem;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    
 }
 
-.membership-card {
-    border: 1px solid black;
-    text-align: center;
-    margin-bottom: 1rem;
+.memberships-wrapper {
+
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 8rem;
+    
+
+    .membership-card {
+        border: 1px solid black;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .membership-card div {
+        padding: 1rem;
+    }
+    
+    .membership-card div:first-of-type {
+        background: cadetblue;
+    }
+
 }
 
-.membership-card div {
-    padding: 1rem;
-}
 
-.membership-card div:first-of-type {
-    background: cadetblue;
-}
 
 // .individual-memberships {
 //     display: grid;
