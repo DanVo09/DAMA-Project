@@ -1,4 +1,4 @@
-.logo-img {
+img {
     margin: 1rem;
     padding: 1rem;
     width: 100%;
@@ -19,7 +19,7 @@
 @media only screen and (min-width: 768px) {
 
     img {
-        width: 70%;
+        width: 80%;
     }
     .logo-flex {
         overflow: hidden;
