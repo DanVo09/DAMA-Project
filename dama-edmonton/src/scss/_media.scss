@@ -1,4 +1,19 @@
+@media screen and (min-width: 470px){
+    .course-info-card {
+
+        .card-sub-container {
+            display: flex;
+
+            .content-container {
+                 margin-left: 1rem;
+              }
+        }
+    }
+}
+
 @media screen and (min-width: 550px){
+
+    // displays slider arrows for larger viewports
 
     .slider-container {
         .btn-slide {
@@ -7,3 +22,118 @@
     }
    
 }
+
+@media screen and (min-width: 670px){
+
+    .course-info-card {
+
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+       
+
+        .card-title-content {
+            grid-column: 1 / span 1;
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .education-section {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .section-header{
+            grid-column: 1 / -1;
+        }
+
+        .course-info-card {
+            grid-column: 1 / span 2;
+        }
+
+        .enroll-today-card {
+            grid-column: 2 / span 2;
+
+            .enroll-content {
+                margin-left: -3rem;
+            }
+        }
+
+        .nait-con-ed-card {
+            grid-column: 1 / span 2;
+        }
+    }
+
+    .slider-container {
+
+        .slider-content-container {
+            left: 65%;
+            margin-left: 1rem;
+        }
+
+    }
+}
+
+
+
+@media screen and (min-width: 1200px){
+
+    // desktop navbar and header styling
+
+    .header-wrapper {
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .navBar {
+            position: static;
+            background-color: transparent;
+            padding: 0;
+
+            .navMenu {
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+        }
+
+        .cart-icon {
+            margin-left: 1rem;
+        }
+
+    }
+
+    .slider-container {
+
+        .slider-content-container {
+            left: 67%;
+        }
+
+    }
+   
+}
+
+@media screen and (min-width: 1500px){
+
+   .education-section {
+       grid-template-columns: 1fr 1fr 1fr 1.75fr;
+
+       .nait-con-ed-card {
+           grid-column: 4;
+           grid-row: 2;
+           margin-left: 8rem;
+       }
+   }
+
+   .header-wrapper {
+       .navBar{
+           .navMenu {
+               gap: 2.25rem;
+           }
+       }
+   }
+    
+
+}
+

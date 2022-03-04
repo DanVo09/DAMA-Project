@@ -4,7 +4,7 @@ const dataSlider = [
     {
       id: uuidv4(),
       title: "DATA MANAGEMENT ASSOCIATION",
-      subTitle: "Providing a professional platform to data practitioners for their information, knowledge management and certification requirements."
+      subTitle: "As part of the DAMA International community, we provide a professional platform to data practitioners for their information, knowledge management and certification requirements."
 
     },
     {

@@ -3,7 +3,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: $dk-green;
+    background-color: $dk-blue;
+    box-shadow: $box-bevel;
 }
 
 .header-wrapper {
@@ -11,6 +12,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
 
     // Navbar Toggle Icon
 
@@ -91,6 +94,7 @@
     .cart-icon {
         font-size: 2.95rem;
         color: $yellow;
+        cursor: pointer;
     }
 
     .navBar {
@@ -99,7 +103,7 @@
         position: absolute;
         padding: 2rem 0;
         padding-left: 1rem;
-        background-color: $dk-green-ol;
+        background-color: $dk-blue-ol;
         backdrop-filter: blur(5px);
         width: 100%;
         transition: all 0.3s ease-in-out;

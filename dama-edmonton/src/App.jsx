@@ -12,7 +12,11 @@ import Events from "./pages/Events";
 import Newsletter from "./pages/NewsLetter";
 import Register from "./pages/SignUp";
 import Memberships from "./pages/Memberships";
+<<<<<<< HEAD
 import Footer from './components/footer/footer';
+=======
+import Dashboard from "./pages/Dashboard";
+>>>>>>> 29de6adfbb3649f03aefc2175d3206f50fecf697
 
 import Navbar from './components/navbar/NavBar'
 
@@ -26,6 +30,7 @@ function App() {
             <Route path="/aboutus" element={<About />}/>
             <Route path="/register" element={<Register />}/>
             <Route path="/memberships" element={<Memberships />}/> 
+            <Route path="/dashboard" element={<Dashboard />}/> 
             <Route path="/newsletter" element={<Newsletter />}/> 
             <Route path="/events" element={<Events />}/> 
             <Route path="/courses" element={<Courses />}/> 
