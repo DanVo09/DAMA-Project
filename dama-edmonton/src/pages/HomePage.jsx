@@ -93,8 +93,12 @@ export default function HomePage() {
 
                    {/* Events Section */}
 
-                  <section>
-
+                  <section className='events-section'>
+                    <div className="section-header">
+                        <h2>Upcoming Events</h2>
+                        <h3>Reliable Data Managment Practices</h3>
+                        <p>DAMA Edmonton is dedicated to advancing the concepts and practices of information and data management by supporting members and their organizations to address their information and data management needs.</p>
+                    </div> 
                   </section>
 
                   {/* logo carousel component goes here */}
