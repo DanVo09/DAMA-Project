@@ -5,6 +5,8 @@
     overflow-y: scroll;
     position: relative;
     height: 100vh;
+
+    
     
 } 
 
@@ -31,8 +33,7 @@
     margin-left: auto; 
     margin-right: auto;
     max-width: 1600px;
-   
-    
+     
 }
 
 // education section styling
@@ -94,9 +95,10 @@
       h2 {
         color: $yellow;
         text-shadow: $txt-shadow-dk;
+        margin-bottom: 2rem;
       }
 
-      p {
+      li {
         text-shadow: $txt-shadow-dk;
       }
 
@@ -116,13 +118,13 @@
         }
 
         h4 {
-          font-size: 1.25rem;
+          font-size: 1.2rem;
           color: $yellow;
           text-shadow: $txt-shadow-dk;
         }
 
         p {
-          font-size: 0.85rem;
+          font-size: 0.95rem;
           margin-bottom: 1rem;
         }
 

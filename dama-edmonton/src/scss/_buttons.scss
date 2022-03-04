@@ -10,5 +10,9 @@
     text-align: center;
     cursor: pointer;
 
+    &:hover {
+        transform: scale(0.975);
+    }
+
 }
 
