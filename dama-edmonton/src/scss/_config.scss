@@ -68,6 +68,7 @@ body {
     font-family: $primary-font;
     color: $off-white;
     overflow-y:scroll;
+    scrollbar-color: transparent transparent;
 }
 
 a {

@@ -13,8 +13,9 @@ import Newsletter from "./pages/NewsLetter";
 import Register from "./pages/SignUp";
 import Memberships from "./pages/Memberships";
 import Footer from './components/footer/footer';
-import Dashboard from './pages/Dashboard';
-import Navbar from './components/navbar/NavBar';
+import Dashboard from "./pages/Dashboard";
+
+import Navbar from './components/navbar/NavBar'
 
 function App() {
   return (

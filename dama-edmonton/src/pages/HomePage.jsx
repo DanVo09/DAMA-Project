@@ -67,7 +67,7 @@ export default function HomePage() {
                                 <h4>Instructor Lead</h4>
                                 <ul>
                                     <li>Live Sessions</li>
-                                    <li>Open During Posted Dates</li>
+                                    <li>Cohort Paced, 12 week program</li>
                                     <li>One hour weekly live discussion and Q&#38;A</li>
                                 </ul>
                                 <Link to="#">Learn More &#62;</Link>

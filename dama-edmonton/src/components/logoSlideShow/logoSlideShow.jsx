@@ -29,7 +29,7 @@ export default function LogoSlideShow() {
                {LogoData.map(current=>(
                 <div className="out" key={current.id}>
                     <div className="logo">
-                        <img src={`assets/images/logo/${current.logoName}`} alt={`name${current.companyName}`}/>
+                        <img className="logo-img" src={`assets/images/logo/${current.logoName}`} alt={`name${current.companyName}`}/>
                     </div>
 
                 </div>
