@@ -13,16 +13,16 @@ export default function Dashboard() {
     return (
         <div className='dashboard-page'>
           <aside className='dashboard-sidebar'>
-            <a href="#" className='sidebar-dk'>Upload Files</a>
+            <a href="#" className='sidebar-dk'><UploadFileIcon className="cart-icon"/>Upload Files</a>
             <a href="#" className='sidebar-mb' title='Upload Files'><UploadFileIcon className="cart-icon"/></a>
 
-            <a href="#" className='sidebar-dk'>Your Courses</a>
+            <a href="#" className='sidebar-dk'><BookOutlinedIcon className="cart-icon"/>Your Courses</a>
             <a href="#" className='sidebar-mb' title='Your Courses'><BookOutlinedIcon className="cart-icon"/></a>
 
-            <a href="#" className='sidebar-dk'>Your Events</a>
+            <a href="#" className='sidebar-dk'><CalendarTodayIcon className="cart-icon"/>Your Events</a>
             <a href="#" className='sidebar-mb' title='Your Events'><CalendarTodayIcon className="cart-icon"/></a>
 
-            <a href="#" className='sidebar-dk'>Job Postings</a>
+            <a href="#" className='sidebar-dk'><WorkOutlineIcon className="cart-icon"/>Job Postings</a>
             <a href="#" className='sidebar-mb' title='Job Postings'><WorkOutlineIcon className="cart-icon"/></a>
           </aside>
           <div>
