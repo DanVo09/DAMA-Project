@@ -28,13 +28,13 @@ export default function Carousel() {
     const startSlider = () => {
         slideInterval = setInterval(() => {
             autoPlay();
-        }, 4000);
+        }, 6000);
       };
 
     useEffect(() => {
 
         startSlider();
-        
+
         return () => {
            
         };
