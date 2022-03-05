@@ -32,7 +32,7 @@
     }
 
     li a:hover {
-        font-weight: 600;
+        color: $yellow;
     }
 
     .bottom-footer {
@@ -91,6 +91,8 @@
 @media only screen and (min-width: 1024px) {
     .flex-footer  {
         justify-content: center;
+        max-width: 1600px;
+        margin: 0 auto;
         section {
             width: 20%;
             

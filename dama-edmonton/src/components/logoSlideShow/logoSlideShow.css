@@ -1,7 +1,7 @@
 img {
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1rem;
-    width: 100%;
+    display: block;
 }
 
 
@@ -10,11 +10,17 @@ img {
    
 }
 
+.slick-dot li a {
+    color: black;
+}
+
 .logo-flex {
     overflow: hidden;
     margin: 0 auto;
     width: 100%;
 }
+
+
 
 @media only screen and (min-width: 768px) {
 
@@ -22,9 +28,7 @@ img {
         width: 80%;
     }
     .logo-flex {
-        overflow: hidden;
-        margin: 0 auto;
-        width: 90%;
+        max-width: 1600px;
     }
 }
 

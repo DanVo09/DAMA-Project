@@ -91,6 +91,8 @@
             }
             img {
                 border-radius: 50%;
+                display: block;
+                margin: 0 auto;
             }
             h4 {
                  padding-top: 1rem;
@@ -195,19 +197,19 @@
 }
 
 @media only screen and (min-width: 1400px) {
+    
     .banner {
        
         .MissonGoal {
-           margin-left: 5rem;
-           margin-right: 5rem;
-            
+           max-width: 1600px;
+           margin: 0 auto;
 
         }
     }
 
     .person-profile-flex {
-        margin-left: 5rem;
-        margin-right: 5rem;
+        max-width: 1600px;
+        margin: 0 auto;
         div {
             img {
                 width: 70%;
