@@ -19,7 +19,7 @@ export default function Eventcard() {
                     Pitch accelerator gen-z
                     business model canvas twitter
                     burn rate.</p>
-                    <Link to="#">Learn More/Register</Link>
+                    <Link to="/events">Learn More/Register</Link>
                 </div>
             </div> 
         </>
