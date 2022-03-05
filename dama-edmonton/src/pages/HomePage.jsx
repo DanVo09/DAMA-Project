@@ -11,6 +11,8 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 // components
 
 import Carousel from '../components/carousel/Carousel'
+import Eventcard from '../components/eventCard/EventCard';
+import LogoSlideShow from '../components/logoSlideShow/logoSlideShow';
 
 export default function HomePage() {
 
@@ -107,28 +109,14 @@ export default function HomePage() {
                         <h3>Join us at one of our upcoming events</h3>
                         <p>DAMA Edmonton hosts a range of events with an opportunity to network with friends, colleagues, and industry peers. Members are entitled to exclusive <span className="highlight">member-only discounts</span>for Data Management conferences and professional development training.</p>
                     </div>
-                    <div className="event-card">
-                        <div className="event-card-img-container">
-                            <img src="#" alt="#" />
-                        </div>
-                        <div className="event-card-content">
-                            <h2>Feature Event</h2>
-                            <h3>Speaker Name</h3>
-                            <h4>Date/Time</h4>
-                            <p>Niche market business model
-                            canvas paradigm shift stock.
-                            Pitch accelerator gen-z
-                            business model canvas twitter
-                            burn rate. A/B testing sucess
-                            scrum project holy grail gen-z
-                            shift pivot assets</p>
-                            <Link to="#">Learn More/Register</Link>
-                        </div>
-                    </div> 
+
+                    <Eventcard />
+
                   </section>
-
-                  {/* logo carousel component goes here */}
-
+                  <div className="slideshow-container">
+                      <h2>Our Sponsors and partners</h2>
+                      <LogoSlideShow />
+                  </div>
                </div>
            </div>   
         </>
