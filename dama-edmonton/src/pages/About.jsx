@@ -14,32 +14,32 @@ export default function Aboutus() {
           <div className="about-page-wrapper">
             <div className="banner" style={{background: `linear-gradient(rgba(255,255,255,0.6),
             rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") top/cover no-repeat` }}>
-                    <div>
+                    <div className="about-title">
                         <h2>Edmonton Data management Association</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga minus laboriosam, nemo iure quae repudiandae architecto ab dolore nesciunt!</p>
-                        <Link className="navItem" to="/memberships" onClick="window.location.reload();">See more</Link>  
+                        <p>Business Analytics, Data Analytics, Internet of Things Analytics, Data Science, Data Management, Data Governance, Data Operations and Security, Data Stewardship, Data Modeling.</p>
+                        <Link className="navItem" to="/memberships" onClick="window.location.reload();">Request information via Email</Link>  
                     </div>
                     <div className="MissonGoal">
                     <div>
-                        <h3>Title 1</h3>
+                        <h3>Mission and Goals</h3>
                         <p>
                         CIPS Alberta and The  Data Management (DAMA) Association will hold joint meetings this fall; along with IIBA and other professional associations.
                         </p>
                     </div>
                     <div>
-                        <h3>Title 1</h3>
+                        <h3>Mission and Goals</h3>
                         <p>
                         Providing a professional platform to local practitioners for their information and knowledge management requirements.
                         </p>
                     </div>
                     <div>
-                        <h3>Title 1</h3>
+                        <h3>Mission and Goals</h3>
                         <p>
                         Sharing latest trends and research in the discipline of Data Analytics, Data Management and Business Intelligence to improve related professional knowledge.
                         </p>
                     </div>
                     <div>
-                        <h3>Title 1</h3>
+                        <h3>Mission and Goals</h3>
                         <p>
                         Form alliances with other local organizations with similar principles to learn and grow in the DATA Management profession.
                         </p>
