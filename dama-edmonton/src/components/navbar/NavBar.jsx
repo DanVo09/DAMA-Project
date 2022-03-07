@@ -36,7 +36,7 @@ export default function Navbar() {
                             <div className="nav-btn"></div>
                     </div>
                     <div className="logo-container">
-                        <Link to="/"><h1>DAMA</h1></Link>
+                        <Link to="/" onClick="window.location.reload();"><img className="dama-logo" src={process.env.PUBLIC_URL + `/assets/images/dama-logo.png`} alt="" /></Link>
                     </div>
                     <nav className="navBar">
                         <ul className="navMenu">

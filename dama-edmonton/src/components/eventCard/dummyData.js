@@ -1,4 +1,4 @@
-export const Events = [
+const Events = [
     {
         id:1,
         eventPicture: "events/1.jpg",
@@ -44,3 +44,5 @@ export const Events = [
         eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
     }
 ]
+
+export default Events

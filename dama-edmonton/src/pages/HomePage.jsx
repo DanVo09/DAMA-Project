@@ -109,10 +109,11 @@ export default function HomePage() {
                         <h3>Join us at one of our upcoming events</h3>
                         <p>DAMA Edmonton hosts a range of events with an opportunity to network with friends, colleagues, and industry peers. Members are entitled to exclusive <span className="highlight">member-only discounts</span>for Data Management conferences and professional development training.</p>
                     </div>
-
-                    <Eventcard />
-
+                    <div className="event-wrapper">
+                        <Eventcard />
+                    </div>
                   </section>
+                  
                   <div className="slideshow-container">
                       <h2>Our Sponsors and partners</h2>
                       <LogoSlideShow />
