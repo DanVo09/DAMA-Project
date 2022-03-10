@@ -43,7 +43,71 @@
         }
         
     }
+
+    .feature {
+
+        .event-card-content {
+
+            margin-top: 1rem;
+            
+            .card-content-wrapper {
+
+                h2 {
+                    font-size: 2.35rem;
+                }
+            }
+
+        }
+
+    }
 }
+
+@media screen and (min-width: 760px) {
+    .event-wrapper {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+
+        .feature {
+            grid-column: 1 / -1;
+        }
+
+        .non-feature:nth-of-type(odd){
+            margin-top: 4rem;
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 950px) {
+
+
+
+        .feature {
+
+           
+            .event-card-img-container {
+            max-width: 22rem;
+            height: 22rem;
+            margin-left: -10rem;
+            margin-bottom: -14rem;
+
+            .event-card-img {
+                height: 22rem !important;
+            }
+        }
+
+            .card-content-wrapper {
+                max-width: 24rem;
+                margin-left: 12rem;
+                margin-top: -4rem;
+            }
+
+
+    }
+}
+
 
 @media screen and (min-width: 1000px){
 
@@ -140,7 +204,66 @@
            }
        }
    }
-    
 
+}
+
+@media screen and (min-width: 1600px){
+    .events-section {
+        display: grid;
+        grid-template-columns: 1fr 1.75fr 1fr 1fr;
+        max-width: 1600px;
+       
+        .section-header {
+            margin-bottom: 8rem;
+            grid-column: 2 / span 2;
+           
+        }
+
+        .event-wrapper {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 0.75fr;
+            grid-column: 1 / -1;
+           
+            gap: 2rem;
+
+            .feature {
+                grid-column: 1 / span 2;
+                grid-row: 1 / span 2;
+                justify-self: flex-end;
+                
+            }
+
+            .non-feature:nth-of-type(odd) {
+                grid-column: 3;
+                margin-top: 0;
+                
+            }
+
+            .non-feature:nth-of-type(even) {
+                grid-column: 4;
+              
+               
+            }
+            
+            .non-feature:nth-of-type(2){
+                grid-row: 2;
+            }
+
+            .non-feature:nth-of-type(3){
+                grid-row: 1;
+                margin-top: 18rem;
+            }
+
+            .non-feature:nth-of-type(4){
+                grid-row: 1;
+                margin-top: 24rem;
+            }
+
+            .non-feature:nth-of-type(5){
+                grid-row: 2;
+                margin-top: -6rem;
+            }
+        }
+    }
 }
 

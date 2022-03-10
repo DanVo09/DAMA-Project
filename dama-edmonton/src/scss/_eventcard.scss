@@ -1,8 +1,16 @@
 .events-section{
+   
+    width: 100vw;
+
+    .event-wrapper {
+        display: grid;
+    }
+   
 
     .event-card {
 
         max-width: 28rem;
+        justify-self: center; 
         margin-bottom: 2rem;
 
         .event-card-img-container {
@@ -70,6 +78,16 @@
                 }
             }
         }
+    }
+
+    .feature {
+
+        max-width: 38rem;
+
+        .event-card-content{
+            background-color: $lt-green;
+        }
+        
     }
 
 }
