@@ -234,34 +234,36 @@
             }
 
             .non-feature:nth-of-type(odd) {
-                grid-column: 3;
+               
                 margin-top: 0;
                 
             }
 
-            .non-feature:nth-of-type(even) {
-                grid-column: 4;
-              
-               
-            }
-            
+           
             .non-feature:nth-of-type(2){
-                grid-row: 2;
+                grid-row: 1;
+                grid-column: 3;
+                margin-top: 18rem;
             }
 
             .non-feature:nth-of-type(3){
                 grid-row: 1;
-                margin-top: 18rem;
+                grid-column: 4;
+                margin-top: 24rem;
+                
             }
 
             .non-feature:nth-of-type(4){
-                grid-row: 1;
-                margin-top: 24rem;
+                grid-row: 2;
+                grid-column: 3;
+                margin-top: -8rem;
+                
             }
 
             .non-feature:nth-of-type(5){
                 grid-row: 2;
-                margin-top: -6rem;
+                grid-column: 4;
+               
             }
         }
     }
