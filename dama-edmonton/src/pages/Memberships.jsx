@@ -18,7 +18,7 @@ export default function Memberships() {
                 </div>
                 <div>
                   <p>If you purchase an annual membership you are able to attend all monthly meetings - typically 10 meetings/year and access the 15% discount on the annual conferences in Calgary and Edmonton</p>
-                  <Link to="#">PURCHASE</Link>
+                  <Link to="#" className='purchase-membership'>PURCHASE</Link>
                 </div>
               </div>
               <div className="membership-card">
@@ -28,7 +28,7 @@ export default function Memberships() {
                 </div>
                 <div>
                   <p>Enjoy all the same great benefits as the standard membership. Proof of academic enrollment is required.</p>
-                  <Link to="#">PURCHASE</Link>
+                  <Link to="#" className='purchase-membership'>PURCHASE</Link>
                 </div>
               </div>
               
@@ -44,7 +44,7 @@ export default function Memberships() {
                 </div>
                 <div>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi eum soluta esse excepturi omnis optio, ab voluptates fugiat reiciendis quae vero repellat id saepe atque illum perspiciatis laborum dolor. Minima?</p>
-                  <Link to="#">PURCHASE</Link>
+                  <Link to="#" className='purchase-membership'>PURCHASE</Link>
                 </div>
               </div>
 
@@ -55,7 +55,7 @@ export default function Memberships() {
                 </div>
                 <div>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi eum soluta esse excepturi omnis optio, ab voluptates fugiat reiciendis quae vero repellat id saepe atque illum perspiciatis laborum dolor. Minima?</p>
-                  <Link to="#">PURCHASE</Link>
+                  <Link to="#" className='purchase-membership'>PURCHASE</Link>
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ export default function Memberships() {
                 </div>
                 <div>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi eum soluta esse excepturi omnis optio, ab voluptates fugiat reiciendis quae vero repellat id saepe atque illum perspiciatis laborum dolor. Minima?</p>
-                  <Link to="#">PURCHASE</Link>
+                  <Link to="#" className='purchase-membership'>PURCHASE</Link>
                 </div>
               </div>
 
