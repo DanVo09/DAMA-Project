@@ -267,6 +267,8 @@
 
 }
 
+// events section styling
+
 .events-section {
    
    margin: 4rem 0;
@@ -291,4 +293,16 @@
         text-shadow: $txt-shadow-dk;
       }
    }
+}
+
+// our sponsors styling
+
+.slideshow-container {
+  h2 {
+    font-family: $title-font;
+    color: $yellow;
+    text-shadow: $txt-shadow-dk;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 }
