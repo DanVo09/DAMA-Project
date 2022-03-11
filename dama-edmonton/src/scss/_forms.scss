@@ -1,3 +1,7 @@
+.form-label {
+    display: block;
+}
+
 .form-input{
     padding: 0.65rem 0 0.65rem 0.5rem;
     border-radius: 0.85rem;
@@ -7,4 +11,6 @@
 .form-input:focus{
     outline: none;
 }
+
+
 

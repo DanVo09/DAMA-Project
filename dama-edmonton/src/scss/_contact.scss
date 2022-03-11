@@ -10,6 +10,15 @@
         .header-banner{
             text-align: center;
         }
+
+        .contact-form-section {
+            .icon-link {
+                color: $dk-green;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
     }
     
 }
