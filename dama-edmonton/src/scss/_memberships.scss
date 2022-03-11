@@ -26,6 +26,8 @@
         border: 1px solid black;
         text-align: center;
         margin-bottom: 1rem;
+        border-radius: 2.85rem;
+        // box-shadow: $box-embed;
     }
     
     .membership-card div {
@@ -34,20 +36,42 @@
     
     .membership-card div:first-of-type {
         background: cadetblue;
+        border-radius: 2.85em 2.85em 0 0;
     }
 
+<<<<<<< HEAD
 }
 
 @media screen and (min-width: 650px) {
     .individual-memberships {
         display: grid;
         grid-template-columns: 30rem 30rem;
+=======
+    .purchase-membership {
+        background-color: #058ED9;
+        width: 18rem;
+        margin-top: 2rem;
+        // float: right;
+        box-shadow: $box-bevel;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+    .individual-memberships {
+        display: grid;
+        grid-template-columns: 45% 45%;
+>>>>>>> 350797acec54c179435d5b3f4f1ec06b46f73a12
         gap: 1rem;
     }
     
     .corporate-memberships {
         display: grid;
+<<<<<<< HEAD
         grid-template-columns: 30rem 30rem 30rem;
+=======
+        grid-template-columns: 30% 30% 30%;
+>>>>>>> 350797acec54c179435d5b3f4f1ec06b46f73a12
         gap: 1rem;
     }
     
@@ -57,6 +81,10 @@
     
     .corporate-memberships h2 {
         grid-column: 1 / 4;
+<<<<<<< HEAD
     }
+=======
+    }    
+>>>>>>> 350797acec54c179435d5b3f4f1ec06b46f73a12
 }
 
