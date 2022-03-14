@@ -1,8 +1,16 @@
 .events-section{
+   
+    width: 100vw;
+
+    .event-wrapper {
+        display: grid;
+    }
+   
 
     .event-card {
 
         max-width: 28rem;
+        justify-self: center; 
         margin-bottom: 2rem;
 
         .event-card-img-container {
@@ -23,7 +31,7 @@
         }
     
         .event-card-content {
-            background-color: $dk-blue;
+            background-color: $dk-green;
             border-radius: 2.85rem;
             box-shadow: $box-bevel;
             padding: 6rem 2rem 4rem;
@@ -70,6 +78,16 @@
                 }
             }
         }
+    }
+
+    .feature {
+
+        max-width: 38rem;
+
+        .event-card-content{
+            background-color: $lt-green;
+        }
+        
     }
 
 }

@@ -1,0 +1,25 @@
+.contact-page-container {
+    background-color: $off-white;
+    color: $dk-green;
+    padding-bottom: 2.75rem;
+
+    .contact-page-wrapper{
+        max-width: 1600px;
+        margin: 0 auto;
+
+        .header-banner{
+            text-align: center;
+        }
+
+        .contact-form-section {
+            .icon-link {
+                color: $dk-green;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    }
+    
+}
+
