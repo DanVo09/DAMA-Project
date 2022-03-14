@@ -10,7 +10,9 @@ export default function Footer() {
                 <div>
                     <div className="flex-footer">
                         <section>
-                            <h2>DAMA Edmonton</h2>
+                            <h2 >
+                                <Link to="/" onClick="window.location.reload();"><img className="dama-logo" src={process.env.PUBLIC_URL + `/assets/images/dama-logo.png`} alt="" /></Link>
+                            </h2>
                             <ul>   
                                     <li className="navLinks">
                                         <Link className="navItem" to="/" onClick="window.location.reload();">Home</Link>
