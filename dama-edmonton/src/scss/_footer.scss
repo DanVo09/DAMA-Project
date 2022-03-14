@@ -1,8 +1,8 @@
 
 .footer-main {
-    background-color: #07342A;
+    background-color: $dk-blue;
     box-shadow: $box-bevel;
-    color: white;
+    color: $off-white;
     padding-top: 4rem;
 
     .flex-footer {
@@ -33,7 +33,7 @@
 
     li a {
         text-decoration: none;
-        color: white;
+        color: $off-white;
     }
 
     li a:hover {
@@ -43,9 +43,9 @@
     .bottom-footer {
         text-align: center;
         padding: 1rem;
-        border-top: 1px solid white;
+        border-top: 1px solid $off-white;
         p{
-             color: white;
+             color: $off-white;
         }
        
     }
@@ -63,10 +63,11 @@
         border: none;
         font-weight: bold;
         cursor: pointer;
+        width: fit-content;
     }
 
     #submit-btn:hover {
-        color: white;
+        color: $off-white;
     }
 
     input:first-of-type {
