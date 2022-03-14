@@ -1,0 +1,217 @@
+.course-page-wrapper {
+
+    color: $dk-green;
+    li,a {
+        color: $dk-green;
+    }
+
+    .course-banner {
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 5rem 1rem;
+        }
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        button, input {
+            margin: 1rem 0.5rem;
+            padding: 0.5rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 0.5rem;
+        }
+
+        input {
+            border: 1px solid $dk-green;
+        }
+
+        button {
+            background-color: $yellow;
+            border: none;
+        }
+
+        #search-submit {
+            display: none;
+        }
+    }
+
+    .main-container {
+        .sidebar {
+            border: 1px solid $dk-green;
+            margin: 2rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: $box-bevel;
+            display: none;
+            background-color: $dk-green;
+             li, a {
+                color: white;
+            }
+          
+            h2 {
+                text-align: center;
+                padding: 1rem;
+                background-color: $yellow;
+                border-radius: 0.5rem;
+            }
+
+            h2, li {
+                border-bottom: 1px solid white;
+            }
+
+            ul{
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    margin: 0;
+                    a {
+                        text-transform: none;
+                        display: block;
+                        padding: 1rem;
+                    }
+
+                    a:hover {
+                        background-color: $yellow;
+                        color: $dk-green;
+                    }
+                }
+            } 
+        }
+
+        .content-detail {
+            .course-card {
+                border: 1px solid $dk-green;
+                margin: 2rem 1rem;
+                border-radius: 0.5rem;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                padding: 1rem;
+
+                h2 {
+                    padding-bottom: 1rem;
+                }
+
+                p {
+                    padding: 1rem 0;
+                }
+            }
+        }
+
+      
+    }
+
+    .certification-content {
+        text-align: center;
+        padding: 3rem 1rem;
+        background-color: $dk-green;
+        h2 {
+            color: $yellow;
+            padding-bottom: 2rem;
+        }
+       
+        ul {
+            padding: 0;
+            margin:0;
+            li {
+                list-style: none;
+                padding: 1rem;
+                color: white;
+                a {
+                    color: white;
+                    text-transform: none;
+                    padding: 0 0.5rem;
+                    .call-icon, .email-icon {
+                        color: $yellow;
+                        
+                    }
+                }
+                a:hover {
+                    text-decoration: underline;
+                    
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+    .course-page-wrapper {
+        .course-banner {
+            h1 {
+                padding-top: 10rem;
+                padding-bottom: 10rem;
+                font-size: 2rem;
+            }
+        }
+
+        .search-form {
+            width: 80%;
+            margin: 0 auto;
+            button {
+                display: none;
+            }
+
+            #search-submit {
+                display: block;
+                width: fit-content;
+                background-color: $yellow;
+                border: none;
+                font-weight: bold;
+            }
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            .sidebar {
+                display: block;
+                width: 45%;
+                h2 {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    .course-page-wrapper {
+
+        .main-container {
+            .sidebar {
+                width: 30%;
+            }
+            .content-detail {
+                display: flex;
+                justify-content: space-between;
+                div {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .course-page-wrapper {
+        .search-form {
+            width: 50%;
+        }
+
+        .main-container {
+            max-width: 1600px;
+            margin: 2rem auto;
+            .sidebar {
+                width: 20%;
+            }
+        }
+    }
+
+}

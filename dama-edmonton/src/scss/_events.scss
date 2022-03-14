@@ -1,0 +1,74 @@
+.event-page-wrapper {
+    color: $dk-green;
+    li,a {
+        color: $dk-green;
+    }
+
+    .course-banner {
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 5rem 1rem;
+        }
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        button, input {
+            margin: 1rem 0.5rem;
+            padding: 0.5rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 0.5rem;
+        }
+
+        input {
+            border: 1px solid $dk-green;
+        }
+
+        button {
+            background-color: $yellow;
+            border: none;
+        }
+
+        #search-submit {
+            display: none;
+        }
+    }
+
+    .main-content {
+        .sidebar {
+            border: 1px solid $dk-green;
+            margin: 2rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: $box-bevel;
+            background-color: $dk-green;
+             h3, p, li, a {
+                color: white;
+            }
+
+            .main-title {
+                background-color: $yellow;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 0.5rem;
+                align-items: center;
+                padding: 0.5rem;
+
+                h2 {
+                    font-size: 1rem;
+                }
+            }
+            
+            .event-detail {
+                .title, .topic-content {
+                    border-bottom: 1px solid white;
+                }
+            }
+
+        }
+    }
+}
