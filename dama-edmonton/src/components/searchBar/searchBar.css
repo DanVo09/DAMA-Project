@@ -1,0 +1,21 @@
+.search-form {
+    padding-bottom: 0;
+}
+
+.dataResult {
+    margin: 0 auto;
+    width: 50%;
+    height: fit-content;
+    max-height: 5rem;
+    background-color: white;
+    overflow: hidden;
+    overflow-y: auto;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.dataResult a {
+    border-bottom: 1px solid black;
+    display: block;
+    padding: 0.5rem 1rem;
+}

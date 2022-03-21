@@ -53,6 +53,8 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import CheckIcon from '@mui/icons-material/Check';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import SearchBar from '../components/searchBar/searchBar';
+import CourseData from '../components/courses/course-data';
 
 export default function Course() {
     
@@ -65,15 +67,9 @@ export default function Course() {
             rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") top/cover no-repeat` }}>
             <h1>TRAINING, EDUCATION, CERTIFICATION</h1>
           </div>
-          <div className='search-form'>
-
-            <button>Courses</button>
-            <input type="text" name="search-bar" />
-            <input type="submit" name="search-submit" id="search-submit" />
-            
-          </div>
+         <SearchBar/>
           <div className='main-container'>
-           <CourseSideBar/>
+           <CourseSideBar placeholder="find a course" data={CourseData}/>
 
             <div className='content-detail'>
               <div className='content-detail-flex'>
