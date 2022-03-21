@@ -46,9 +46,13 @@ export default Courses;
 
 
 import FeedBackForm from '../components/feedbackForm/feedbackForm';
+import CourseSideBar from '../components/courses/course-sidebar';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
-
+import ComputerIcon from '@mui/icons-material/Computer';
+import CastForEducationIcon from '@mui/icons-material/CastForEducation';
+import CheckIcon from '@mui/icons-material/Check';
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 
 export default function Course() {
     
@@ -69,44 +73,57 @@ export default function Course() {
             
           </div>
           <div className='main-container'>
-            <div className='sidebar'>
-              <h2>Online Courses</h2>
-              <ul>
-                <li><a href="#">Data Governance and Stewardship (Certified DGS Professional)</a></li>
-                <li><a href="#">Data Foundations/Data Literacy (Certified Business Intelligence Professional (CBIP, or Certified Data Professional - CDP))</a></li>
-                <li><a href="#">Data Management (Prepare for the CDMP )</a></li>
-                <li><a href="#">Data Modeling</a></li>
-                <li><a href="#">Certified Business Intelligence Professional (CBIP, or Certified Data Professional-CDP)</a></li>
-                <li><a href="#">Information Systems (Certified Business Intelligence Professional (CBIP, or Certified Data Professional))</a></li>
-                <li><a href="#">Business Intelligence and Data Analytics: (Certified Business Intelligence Professional (CBIP, or Certified Data Professional))</a></li>
-              </ul>
-
-            </div>
+           <CourseSideBar/>
 
             <div className='content-detail'>
-              <div className='course-card'>
-                <h2>Self Study Courses</h2>
-                <ul>
-                    <li>$595</li>
-                    <li>Start at Any Time</li>
-                    <li>Work at your own pace</li>
-                    <li>Ideal for Experienced Data Professionals</li>
-                </ul>
-                <Link to="#">Learn More &#62;</Link>
-              </div>
+              <div className='content-detail-flex'>
 
-              <div className='course-card'>
-                <h2>Instrutor-Led, Group Study-paced Learning</h2>
-               
-                <ul>
-                  <li>$1295</li>
-                  <li>Live Sessions </li>
-                  <li>Cohort Paced, 12 week program</li>
-                  <li>One hour weekly live discussion and Q&#38;A</li>
-                </ul>
-                <a href="#">More infor</a>
-              </div>
+                  <div className='course-card self-study'>
+                    <div className='icon'>
+                      <ComputerIcon className='title-icons'/>
+                    </div>
+                    <div className='course-card-content'>
+                      <h2>Self Study Courses</h2>
+                      <ul>
+                          <li><CheckIcon className='check-icon'/>$595</li>
+                          <li><CheckIcon className='check-icon'/>Start at Any Time</li>
+                          <li><CheckIcon className='check-icon'/>Work at your own pace</li>
+                          <li><CheckIcon className='check-icon'/>Ideal for Experienced Data Professionals</li>
+                      </ul>
+                      <Link to="#">Learn More &#62;</Link>
+                    </div>
+                  
+                  </div>
 
+                  <div className='course-card instuctor-led'>
+                    <div className='icon'>
+                      <CastForEducationIcon className='title-icons'/>
+                    </div>
+                    <div className='course-card-content'>
+                        <h2>Instrutor-Led, Group Study-paced Learning</h2>
+                      
+                      <ul>
+                        <li><CheckIcon className='check-icon'/>$1295</li>
+                        <li><CheckIcon className='check-icon'/>Live Sessions </li>
+                        <li><CheckIcon className='check-icon'/>Cohort Paced, 12 week program</li>
+                        <li><CheckIcon className='check-icon'/>One hour weekly live discussion and Q&#38;A</li>
+                      </ul>
+                      <a href="#">Learn More &#62;</a>
+                    </div>
+                  </div>
+              </div>
+              <div className='note'>
+                <div className='icon-container'>
+                  <AppRegistrationIcon className='note-icon'/>
+                 
+                </div>
+                <div className='note-content'>
+                 <p>
+                  To register for the Online course or self study program: purchase the course from the DAMA Edmonton Store and you will receive an email with the website, user name and password within 48 hours of payment.
+                  </p>
+                </div>
+              </div>
+         
             </div>
 
           </div>

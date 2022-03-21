@@ -88,16 +88,69 @@
                 border: 1px solid $dk-green;
                 margin: 2rem 1rem;
                 border-radius: 0.5rem;
-                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                padding: 1rem;
-
+                box-shadow: $box-bevel;
+                padding: 1rem 1rem 2rem 1rem;
+                background-color: $dk-blue;
+                color: $off-white;
+                .icon {
+                    margin: 0 auto;
+                    .title-icons {
+                        font-size: 10rem;
+                        color: $yellow;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                   
+                }
                 h2 {
                     padding-bottom: 1rem;
                 }
 
-                p {
-                    padding: 1rem 0;
+                ul {
+                    margin: 0;
+                    padding: 0 0 2rem 0;
+                    li {
+                    color: $off-white;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    .check-icon {
+                        color: $yellow;
+                        font-size: 2rem;
+                        margin-right: 1rem;
+                        }
+                    }
                 }
+                a {
+                    background-color: $yellow;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .note {
+                background-color: $dk-blue;
+                margin: 1rem;
+                border-radius: 0.5rem;
+                box-shadow: $box-bevel;
+                padding: 1rem 0.5rem;
+                .icon-container {
+                    .note-icon {
+                        font-size: 10rem;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        color: $yellow;
+                    }
+                }
+                p {
+                    padding: 1rem;
+                    color: $off-white;
+                    text-align: center;
+                }
+
+               
             }
         }
 
@@ -170,10 +223,15 @@
             justify-content: space-between;
             .sidebar {
                 display: block;
-                width: 45%;
+                width: 40%;
+                height: fit-content;
                 h2 {
                     font-size: 1rem;
                 }
+            }
+
+            .content-detail {
+                width: 60%;
             }
         }
 
@@ -189,12 +247,35 @@
                 width: 30%;
             }
             .content-detail {
-                display: flex;
-                justify-content: space-between;
-                div {
-                    width: 50%;
+                .content-detail-flex {
+                    .course-card {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 50%;
+                        margin-bottom: 4rem;
+                        .icon {
+                            margin-left: 0;
+                            margin-right: 0;
+                            position: relative;
+                            top: -4rem;
+                            left: -4rem;
+                            height: fit-content;
+                            
+                        }
+                        .course-card-content {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            a {
+                                width: fit-content;
+                            }
+                        }
+
+                    }
+                    
                 }
             }
+            
         }
     }
 }
@@ -210,6 +291,24 @@
             margin: 2rem auto;
             .sidebar {
                 width: 20%;
+            }
+
+            .content-detail {
+                width: 70%;
+                .content-detail-flex {
+                    display: flex;
+                    justify-content: space-between;
+                    .course-card {
+                        width: 48%;
+                        height: 35rem;
+                        margin-left: 2rem;
+                        margin-right: 2rem;
+                        .course-card-content {
+                            justify-content: space-between;
+                        }
+
+                    }
+                }
             }
         }
     }
