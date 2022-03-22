@@ -1,0 +1,315 @@
+.course-page-wrapper {
+
+    color: $dk-green;
+    li,a {
+        color: $dk-green;
+    }
+
+    .course-banner {
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 5rem 1rem;
+        }
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+
+        button, input {
+            margin: 1rem 0.5rem;
+            padding: 0.5rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 0.5rem;
+        }
+
+        input {
+            border: 1px solid $dk-green;
+        }
+
+        button {
+            background-color: $yellow;
+            border: none;
+        }
+
+        #search-submit {
+            display: none;
+        }
+    }
+
+    .main-container {
+        .sidebar {
+            border: 1px solid $dk-green;
+            margin: 2rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: $box-bevel;
+            display: none;
+            background-color: $dk-green;
+             li, a {
+                color: white;
+            }
+          
+            h2 {
+                text-align: center;
+                padding: 1rem;
+                background-color: $yellow;
+                border-radius: 0.5rem;
+            }
+
+            h2, li {
+                border-bottom: 1px solid white;
+            }
+
+            ul{
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    margin: 0;
+                    a {
+                        text-transform: none;
+                        display: block;
+                        padding: 1rem;
+                    }
+
+                    a:hover {
+                        background-color: $yellow;
+                        color: $dk-green;
+                    }
+                }
+            } 
+        }
+
+        .content-detail {
+            .course-card {
+                border: 1px solid $dk-green;
+                margin: 2rem 1rem;
+                border-radius: 0.5rem;
+                box-shadow: $box-bevel;
+                padding: 1rem 1rem 2rem 1rem;
+                background-color: $dk-blue;
+                color: $off-white;
+                .icon {
+                    margin: 0 auto;
+                    .title-icons {
+                        font-size: 10rem;
+                        color: $yellow;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                   
+                }
+                h2 {
+                    padding-bottom: 1rem;
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0 0 2rem 0;
+                    li {
+                    color: $off-white;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    .check-icon {
+                        color: $yellow;
+                        font-size: 2rem;
+                        margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    background-color: $yellow;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .note {
+                background-color: $dk-blue;
+                margin: 1rem;
+                border-radius: 0.5rem;
+                box-shadow: $box-bevel;
+                padding: 1rem 0.5rem;
+                .icon-container {
+                    .note-icon {
+                        font-size: 10rem;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        color: $yellow;
+                    }
+                }
+                p {
+                    padding: 1rem;
+                    color: $off-white;
+                    text-align: center;
+                }
+
+               
+            }
+        }
+
+      
+    }
+
+    .certification-content {
+        text-align: center;
+        padding: 3rem 1rem;
+        background-color: $dk-green;
+        h2 {
+            color: $yellow;
+            padding-bottom: 2rem;
+        }
+       
+        ul {
+            padding: 0;
+            margin:0;
+            li {
+                list-style: none;
+                padding: 1rem;
+                color: white;
+                a {
+                    color: white;
+                    text-transform: none;
+                    padding: 0 0.5rem;
+                    .call-icon, .email-icon {
+                        color: $yellow;
+                        
+                    }
+                }
+                a:hover {
+                    text-decoration: underline;
+                    
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+    .course-page-wrapper {
+        .course-banner {
+            h1 {
+                padding-top: 10rem;
+                padding-bottom: 10rem;
+                font-size: 2rem;
+            }
+        }
+
+        .search-form {
+            width: 80%;
+            margin: 0 auto;
+            button {
+                display: none;
+            }
+
+            #search-submit {
+                display: block;
+                width: fit-content;
+                background-color: $yellow;
+                border: none;
+                font-weight: bold;
+            }
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            .sidebar {
+                display: block;
+                width: 40%;
+                height: fit-content;
+                h2 {
+                    font-size: 1rem;
+                }
+            }
+
+            .content-detail {
+                width: 60%;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    .course-page-wrapper {
+
+        .main-container {
+            .sidebar {
+                width: 30%;
+            }
+            .content-detail {
+                .content-detail-flex {
+                    .course-card {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 50%;
+                        margin-bottom: 4rem;
+                        .icon {
+                            margin-left: 0;
+                            margin-right: 0;
+                            position: relative;
+                            top: -4rem;
+                            left: -4rem;
+                            height: fit-content;
+                            
+                        }
+                        .course-card-content {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            a {
+                                width: fit-content;
+                            }
+                        }
+
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .course-page-wrapper {
+        .search-form {
+            width: 50%;
+        }
+
+        .main-container {
+            max-width: 1600px;
+            margin: 2rem auto;
+            .sidebar {
+                width: 20%;
+            }
+
+            .content-detail {
+                width: 70%;
+                .content-detail-flex {
+                    display: flex;
+                    justify-content: space-between;
+                    .course-card {
+                        width: 48%;
+                        height: 35rem;
+                        margin-left: 2rem;
+                        margin-right: 2rem;
+                        .course-card-content {
+                            justify-content: space-between;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+/*
 import axios from 'axios';
 
 class Courses extends React.Component {
@@ -39,3 +42,105 @@ class Courses extends React.Component {
 }
 
 export default Courses;
+*/
+
+
+import FeedBackForm from '../components/feedbackForm/feedbackForm';
+import CourseSideBar from '../components/courses/course-sidebar';
+import CallIcon from '@mui/icons-material/Call';
+import EmailIcon from '@mui/icons-material/Email';
+import ComputerIcon from '@mui/icons-material/Computer';
+import CastForEducationIcon from '@mui/icons-material/CastForEducation';
+import CheckIcon from '@mui/icons-material/Check';
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import SearchBar from '../components/searchBar/searchBar';
+import CourseData from '../components/courses/course-data';
+
+export default function Course() {
+    
+
+    return (
+      
+        <>
+        <div className="course-page-wrapper">
+          <div className='course-banner' style={{background: `linear-gradient(rgba(255,255,255,0.6),
+            rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") top/cover no-repeat` }}>
+            <h1>TRAINING, EDUCATION, CERTIFICATION</h1>
+          </div>
+         <SearchBar/>
+          <div className='main-container'>
+           <CourseSideBar placeholder="find a course" data={CourseData}/>
+
+            <div className='content-detail'>
+              <div className='content-detail-flex'>
+
+                  <div className='course-card self-study'>
+                    <div className='icon'>
+                      <ComputerIcon className='title-icons'/>
+                    </div>
+                    <div className='course-card-content'>
+                      <h2>Self Study Courses</h2>
+                      <ul>
+                          <li><CheckIcon className='check-icon'/>$595</li>
+                          <li><CheckIcon className='check-icon'/>Start at Any Time</li>
+                          <li><CheckIcon className='check-icon'/>Work at your own pace</li>
+                          <li><CheckIcon className='check-icon'/>Ideal for Experienced Data Professionals</li>
+                      </ul>
+                      <Link to="#">Learn More &#62;</Link>
+                    </div>
+                  
+                  </div>
+
+                  <div className='course-card instuctor-led'>
+                    <div className='icon'>
+                      <CastForEducationIcon className='title-icons'/>
+                    </div>
+                    <div className='course-card-content'>
+                        <h2>Instrutor-Led, Group Study-paced Learning</h2>
+                      
+                      <ul>
+                        <li><CheckIcon className='check-icon'/>$1295</li>
+                        <li><CheckIcon className='check-icon'/>Live Sessions </li>
+                        <li><CheckIcon className='check-icon'/>Cohort Paced, 12 week program</li>
+                        <li><CheckIcon className='check-icon'/>One hour weekly live discussion and Q&#38;A</li>
+                      </ul>
+                      <a href="#">Learn More &#62;</a>
+                    </div>
+                  </div>
+              </div>
+              <div className='note'>
+                <div className='icon-container'>
+                  <AppRegistrationIcon className='note-icon'/>
+                 
+                </div>
+                <div className='note-content'>
+                 <p>
+                  To register for the Online course or self study program: purchase the course from the DAMA Edmonton Store and you will receive an email with the website, user name and password within 48 hours of payment.
+                  </p>
+                </div>
+              </div>
+         
+            </div>
+
+          </div>
+
+          <div className='certification-content'>
+            <h2>Certification Examinations</h2>
+          
+              <ul>
+                <li><a href="#"><CallIcon className='call-icon'/> 1.800.843.8227 </a> to schedule a date and time to take the Data Governance and Stewardship Professional examination or </li>
+                <li><a href="#"><EmailIcon className='email-icon'/> damaedmonton@gmail.com </a> with your preferred dates for an online proctored examination. </li>
+              </ul>
+          </div>
+
+        </div>
+
+        <div className='feedback'>
+          <FeedBackForm/>
+        </div>
+        </>
+    )
+}
+
+
+
