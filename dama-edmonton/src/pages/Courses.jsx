@@ -69,7 +69,7 @@ export default function Course() {
           </div>
          <SearchBar/>
           <div className='main-container'>
-           <CourseSideBar placeholder="find a course" data={CourseData}/>
+           <CourseSideBar />
 
             <div className='content-detail'>
               <div className='content-detail-flex'>

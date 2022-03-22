@@ -3,7 +3,7 @@ import './searchBar.css';
 import CourseData from "../courses/course-data";
 import { Link } from "react-router-dom";
 
-export default function SearchBar({placeholder, data}){
+export default function SearchBar(){
     
     const [filteredData, setFilterData] = useState([]);
     const handleFilter = (event) => {
@@ -23,7 +23,7 @@ export default function SearchBar({placeholder, data}){
         <div className='search-form'>
 
             <button>Courses</button>
-            <input type="text" name="search-bar" placeholder={placeholder} onChange={handleFilter}/>
+            <input type="text" name="search-bar" placeholder="Find a course" onChange={handleFilter}/>
             <input type="submit" name="search-submit" id="search-submit" value="Search"/>
             
         </div>
