@@ -33,6 +33,7 @@ $title-font: ethnocentric, sans-serif;
 // text shadows
 
 $txt-shadow-white: 3px 2px 4px #f2f2f2;
+$txt-shadow-lt: 2px 2px 8px #D3D3D3;
 $txt-shadow-dk: 3px 2px 4px #0f0f0f;
 
 // box shadows
@@ -56,6 +57,8 @@ $box-embed: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
             rgba(0, 0, 0, 0.25) 8px -8px 4px 8px,
             rgba(0, 0, 0, 0.25) -8px 8px 4px 8px,
             rgba(0, 0, 0, 0.25) 8px 8px 4px 8px;
+
+$box-shadow-sm: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
             
 
 
