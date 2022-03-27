@@ -1,10 +1,12 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import CourseSideBar from './course-sidebar';
 import CourseData from './course-data';
+import CartContext from '../../context/cart/CartContext';
 
 
-export default function CourseDetail() {
+export default function CourseDetail({obj}) {
+    const { addToCart } = useContext(CartContext)
     const {id} = useParams();
     console.log(id);
     const selectedCourse = CourseData.filter(obj => obj.id === id);
@@ -30,7 +32,8 @@ export default function CourseDetail() {
                                     <h3>{obj.courseInstructor}</h3>
                                     <p>{obj.startDate}</p>
                                     <p>{obj.courseDetail}</p>
-                                    <Link to="#">Register</Link>
+                                    <Link to="#" id="selfStudy" onClick={ () => addToCart(obj)}>Enroll - Self Study</Link>
+                                    <Link to="#" id="instructorLead">Enroll - Instructor Lead</Link>
                                 </div>
                             </div>
                         </div>

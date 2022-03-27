@@ -54,7 +54,7 @@ import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import CheckIcon from '@mui/icons-material/Check';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import SearchBar from '../components/searchBar/searchBar';
-import CourseData from '../components/courses/course-data';
+import courses from '../components/courses/course-data';
 
 export default function Course() {
     
