@@ -20,24 +20,20 @@ const center = {
   const apiOptions = {
     "id": 'google-map-script',
     "version": "beta",
-    "map_ids": ["464549dbb388e9d5"],
     "googleMapsApiKey": "AIzaSyBFSv_RLHmQWzknsUzQBzdz3f3C4f_DzDw",
   };
 
+
   const mapOptions = {
-  "tilt": 0,
-  "heading": 0,
-  "mapId": "2e8585d53d21223e",
-   keyboardShortcuts: false,
-   "center": { lat: 53.56851332068016, lng: -113.49961975803355 }
+    "tilt": 0,
+    "heading": 0,
+    "zoom": 18,
+    "mapId": "464549dbb388e9d5",
+    keyboardShortcuts: false,
+    "center": { lat: 53.56851332068016, lng: -113.49961975803355 }
 }
 
-const cameraOptions = {
-  tilt: 0,
-  heading: 0,
-  zoom: 18,
-  center: { lat: 53.56851332068016, lng: -113.49961975803355 },
-};
+
 
 function GoogleMapLoader() {
 
@@ -61,6 +57,7 @@ function GoogleMapLoader() {
     function initWebGLOverlayView (map) {
         const webglOverlayView = new window.google.maps.WebGLOverlayView();
         let scene, renderer, camera, loader;
+
         // WebGLOverlayView code goes here
       
         webglOverlayView.onAdd = () => {
@@ -73,12 +70,13 @@ function GoogleMapLoader() {
             scene.add(directionalLight);
       
             loader = new GLTFLoader();
-            const source = 'pin.gltf';
+            const source = process.env.PUBLIC_URL + `/assets/models/pin.glb`;
             loader.load(
               source,
               gltf => {
                 gltf.scene.scale.set(25,25,25);
                 gltf.scene.rotation.x = 180 * Math.PI/180;
+                gltf.scene.position.z = -40
                 scene.add(gltf.scene);
               }
             );
