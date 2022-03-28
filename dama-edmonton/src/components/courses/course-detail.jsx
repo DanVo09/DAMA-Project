@@ -2,11 +2,17 @@ import React, { useState, useEffect, useContext} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import CourseSideBar from './course-sidebar';
 import CourseData from './course-data';
+<<<<<<< Updated upstream
 import CartContext from '../../context/cart/CartContext';
 import SearchBar from '../searchBar/searchBar';
 
 export default function CourseDetail({obj}) {
     const { addToCart } = useContext(CartContext)
+=======
+import SearchBar from '../searchBar/searchBar';
+
+export default function CourseDetail() {
+>>>>>>> Stashed changes
     const {id} = useParams();
     console.log(id);
     const selectedCourse = CourseData.filter(obj => obj.id === id);
@@ -26,6 +32,7 @@ export default function CourseDetail({obj}) {
         <div className="course-detail-page-wrapper">
             <SearchBar/>
             <div className='main-container'>
+               
                 <CourseSideBar/>
                 
                 {selectedCourse.map((obj, id) => {
@@ -51,7 +58,11 @@ export default function CourseDetail({obj}) {
                     )
                 })}
 
+<<<<<<< Updated upstream
                 <div className='test-data'>
+=======
+<               div className='test-data'>
+>>>>>>> Stashed changes
                     <h3>Test Data from Laravel</h3>
                     {
                         data.map((item)=>
@@ -64,7 +75,12 @@ export default function CourseDetail({obj}) {
                         )
                     }
                 </div>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             </div>
+            
         </div> 
         </>
     )

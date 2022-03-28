@@ -22,11 +22,19 @@ export default function SearchBar(){
         }
        
     };
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     const CloseInput = () => {
         setFilterData([]);
         setWordEnter("");
     }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     return(
         <>
         <div className='search-form'>
@@ -52,7 +60,7 @@ export default function SearchBar(){
                     )
                 })}
             </div>
-        )};
+        )}
        
         </>
     )

@@ -2,7 +2,11 @@ import React, { useState, useEffect} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import EventSideBar from './event-sidebar';
 import EventData from './event-data';
+<<<<<<< Updated upstream
 import EventSearchBar from './event-searchbar';
+=======
+import EventSearchBar from '../searchBar/event-searchBar';
+>>>>>>> Stashed changes
 
 export default function EventDetail() {
     const {id} = useParams();

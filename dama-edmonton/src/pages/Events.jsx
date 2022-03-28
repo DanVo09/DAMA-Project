@@ -8,7 +8,11 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 import FeedBackForm from '../components/feedbackForm/feedbackForm';
 import EventSideBar from '../components/Events/event-sidebar';
+<<<<<<< Updated upstream
 import EventSearchBar from '../components/Events/event-searchbar';
+=======
+import EventSearchBar from '../components/searchBar/event-searchBar';
+>>>>>>> Stashed changes
 
 export default function EventPages() {
 
@@ -21,9 +25,17 @@ export default function EventPages() {
                 rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") top/cover no-repeat` }}>
                 <h1>EVENTS - PAST AND PRESENT</h1>
             </div>
+<<<<<<< Updated upstream
             <EventSearchBar/>
             <div className='main-content'>
                 <EventSideBar/>
+=======
+            
+            <EventSearchBar/>
+
+            <div className='main-content'>
+               <EventSideBar/>
+>>>>>>> Stashed changes
 
                 <div className='event-list'>
                     <h2>Upcoming Events</h2>
