@@ -17,7 +17,7 @@ import Footer from './components/footer/footer';
 import Dashboard from "./pages/Dashboard";
 import CourseDetail from './components/courses/course-detail';
 import Navbar from './components/navbar/NavBar'
-import EventDetail from './components/Events/event-detail';
+
 
 function App() {
   return (
@@ -32,11 +32,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />}/> 
             <Route path="/newsletter" element={<Newsletter />}/> 
             <Route path="/events" exact element={<EventPages />}/> 
-<<<<<<< Updated upstream
-            <Route path="/events/:id" element={<EventDetail />}/>
-=======
             <Route path="/events/:id" element={<EventDetail />}/> 
->>>>>>> Stashed changes
             <Route path="/courses/:id" element={<CourseDetail />}/> 
             <Route path="/courses" exact element={<Courses />}/> 
             <Route path="/contact" element={<Contact />}/>

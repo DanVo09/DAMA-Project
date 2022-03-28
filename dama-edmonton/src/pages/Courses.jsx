@@ -55,10 +55,6 @@ import CheckIcon from '@mui/icons-material/Check';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import SearchBar from '../components/searchBar/searchBar';
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 export default function Course() {
     
