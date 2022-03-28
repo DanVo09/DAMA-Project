@@ -21,30 +21,61 @@
     overflow-y: scroll;
     padding-bottom: 8rem;
     
+    .memberships {
+        h2, h3, p {
+            text-align: center;
+        }
 
-    .membership-card {
-        border: 1px solid black;
-        text-align: center;
-        margin-bottom: 1rem;
-        border-radius: 2.85rem;
-        // box-shadow: $box-embed;
-    }
-    
-    .membership-card div {
-        padding: 1rem;
-    }
-    
-    .membership-card div:first-of-type {
-        background: cadetblue;
-        border-radius: 2.85em 2.85em 0 0;
-    }
+        h2 {
+            text-transform: uppercase;
+        }
+        
+        margin-top: 4rem;
 
-    .purchase-membership {
-        background-color: #058ED9;
-        width: 18rem;
-        margin-top: 2rem;
-        // float: right;
-        box-shadow: $box-bevel;
+        div.membership-card {
+            padding: 1rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            border-radius: 0.5rem;
+            background-color: $dk-green;
+            box-shadow: $box-bevel;
+
+            p{
+                color: white;
+                padding: 0 1rem 1rem 1rem;
+                text-align: left;
+            }
+
+            div {
+                background-color: $yellow;
+                border-radius: 0.5rem;
+                padding: 0.5rem 1rem;
+                width: 80%;
+                margin: 0 auto;
+                position: relative;
+                top: -2.5rem;
+                box-shadow: $box-bevel;
+                
+                h3 {
+                    color: #07342A;
+                }
+
+                p {
+                    text-align: center;
+                    color: #07342A;
+                }
+            }
+
+            div.purchase {
+                text-align: center;
+                top: auto;
+                bottom: 0;
+
+                a {
+                    color: #07342A;
+                }
+            }
+        }
     }
 
 }
@@ -52,7 +83,7 @@
 @media screen and (min-width: 750px) {
     .individual-memberships {
         display: grid;
-        grid-template-columns: 45% 45%;
+        grid-template-columns: 30% 30%;
         gap: 1rem;
     }
     
