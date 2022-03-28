@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import EventSideBar from './event-sidebar';
 import EventData from './event-data';
-import EventSearchBar from '../searchBar/event-searchBar';
+import EventSearchBar from './event-searchbar';
 
 export default function EventDetail() {
     const {id} = useParams();

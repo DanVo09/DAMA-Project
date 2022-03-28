@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import CourseSideBar from './course-sidebar';
 import CourseData from './course-data';
 import CartContext from '../../context/cart/CartContext';
-
+import SearchBar from '../searchBar/searchBar';
 
 export default function CourseDetail({obj}) {
     const { addToCart } = useContext(CartContext)
@@ -12,9 +12,19 @@ export default function CourseDetail({obj}) {
     const selectedCourse = CourseData.filter(obj => obj.id === id);
     console.log(selectedCourse);
 
+    const [data, setData] = useState([]);
+    useEffect(async ()=> {
+        let result = await fetch("http://127.0.0.1:8000/api/courselist");
+        result =await result.json();
+        setData(result);
+
+    },[])
+    console.warn("result", data)
+
     return (
         <> 
         <div className="course-detail-page-wrapper">
+            <SearchBar/>
             <div className='main-container'>
                 <CourseSideBar/>
                 
@@ -40,6 +50,20 @@ export default function CourseDetail({obj}) {
 
                     )
                 })}
+
+                <div className='test-data'>
+                    <h3>Test Data from Laravel</h3>
+                    {
+                        data.map((item)=>
+                            <div>
+                                <p>Course ID: {item.course_id}</p>
+                                <p>Course name: {item.course_name}</p>
+                                <p>Course description: {item.course_description}</p>
+                                <p>Course price: {item.course_price}</p>
+                            </div>
+                        )
+                    }
+                </div>
             </div>
         </div> 
         </>

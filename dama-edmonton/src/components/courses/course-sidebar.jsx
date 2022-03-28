@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import CourseData from "./course-data";
+import './course-sidebar.css';
 
 export default function CourseSideBar() {
     
