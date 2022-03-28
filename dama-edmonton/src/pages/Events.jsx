@@ -1,18 +1,13 @@
 
-import React, {useState} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import Events from '../components/eventCard/dummyData';
-
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import RemoveIcon from '@mui/icons-material/Remove';
 
 import FeedBackForm from '../components/feedbackForm/feedbackForm';
 import EventSideBar from '../components/Events/event-sidebar';
 import EventSearchBar from '../components/Events/event-searchbar';
 
 export default function EventPages() {
-
-    const [events, setEvents] = useState([])
     
     return (
         <>
