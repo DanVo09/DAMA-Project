@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Courses from "./pages/Courses";
 import EventPages from './pages/Events';
+import EventDetail from './components/Events/event-detail';
 import Newsletter from "./pages/NewsLetter";
 import Register from "./pages/SignUp";
 import Memberships from "./pages/Memberships";
@@ -31,6 +32,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />}/> 
             <Route path="/newsletter" element={<Newsletter />}/> 
             <Route path="/events" exact element={<EventPages />}/> 
+            <Route path="/events/:id" element={<EventDetail />}/> 
             <Route path="/courses/:id" element={<CourseDetail />}/> 
             <Route path="/courses" exact element={<Courses />}/> 
             <Route path="/contact" element={<Contact />}/>

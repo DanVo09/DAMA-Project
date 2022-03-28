@@ -7,7 +7,9 @@ const CourseData = [
         courseTitle: "Data Governance and Stewardship (Certified DGS Professional)",
         courseInstructor: "Jon Snow",
         startDate: "May 17th, 2022 | 12:00",
-        courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        selfStudyPrice: '$595',
+        courseLedPrice: '$1295'
     },
 
     {
@@ -16,7 +18,9 @@ const CourseData = [
         courseTitle: "Data Foundations/Data Literacy (Certified Business Intelligence Professional (CBIP, or Certified Data Professional - CDP))",
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
-        courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        courseDetail: "Data Foundations/Data Literacy (Certified Business Intelligence Professional (CBIP, or Certified Data Professional - CDP))",
+        selfStudyPrice: '$595',
+        courseLedPrice: '$1295'
     },
 
     {
@@ -25,7 +29,9 @@ const CourseData = [
         courseTitle: "Data Management (Prepare for the CDMP )",
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
-        courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        selfStudyPrice: '$595',
+        courseLedPrice: '$1295'
     },
 
     {
@@ -34,7 +40,9 @@ const CourseData = [
         courseTitle: "Data Modeling (Certified Business Intelligence Professional (CBIP, or Certified Data Professional-CDP))",
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
-        courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        selfStudyPrice: '$595',
+        courseLedPrice: '$1295'
     },
 
     {
@@ -43,7 +51,9 @@ const CourseData = [
         courseTitle: "Information Systems (Certified Business Intelligence Professional (CBIP, or Certified Data Professional))",
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
-        courseDetail: "Certified Business Intelligence Professional (CBIP, or Certified Data Professional-CDP)"
+        courseDetail: "Certified Business Intelligence Professional (CBIP, or Certified Data Professional-CDP)",
+        selfStudyPrice: '$595',
+        courseLedPrice: '$1295'
     },
 
     {
@@ -52,7 +62,9 @@ const CourseData = [
         courseTitle: "Business Intelligence & Data Analytics: (Certified Business Intelligence Professional (CBIP, or Certified Data Professional))",
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
-        courseDetail: "Certified Business Intelligence Professional (CBIP, or Certified Data Professional-CDP)"
+        courseDetail: "Certified Business Intelligence Professional (CBIP, or Certified Data Professional-CDP)",
+        selfStudyPrice: '$595',
+        courseLedPrice: '$1295'
     }
 ]
 
