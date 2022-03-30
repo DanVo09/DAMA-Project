@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use Illuminate\Http\Request;
-use app\Models\Event;
-
+use App\Event;
 
 class EventController extends Controller
 {
@@ -32,9 +31,5 @@ class EventController extends Controller
 
 
 
-    }
-
-    public function list() {
-        return Event::all();
     }
 }
