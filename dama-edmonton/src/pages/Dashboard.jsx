@@ -13,19 +13,12 @@ export default function Dashboard() {
     return (
         <div className='dashboard-page'>
           <aside className='dashboard-sidebar'>
-            <a href="#" className='sidebar-dk'><UploadFileIcon className="cart-icon"/>Upload Files</a>
-            <a href="#" className='sidebar-mb' title='Upload Files'><UploadFileIcon className="cart-icon"/></a>
-
-            <a href="#" className='sidebar-dk'><BookOutlinedIcon className="cart-icon"/>Your Courses</a>
-            <a href="#" className='sidebar-mb' title='Your Courses'><BookOutlinedIcon className="cart-icon"/></a>
-
-            <a href="#" className='sidebar-dk'><CalendarTodayIcon className="cart-icon"/>Your Events</a>
-            <a href="#" className='sidebar-mb' title='Your Events'><CalendarTodayIcon className="cart-icon"/></a>
-
-            <a href="#" className='sidebar-dk'><WorkOutlineIcon className="cart-icon"/>Job Postings</a>
-            <a href="#" className='sidebar-mb' title='Job Postings'><WorkOutlineIcon className="cart-icon"/></a>
+            <a href="#" className='sidebar-icon'><UploadFileIcon className="upload-icon"/><p>Upload Files</p></a>
+            <a href="#" className='sidebar-icon'><BookOutlinedIcon className="courses-icon"/><p>Your Courses</p></a>
+            <a href="#" className='sidebar-icon'><CalendarTodayIcon className="calendar-icon"/><p>Your Events</p></a>
+            <a href="#" className='sidebar-icon'><WorkOutlineIcon className="job-icon"/><p>Job Postings</p></a>
           </aside>
-          <div>
+          <div className='dashboard-cards'>
             <section className='user-profile'>
               <img src="https://picsum.photos/360/360" alt="User profile image" />
               <h3>User Email</h3>
