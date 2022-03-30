@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Events from '../components/eventCard/dummyData';
+import EventData from '../components/Events/event-data';
 
 import FeedBackForm from '../components/feedbackForm/feedbackForm';
 import EventSideBar from '../components/Events/event-sidebar';
@@ -24,7 +24,7 @@ export default function EventPages() {
                 <div className='event-list'>
                     <h2>Upcoming Events</h2>
                     <div className='event-flex'>
-                    {Events.map((obj, id) => {
+                    {EventData.map((obj, id) => {
                  
                         return(
                             
@@ -38,7 +38,7 @@ export default function EventPages() {
                                         <h3>{obj.eventSpeaker}</h3>
                                         <h4>{obj.eventDate}</h4>
                                         <p>{obj.eventDetail}</p>
-                                        <Link to="/events">Learn More/Register</Link>
+                                        <Link to={`/events/${obj.id}`} >Learn More/Register</Link>
                                     </div>
                                 </div>
                             </div>

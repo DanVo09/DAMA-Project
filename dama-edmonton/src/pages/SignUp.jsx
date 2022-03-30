@@ -40,8 +40,8 @@ export default function Register() {
     
     return (
         <>
-          <div className="signup-container">
-            <h1>Register Form</h1>
+          <div className="login-form-container">
+            <h1>Register A New Account</h1>
                 
                 <div class="form">    
                     <label for="name">Full Name</label>

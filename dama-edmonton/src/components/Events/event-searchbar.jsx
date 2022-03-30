@@ -1,9 +1,9 @@
 
 import React, {useState} from "react";
-import Events from "../eventCard/dummyData";
 import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
+import EventData from "./event-data";
 
 export default function EventSearchBar(){
     
@@ -12,7 +12,7 @@ export default function EventSearchBar(){
     const handleFilter = (event) => {
         const searchWord = event.target.value;
         setWordEnter(searchWord);
-        const newFilter = Events.filter((value)=>{
+        const newFilter = EventData.filter((value)=>{
             return value.eventTitle.toLowerCase().includes(searchWord.toLowerCase());
         });
         if(searchWord===""){

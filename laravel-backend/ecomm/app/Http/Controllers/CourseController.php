@@ -69,12 +69,6 @@ class CourseController extends Controller
 
     }
 
-    public function courselist(){
-
-         return Course::all();
-        
-    }
-
     
 
 }
