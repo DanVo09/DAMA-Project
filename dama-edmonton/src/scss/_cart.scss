@@ -1,0 +1,19 @@
+.cart-wrapper {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 12px;
+    background-color: tomato;
+    color: black;
+    border: 1px solid gray;
+    padding: 10px;
+    z-index: 10;
+
+    .cart-inner-wrapper {
+        height: max-content;
+        background-color: tomato;
+        color: black;
+        max-height: 50vh;
+        overflow-y: auto;
+    }
+}
