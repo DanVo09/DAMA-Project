@@ -4,6 +4,8 @@ import CourseSideBar from './course-sidebar';
 import CourseData from './course-data';
 import CartContext from '../../context/cart/CartContext';
 import SearchBar from '../searchBar/searchBar';
+import CurrencyFormat from 'react-currency-format';
+
 
 export default function CourseDetail({obj}) {
     const { addToCart } = useContext(CartContext)
@@ -56,8 +58,8 @@ export default function CourseDetail({obj}) {
                                     <h3>{obj.courseInstructor}</h3>
                                     <p>{obj.startDate}</p>
                                     <p>{obj.courseDetail}</p>
-                                    <Link to="#" id="selfStudy" onClick={ () => addToCart(obj)}>Enroll - Self Study</Link>
-                                    <Link to="#" id="instructorLead">Enroll - Instructor Lead</Link>
+                                    <Link to="#" id="selfStudy" onClick={ () => addToCart(obj)}>Enroll</Link>
+                                   
                                 </div>
                             </div>
                         </div>

@@ -8,7 +8,6 @@ export default function Navbar() {
   
     
     const { cartItems, showHideCart } = useContext( CartContext );
-    console.log(showHideCart)
     console.log(cartItems)
     const navigate = useNavigate();
 
