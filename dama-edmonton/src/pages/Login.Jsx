@@ -41,7 +41,7 @@ export default function Login() {
             <div className="login-form-container">
                 <h1>Sign in to Your Account</h1>
                 
-                <div class="form">    
+                <div class="form">
                     <label for="email">Email</label>
                     <input type="text" onChange={(e)=>setEmail(e.target.value)} name="email" placeholder='Email or Username'/>
                     <label for="name">Password</label>
