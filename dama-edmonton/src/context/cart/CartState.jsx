@@ -20,8 +20,11 @@ const CartState = ({children}) => {
         dispatch({ type: SHOW_HIDE_CART });
       };
 
-    const removeItem = id => {
+    const removeItem = (id) => {
         dispatch({type: REMOVE_ITEM, payload: id})
+        const savedItems = JSON.parse(localStorage.getItem("cartItems"))
+        const newItems = savedItems.filter((item) => item.id !== id);
+        localStorage.setItem("cartItems", JSON.stringify(newItems));
     }
 
     const getCartItems = () => {

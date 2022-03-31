@@ -2,14 +2,14 @@ import React, {useContext} from 'react'
 import CartContext from '../context/cart/CartContext'
 import CurrencyFormat from 'react-currency-format';
 
-import CartItem from '../components/cartItem/CartItem'
+
 
 
 export default function Checkout() {
 
     const { cartItems } = useContext(CartContext)
-    const checkoutItems = [];
-    console.log( cartItems )
+    
+    
     
 
     return (
@@ -31,11 +31,11 @@ export default function Checkout() {
                         </div>
                         <div className="form-control">
                             <label htmlFor="phoneNumber" className='form-label'> <span className="required">*</span>Phone number</label>
-                            <input type="tel:" name="phoneNumber"  className='form-input' aria-required={true} required value="(123) 456-7890"/>
+                            <input type="tel:" name="phoneNumber"  className='form-input' aria-required={true} required defaultValue="(123) 456-7890"/>
                         </div>
                         <div className="form-control">
                             <label htmlFor="email" className='form-label'> <span className="required">*</span>Last Name</label>
-                            <input type="mailto:" name="email"  className='form-input' aria-required={true} required value="janesmith@gmail.com"/>
+                            <input type="mailto:" name="email"  className='form-input' aria-required={true} required defaultValue="janesmith@gmail.com"/>
                         </div>
                     </form>
                 </div>
