@@ -17,24 +17,25 @@ const CartState = ({children}) => {
     }
 
     const showHideCart = () => {
-        dispatch({Type: SHOW_HIDE_CART})
-    }
+        dispatch({ type: SHOW_HIDE_CART });
+      };
 
     const removeItem = id => {
         dispatch({type: REMOVE_ITEM, payload: id})
     }
 
     return (
-        <CartContext.Provider value={{
+        <CartContext.Provider
+        value={{
             showCart: state.showCart,
             cartItems: state.cartItems,
             addToCart,
             showHideCart,
-            removeItem
-
-        }}>
-            {children}    
-        </CartContext.Provider>
+            removeItem,
+        }}
+        >
+        {children}
+    </CartContext.Provider>
     )
 }
 

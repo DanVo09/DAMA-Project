@@ -16,13 +16,15 @@ import Memberships from "./pages/Memberships";
 import Footer from './components/footer/footer';
 import Dashboard from "./pages/Dashboard";
 import CourseDetail from './components/courses/course-detail';
-import Navbar from './components/navbar/NavBar'
+import Navbar from './components/navbar/NavBar';
+import Cart from './components/cart/Cart';
 
 
 function App() {
   return (
     <Router>
         <Navbar/> 
+        <Cart />
         <Routes>   
             <Route index element={<HomePage />}/>
             <Route path="/login" element={<Login />}/> 
