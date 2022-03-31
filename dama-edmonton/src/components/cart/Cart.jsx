@@ -1,4 +1,5 @@
 import React, {useContext} from 'react'
+import {Link} from 'react-router-dom'
 import CartContext from '../../context/cart/CartContext'
 import CurrencyFormat from 'react-currency-format';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
@@ -26,10 +27,10 @@ export default function Cart() {
                     </div>
                     <div className="cart-total">
                         <h3>Cart Total</h3>
-                        <div></div>
                         <div className="cart-currency">
                             <CurrencyFormat value={cartItems.reduce((amount, item) => amount + item.price, 0)}displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
                         </div>
+                        <Link className="checkOut-btn" to="/checkout" onClick="window.location.reload();">Proceed to Checkout</Link>
                     </div>
                 </div>
                

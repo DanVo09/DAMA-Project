@@ -68,11 +68,29 @@
     .cart-total {
         margin-top: 4rem;
         text-align: center;
+        
 
         .cart-currency {
             color: $yellow;
             font-weight: bold;
             font-size: 1.35rem;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 0.15rem dotted $lt-green;
+        }
+
+        .checkOut-btn {
+            @extend %btn;
+            background-color: $yellow;
+            color: $dk-green;
+            box-shadow: $box-bevel;
+
+            &:hover{
+                background-color: $dk-green;
+                color: $yellow;
+            }
         }
     }
+
+
 }
