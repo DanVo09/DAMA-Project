@@ -27,8 +27,9 @@ function App() {
   return (
     <Router>
         <Navbar/> 
-        <Cart />
-        <Routes>   
+       
+        <Routes>  
+             
             <Route index element={<HomePage />}/>
             <Route path="/login" element={<Login />}/> 
             <Route path="/aboutus" element={<About />}/>

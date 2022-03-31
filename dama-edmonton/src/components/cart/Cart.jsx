@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import CartContext from '../../context/cart/CartContext'
 import CurrencyFormat from 'react-currency-format';
@@ -8,7 +8,11 @@ import CartItem from '../cartItem/CartItem'
 
 export default function Cart() {
     
-    const { cartItems, showCart, showHideCart } = useContext(CartContext)
+    const { cartItems, showCart, showHideCart, getCartItems } = useContext(CartContext)
+
+    useEffect(() => {
+        getCartItems();
+    }, [])
     
 
     return (

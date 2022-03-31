@@ -2,8 +2,14 @@ import React, {useContext} from 'react'
 import CartContext from '../context/cart/CartContext'
 import CurrencyFormat from 'react-currency-format';
 
+import CartItem from '../components/cartItem/CartItem'
+
 
 export default function Checkout() {
+
+    const { cartItems } = useContext(CartContext)
+    const checkoutItems = [];
+    console.log( cartItems )
     
 
     return (

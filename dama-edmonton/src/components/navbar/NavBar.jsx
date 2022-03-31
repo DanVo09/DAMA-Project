@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import {Link, useNavigate} from 'react-router-dom';
 import CartContext from '../../context/cart/CartContext';
+import Cart from '../cart/Cart';
 
 export default function Navbar() {
 
@@ -97,6 +98,7 @@ export default function Navbar() {
                     </div>
                 </div>
            </header>
+           <Cart/>
         </>
     )
 }

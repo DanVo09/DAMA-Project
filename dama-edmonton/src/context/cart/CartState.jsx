@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import CartContext from './CartContext'
 import CartReducer from './CartReducer'
-import { SHOW_HIDE_CART, ADD_TO_CART, REMOVE_ITEM } from '../Types'
+import { SHOW_HIDE_CART, ADD_TO_CART, REMOVE_ITEM, GET_ITEM } from '../Types'
 
 const CartState = ({children}) => {
 
@@ -24,6 +24,26 @@ const CartState = ({children}) => {
         dispatch({type: REMOVE_ITEM, payload: id})
     }
 
+    const getCartItems = () => {
+        if (localStorage.hasOwnProperty("cartItems")) {
+            const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
+            dispatch({ type: GET_ITEM, payload: storedCartItems });
+          }
+    }
+
+    const addCartToStorage = (item) => {
+        const savedItems = JSON.parse(localStorage.getItem("cartItems"))
+        if (savedItems === null){
+            const newItems = [item]
+            localStorage.setItem("cartItems", JSON.stringify(newItems))
+        } else {
+            const newItems = [item, ...savedItems]
+            localStorage.setItem("cartItems", JSON.stringify(newItems))
+        }
+
+        dispatch({ type: ADD_TO_CART, payload: item})
+    }
+
     return (
         <CartContext.Provider
         value={{
@@ -32,6 +52,9 @@ const CartState = ({children}) => {
             addToCart,
             showHideCart,
             removeItem,
+            getCartItems,
+            addCartToStorage
+            
         }}
         >
         {children}

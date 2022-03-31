@@ -7,10 +7,13 @@ import SearchBar from '../searchBar/searchBar';
 import CurrencyFormat from 'react-currency-format';
 
 
+
 export default function CourseDetail({obj}) {
-    const { addToCart } = useContext(CartContext)
+    const { addToCart, addCartToStorage } = useContext(CartContext)
     const {id} = useParams();
     const selectedCourse = CourseData.filter(obj => obj.id === id);
+
+    
 
 /*
     const [data, setData] = useState([]);
@@ -58,7 +61,7 @@ export default function CourseDetail({obj}) {
                                     <h3>{obj.courseInstructor}</h3>
                                     <p>{obj.startDate}</p>
                                     <p>{obj.courseDetail}</p>
-                                    <Link to="#" id="selfStudy" onClick={ () => addToCart(obj)}>Enroll</Link>
+                                    <Link to="#" id="selfStudy" onClick={ () => addCartToStorage(obj)}>Enroll</Link>
                                    
                                 </div>
                             </div>
