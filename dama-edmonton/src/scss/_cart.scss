@@ -27,6 +27,7 @@
         max-height: 75vh;
         max-width: 50rem;
         overflow-y: auto;
+        text-shadow: $txt-shadow-dk;
 
 
         .cartItem-item {
@@ -70,6 +71,7 @@
     .cart-total {
         margin-top: 4rem;
         text-align: center;
+        text-shadow: $txt-shadow-dk;
         
 
         .cart-currency {
@@ -86,6 +88,8 @@
             background-color: $yellow;
             color: $dk-green;
             box-shadow: $box-bevel;
+            text-shadow: none;
+            
 
             &:hover{
                 background-color: $dk-green;
