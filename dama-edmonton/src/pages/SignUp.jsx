@@ -40,16 +40,26 @@ export default function Register() {
     
     return (
         <>
-          <div className="login-form-container">
+          <div className="signup-form-container">
             <h1>Register A New Account</h1>
                 
                 <div class="form">    
-                    <label for="name">Full Name</label>
-                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="name" />
+                    <label for="firstname">First Name</label>
+                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="firstname" />
+                    <label for="lastname">First Name</label>
+                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="lastname" />
                     <label for="email">Email</label>
                     <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} name="email" />
                     <label for="name">Password</label>
                     <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} name="password" />
+                    <label for="type">Membership Type</label>
+                    <select name="type" id="type">
+                        <option value="Individual">Individual</option>
+                        <option value="Student">Student</option>
+                        <option value="Corporate5">Corporate - 5 Accounts</option>
+                        <option value="Corporate10">Corporate - 10 Accounts</option>
+                        <option value="CorporateUnlimited">Corporate - Unlimited Accounts</option>
+                    </select>
                     <button onClick={signUp}>Sign Up</button>
                 </div>   
           </div>

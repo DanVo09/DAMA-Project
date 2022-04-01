@@ -14,7 +14,7 @@
     }
 
     a:hover {
-        font-weight: bold;
+        color: $lt-blue;
     }
 
     h1 {
@@ -37,7 +37,19 @@
 
         button {
             padding: 0.5rem;
-            border-radius: 5rem; 
+            border-radius: 5rem;
+            margin-top: 2rem;
+            border: 1px solid $dk-green;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: $yellow;
+            color: $dk-green;
+            border: none;
+        }
+
+        button:hover {
+            background-color: $dk-green;
+            color: $off-white;
         }
         
         label {

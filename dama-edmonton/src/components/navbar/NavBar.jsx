@@ -73,9 +73,6 @@ export default function Navbar() {
                                 :
                                 <>
                                     <li className="navLinks">
-                                        <Link className="navItem" to="/register" onClick="window.location.reload();">Signup</Link>
-                                    </li>
-                                    <li className="navLinks">
                                         <Link className="navItem" to="/login" onClick="window.location.reload();">Login</Link>
                                     </li>
                                 </>

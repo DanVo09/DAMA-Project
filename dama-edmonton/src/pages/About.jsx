@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import LogoSlideShow from '../components/logoSlideShow/logoSlideShow';
-
-
+import GoalMission from '../components/about-components/GoalMission/GoalMission';
+import ThoughtLeader from '../components/about-components/ThoughtLeaders/ThoughtLeader';
 
 
 export default function Aboutus() {
@@ -20,30 +20,7 @@ export default function Aboutus() {
                         <Link className="navItem" to="/memberships" onClick="window.location.reload();">Request information via Email</Link>  
                     </div>
                     <div className="MissonGoal">
-                    <div>
-                        <h3>Mission and Goals</h3>
-                        <p>
-                        CIPS Alberta and The  Data Management (DAMA) Association will hold joint meetings this fall; along with IIBA and other professional associations.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Mission and Goals</h3>
-                        <p>
-                        Providing a professional platform to local practitioners for their information and knowledge management requirements.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Mission and Goals</h3>
-                        <p>
-                        Sharing latest trends and research in the discipline of Data Analytics, Data Management and Business Intelligence to improve related professional knowledge.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Mission and Goals</h3>
-                        <p>
-                        Form alliances with other local organizations with similar principles to learn and grow in the DATA Management profession.
-                        </p>
-                    </div>
+                        <GoalMission/>
                     </div>
 
                 </div> 
@@ -126,48 +103,7 @@ export default function Aboutus() {
                     <h3>Data Management - Data Science - Thought Leaders</h3>
                 
                     <div className="person-profile-flex">
-                        <div className="person-profile-details">
-                            <Link className="navItem" to="/memberships" onClick="window.location.reload();">
-                                <img src="assets/images/profile-picture/example1.jpg" alt="images"/>
-                                <h4>Fullname</h4>
-                            </Link>
-                        </div>
-
-                        <div className="person-profile-details">
-                            <Link className="navItem" to="/memberships" onClick="window.location.reload();">
-                                <img src="assets/images/profile-picture/example1.jpg" alt="images"/>
-                                <h4>Fullname</h4>
-                            </Link>
-                        </div>
-
-                        <div className="person-profile-details">
-                            <Link className="navItem" to="/memberships" onClick="window.location.reload();">
-                                <img src="assets/images/profile-picture/example1.jpg" alt="images"/>
-                                <h4>Fullname</h4>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="person-profile-flex">
-                        <div className="person-profile-details">
-                            <Link className="navItem" to="/memberships" onClick="window.location.reload();">
-                                <img src="assets/images/profile-picture/example1.jpg" alt="images"/>
-                                <h4>Fullname</h4>
-                            </Link>
-                        </div>
-
-                        <div className="person-profile-details">
-                            <Link className="navItem" to="/memberships" onClick="window.location.reload();">
-                                <img src="assets/images/profile-picture/example1.jpg" alt="images"/>
-                                <h4>Fullname</h4>
-                            </Link>
-                        </div>
-
-                        <div className="person-profile-details">
-                            <Link className="navItem" to="/memberships" onClick="window.location.reload();">
-                                <img src="assets/images/profile-picture/example1.jpg" alt="images"/>
-                                <h4>Fullname</h4>
-                            </Link>
-                        </div>
+                        <ThoughtLeader/>
                     </div>
                 
                 </section>
