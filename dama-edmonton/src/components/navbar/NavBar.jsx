@@ -2,8 +2,11 @@ import React, { useContext } from 'react'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import {Link, useNavigate} from 'react-router-dom';
 import CartContext from '../../context/cart/CartContext';
+import Cart from '../cart/Cart';
 
 export default function Navbar() {
+
+  
     
     const { cartItems, showHideCart } = useContext( CartContext );
     const navigate = useNavigate();
@@ -79,8 +82,11 @@ export default function Navbar() {
                             }
                         </ul>
                     </nav>
-                    <div className="cart-icon-container"> 
-                            <ShoppingCartCheckoutIcon className="cart-icon"/>
+                    <div className="cart-icon-container" >
+                            
+                            <ShoppingCartCheckoutIcon
+                            onClick={showHideCart}
+                            className="cart-icon"/>
                             {cartItems.length > 0 && (
                                 <div className='cart-items-count'>
                                 <span>{cartItems.length}</span>
@@ -89,6 +95,7 @@ export default function Navbar() {
                     </div>
                 </div>
            </header>
+           <Cart/>
         </>
     )
 }
