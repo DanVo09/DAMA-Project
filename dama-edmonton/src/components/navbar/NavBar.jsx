@@ -2,14 +2,13 @@ import React, { useContext } from 'react'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import {Link, useNavigate} from 'react-router-dom';
 import CartContext from '../../context/cart/CartContext';
+import Cart from '../cart/Cart';
 
 export default function Navbar() {
 
   
     
     const { cartItems, showHideCart } = useContext( CartContext );
-    console.log(showHideCart)
-    console.log(cartItems)
     const navigate = useNavigate();
 
     function logOut(){
@@ -77,9 +76,6 @@ export default function Navbar() {
                                 :
                                 <>
                                     <li className="navLinks">
-                                        <Link className="navItem" to="/register" onClick="window.location.reload();">Signup</Link>
-                                    </li>
-                                    <li className="navLinks">
                                         <Link className="navItem" to="/login" onClick="window.location.reload();">Login</Link>
                                     </li>
                                 </>
@@ -99,6 +95,7 @@ export default function Navbar() {
                     </div>
                 </div>
            </header>
+           <Cart/>
         </>
     )
 }

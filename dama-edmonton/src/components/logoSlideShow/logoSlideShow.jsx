@@ -61,7 +61,6 @@ export default class LogoSlideShow extends Component {
                         <div className="logo">
                             <img className="logo-img" src={`assets/images/logo/${current.logoName}`} alt={`name${current.companyName}`}/>
                         </div>
-
                     </div>
                 )
                )}

@@ -8,8 +8,7 @@ const CourseData = [
         courseInstructor: "Jon Snow",
         startDate: "May 17th, 2022 | 12:00",
         courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
-        selfStudyPrice: '$595',
-        courseLedPrice: '$1295'
+        price: 595
     },
 
     {
@@ -19,8 +18,7 @@ const CourseData = [
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
         courseDetail: "Data Foundations/Data Literacy (Certified Business Intelligence Professional (CBIP, or Certified Data Professional - CDP))",
-        selfStudyPrice: '$595',
-        courseLedPrice: '$1295'
+        price: 595
     },
 
     {
@@ -30,8 +28,7 @@ const CourseData = [
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
         courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
-        selfStudyPrice: '$595',
-        courseLedPrice: '$1295'
+        price: 595
     },
 
     {
@@ -41,8 +38,7 @@ const CourseData = [
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
         courseDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
-        selfStudyPrice: '$595',
-        courseLedPrice: '$1295'
+        price: 595
     },
 
     {
@@ -52,8 +48,7 @@ const CourseData = [
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
         courseDetail: "Certified Business Intelligence Professional (CBIP, or Certified Data Professional-CDP)",
-        selfStudyPrice: '$595',
-        courseLedPrice: '$1295'
+        price: 595
     },
 
     {
@@ -63,8 +58,7 @@ const CourseData = [
         courseInstructor: "Arya Stark",
         startDate: "May 24th, 2022 | 8:00",
         courseDetail: "Certified Business Intelligence Professional (CBIP, or Certified Data Professional-CDP)",
-        selfStudyPrice: '$595',
-        courseLedPrice: '$1295'
+        price: 595
     }
 ]
 
