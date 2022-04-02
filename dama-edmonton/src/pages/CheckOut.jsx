@@ -10,7 +10,7 @@ import CurrencyFormat from 'react-currency-format';
 export default function Checkout() {
 
     const { cartItems } = useContext(CartContext)
-    
+    const GST = 0.05;
     const product = cartItems
 
     console.log(product)
@@ -38,6 +38,20 @@ export default function Checkout() {
                               </li>
                             ))}
                         </ul>
+                    </div>
+                    <div className="checkout-total">
+                        <div className="checkout-subtotal">
+                            <p>SubTotal</p>
+                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.price, 0)}displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                        </div>
+                        <div className="checkout-gst">
+                            <p>GST</p>
+                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.price, 0) * GST }displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                        </div>
+                        <div className="checkout-gst">
+                            <p>Total Price</p>
+                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.price, 0) * GST + product.reduce((amount, item) => amount + item.price, 0)}displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                        </div>
                     </div>
                     <div className="checkout-button-container">
                         <Paypalcheckoutbutton product={product} />
