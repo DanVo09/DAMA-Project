@@ -64,7 +64,7 @@ export default function Course() {
         <>
         <div className="course-page-wrapper">
           <div className='course-banner' style={{background: `linear-gradient(rgba(255,255,255,0.6),
-            rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") top/cover no-repeat` }}>
+            rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
             <h1>TRAINING, EDUCATION, CERTIFICATION</h1>
           </div>
          <SearchBar/>
