@@ -24,10 +24,16 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 
 const PAYPAL_KEY = process.env.REACT_APP_PAYPAL_CLIENT_ID
 
+const initialOptions = {
+    "client-id":  PAYPAL_KEY,
+    currency: "CAD",
+    intent: "capture"
+}
+
 function App() {
   
   return (
-    <PayPalScriptProvider options={{ "client-id":  PAYPAL_KEY }}>
+    <PayPalScriptProvider options={initialOptions}>
         <div className="App">
             <Router>
                 <Navbar/> 

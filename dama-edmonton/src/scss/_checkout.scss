@@ -11,6 +11,11 @@
             padding: 1rem;
             border-radius: 1.15rem;
             box-shadow: $box-bevel;
+
+           .checkout-button-container {
+               text-align: center;
+               width: 100%;
+           }
         }
     }
 
