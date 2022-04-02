@@ -11,7 +11,8 @@ export default function Register() {
         }
     })
     
-    const [name,setName]=useState("")
+    const [last_name,setLastName]=useState("")
+    const [first_name,setFirstName]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const navigate = useNavigate()
@@ -20,7 +21,7 @@ export default function Register() {
     async function signUp()
     {
         
-        let item = {name, password, email}
+        let item = {first_name, last_name, password, email}
         console.warn(item)
 
        let result = await fetch("http://localhost:8000/api/register",{
@@ -34,7 +35,7 @@ export default function Register() {
 
         result = await result.json()
         localStorage.setItem("user-info",JSON.stringify(result))
-        navigate("/aboutus")
+        navigate("/")
 
     }
     
@@ -45,9 +46,9 @@ export default function Register() {
                 
                 <div class="form">    
                     <label for="firstname">First Name</label>
-                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="firstname" />
-                    <label for="lastname">First Name</label>
-                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="lastname" />
+                    <input type="text" value={first_name} onChange={(e)=>setFirstName(e.target.value)} name="firstname" />
+                    <label for="lastname">Last Name</label>
+                    <input type="text" value={last_name} onChange={(e)=>setLastName(e.target.value)} name="lastname" />
                     <label for="email">Email</label>
                     <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} name="email" />
                     <label for="name">Password</label>

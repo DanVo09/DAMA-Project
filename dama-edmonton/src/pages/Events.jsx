@@ -1,7 +1,6 @@
 
 import React from 'react'
-import { Link } from 'react-router-dom';
-import EventData from '../components/Events/event-data';
+import EventList from '../components/Events/Events-list';
 
 import FeedBackForm from '../components/feedbackForm/feedbackForm';
 import EventSideBar from '../components/Events/event-sidebar';
@@ -20,36 +19,7 @@ export default function EventPages() {
 
             <div className='main-content'>
                <EventSideBar/>
-
-                <div className='event-list'>
-                    <h2>Upcoming Events</h2>
-                    <div className='event-flex'>
-                    {EventData.map((obj, id) => {
-                 
-                        return(
-                            
-                            <div key={obj.id}  className="event-card">
-                                <div className="event-card-img-container">
-                                    <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.eventPicture}`} alt="#" />
-                                </div>
-                                <div className="event-card-content">
-                                    <div className="card-content-wrapper">
-                                        <h2>{obj.eventTitle}</h2>
-                                        <h3>{obj.eventSpeaker}</h3>
-                                        <h4>{obj.eventDate}</h4>
-                                        <p>{obj.eventDetail}</p>
-                                        <Link to={`/events/${obj.id}`} >Learn More/Register</Link>
-                                    </div>
-                                </div>
-                            </div>
-        
-                        )
-                    })}
-
-                    </div>
-
-                </div>
-
+                <EventList/>
             </div>
             <div className='feedback'>
                 <FeedBackForm/>

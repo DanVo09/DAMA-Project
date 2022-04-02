@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Course;
+use App\Models\User;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\membershipController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,6 +16,33 @@ use App\Models\Course;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::middleware('auth:api')->get('/user', function (Request $request){
+    return $request->user();
+});
+
+Route::post('register', function(Request $req){
+        $user = new User;
+        $user->first_name= $req->input('first_name');
+        $user->last_name= $req->input('last_name');
+        $user->email= $req->input('email');
+        $user->password= Hash::make($req->input('password'));
+        $user->save();
+        return $user;
+
+});
+
+Route::post('log-in', function(Request $req){
+    $user = User::where('email', $req->email)->first();
+        if (!$user || !Hash::check($req->password,$user->password)){
+            return null;
+        }
+        return $user;
+});
+
+Route::get('/course', function () {
+    return course::all();
+});
+
 
 
 Route::get('/', function () {
@@ -27,9 +57,7 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::get('/events', function () {
-    return course::all();
-});
+
 Route::get('/event_list', function () {
     return course::all();
 });
@@ -39,9 +67,7 @@ Route::get('/event-register', function () {
 Route::get('/session-test', function () {
     return view('session-test');
 });
-Route::get('/login', function () {
-    return view('login');
-});
+
 Route::get('/my-events', function () {
     return view('my-events');
 });

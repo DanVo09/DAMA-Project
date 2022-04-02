@@ -7,129 +7,111 @@ import './event-sidebar.css';
 
 
 export default function EventSideBar(){
- 
-    const [click, setClick] = useState("");
 
-    const handleClick = () => {
-        setClick(!click);    
-   
+    const current = new Date();
+
+    const upComingEventData = EventData.filter(obj=> new Date(obj.eventDate)  > current)
+    const PastEventData = EventData.filter(obj=> new Date(obj.eventDate)  < current)
+ 
+    const [click, setClick] = useState(false);
+    const toggle = index => {
+        if(click === index) {
+            return setClick(null)
+        }
+
+        setClick(index)
+    }
+
+    const [pastClick, setPastClick] = useState(false);
+    const pastEventToggle = index => {
+        if(pastClick === index) {
+            return setPastClick(null)
+        }
+
+        setPastClick(index)
     }
   
 
     return (
         <div className='sidebar'>
-                    <div className='upcoming-event'>
-                        <div className='main-title'>
-                            <h2>Upcoming Events</h2>
-                        </div>
-                         
-                        <>  
-            {EventData.map(obj => {
-                return(
-                    
-                    <div key={obj.id}  className= "event-detail">
-
-                            <div className='title'>
-                                <h3>{obj.eventSpeaker}</h3>
-                                <div onClick={handleClick}>
-                                    {
-                                        click?
-                                        <RemoveIcon classname="remove-icon"/>
-                                       
-                                        :
-                                        <AddIcon classname="remove-icon"/>
-                                        
-                                    }
-                                   
-                                </div>
-                                
-                            </div>
-                            <div className="topic-content">
-                                            <p>Topic: {obj.eventTitle}</p>
-                                            <p>Time: {obj.eventDate}</p>
-                                            <Link to={`/events/${obj.id}`} >More infor</Link>
-                                        </div>
-                            
-                            
-                    </div>
-
-                )
-            })}
-        </>
-
-
-                        <div className='detail-btn'>
-                            <a href="#">More</a>
-
-                        </div>
-                       
-                    </div>
-
-                    <div  className='past-event'>
-                        <div className='main-title'>
-                            <h2>Past events</h2>
-                           
-                        </div>
-                        <div className='event-detail'>
-                            <div className='title'>
-                                <h3>Amelia Estwick</h3>
-                                <RemoveIcon classname="remove-icon"/>
-                            </div>
-                            <div className='topic-content'>
-                               <p>Topic: How to talk to the business side about ML</p>
-                               <p>Time: 5:00 p.m April 21, 2022</p>
-                                <a href="#">Presentation Slide</a>
-                                <a href="#">document.PDF</a>
-                            </div>
-                            
-                        </div>
-                        <div className='event-detail'>
-                            <div className='title'>
-                                <h3>Joseph Paul</h3>
-                                <RemoveIcon classname="remove-icon"/>
-                            </div>
-                            <div className='topic-content'>
-                               <p>Topic: How to talk to the business side about ML</p>
-                               <p>Time: 5:00 p.m April 21, 2022</p>
-                               <a href="#">Presentation Slide</a>
-                                <a href="#">document.PDF</a>
-                            </div>
-                            
-                        </div>
-                        <div className='event-detail'>
-                            <div className='title'>
-                                <h3>William Inmon</h3>
-                                <RemoveIcon classname="remove-icon"/>
-                            </div>
-                            <div className='topic-content'>
-                               <p>Topic: How to talk to the business side about ML</p>
-                               <p>Time: 5:00 p.m April 21, 2022</p>
-                               <a href="#">Presentation Slide</a>
-                                <a href="#">document.PDF</a>
-                            </div>
-                            
-                        </div>
-                        <div className='event-detail'>
-                            <div className='title'>
-                                <h3>Karen Parker</h3>
-                                <RemoveIcon classname="remove-icon"/>
-                            </div>
-                            <div className='topic-content'>
-                               <p>Topic: How to talk to the business side about ML</p>
-                               <p>Time: 5:00 p.m April 21, 2022</p>
-                               <a href="#">Presentation Slide</a>
-                                <a href="#">document.PDF</a>
-                            </div>
-                            
-                        </div>
-                        <div className='detail-btn'>
-                            <a href="#">More</a>
-
-                        </div>
-                       
-                    </div>
-
+            <div className='upcoming-event'>
+                <div className='main-title'>
+                    <h2>Upcoming Events</h2>
                 </div>
-        
+                         
+                <>  
+                {upComingEventData.map((obj, index )=> {
+                    return(
+                        
+                        <div key={obj.id}  className= "event-detail">
+
+                                <div className='title'>
+                                    <h3>{obj.eventSpeaker}</h3>
+                                    <div onClick={() => toggle(index)} key={index}>
+                                        {click === index?
+                                            <RemoveIcon classname="remove-icon"/>
+                                        
+                                            :
+                                            <AddIcon classname="remove-icon"/>}
+                                    </div>
+                                </div>
+                                {click === index?
+                                    <div className="topic-content">
+                                        <p>Topic: {obj.eventTitle}</p>
+                                        <p>Date: {obj.eventDate}</p>
+                                        <p>Time: {obj.eventTime}</p>
+                                        <Link to={`/events/${obj.id}`} >More infor</Link>
+                                    </div>
+                                    :
+                                    null
+                                } 
+                        </div>
+
+                    )
+                })}
+                </>
+                <div className='detail-btn'>
+                    <a href="#">More</a>
+                </div>
+                       
+            </div>
+
+            <div  className='past-event'>
+                <div className='main-title'>
+                    <h2>Past events</h2>
+                </div>
+                <>  
+                {PastEventData.map((obj, index )=> {
+                    return(
+                        
+                        <div key={obj.id}  className= "event-detail">
+
+                                <div className='title'>
+                                    <h3>{obj.eventSpeaker}</h3>
+                                    <div onClick={() => pastEventToggle(index)} key={index}>
+                                        {pastClick === index?
+                                            <RemoveIcon classname="remove-icon"/>
+                                        
+                                            :
+                                            <AddIcon classname="remove-icon"/>}
+                                    </div>
+                                </div>
+                                {pastClick === index?
+                                    <div className="topic-content">
+                                        <p>Topic: {obj.eventTitle}</p>
+                                        <p>Date: {obj.eventDate}</p>
+                                        <p>Time: {obj.eventTime}</p>
+                                        <Link to={`/events/${obj.id}`} >More infor</Link>
+                                    </div>
+                                    :
+                                    null
+                                } 
+                        </div>
+
+                    )
+                })}
+                </>
+            </div>
+        </div>
     )
 }
