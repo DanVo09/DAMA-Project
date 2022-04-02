@@ -10,3 +10,10 @@
 ### - Partners and sponsors slide logos
 ### - Banner images
 ### 2. add banner to memberships page.
+### 2. add banner to memberships page.
+
+## Jennifer
+### 1. Finish Checkout/Payment System
+### 2. Create memberMenu component
+### 3. Create News Section
+### 4. 

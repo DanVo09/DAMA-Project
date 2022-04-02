@@ -3,9 +3,10 @@ import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import { Loader } from '@googlemaps/js-api-loader';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { Tween, update, Easing } from "@tweenjs/tween.js";
 
 
+const GOOGLEMAP_API_KEY = process.env.REACT_APP_GOOGLEMAP_API_KEY
+const GOOGLEMAP_ID = process.env.REACT_APP_GOOGLEMAP_ID
 
 const containerStyle = {
     width: '100%',
@@ -20,7 +21,7 @@ const center = {
   const apiOptions = {
     "id": 'google-map-script',
     "version": "beta",
-    "googleMapsApiKey": "AIzaSyBFSv_RLHmQWzknsUzQBzdz3f3C4f_DzDw",
+    "googleMapsApiKey": GOOGLEMAP_API_KEY,
   };
 
 
@@ -28,7 +29,7 @@ const center = {
     "tilt": 0,
     "heading": 0,
     "zoom": 18,
-    "mapId": "464549dbb388e9d5",
+    "mapId": GOOGLEMAP_ID,
     keyboardShortcuts: false,
     "center": { lat: 53.56851332068016, lng: -113.49961975803355 }
 }
@@ -39,8 +40,8 @@ function GoogleMapLoader() {
 
     const { isLoaded } = useJsApiLoader({
       id: 'google-map-script',
-      mapIds: ['464549dbb388e9d5'],
-      googleMapsApiKey: "AIzaSyBFSv_RLHmQWzknsUzQBzdz3f3C4f_DzDw",
+      mapIds: [GOOGLEMAP_ID],
+      googleMapsApiKey: GOOGLEMAP_API_KEY,
       version: "beta"
     })
   
