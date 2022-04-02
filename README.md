@@ -8,4 +8,5 @@
 ### - Newsletter
 ### - Dama directors and thought leaders
 ### - Partners and sponsors slide logos
+### - Banner images
 ### 2. add banner to memberships page.
