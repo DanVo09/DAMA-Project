@@ -1,42 +1,42 @@
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 
-const LogoData = [
-    {
-      id: uuidv4(),
-      companyName: "DATA MANAGEMENT ASSOCIATION",
-      logoName: "logo1.png"
+// const LogoData = [
+//     {
+//       id: uuidv4(),
+//       companyName: "CLOUDERA",
+//       logoName: "cloudera.png"
 
-    },
-    {
-      id: uuidv4(),
-      companyName: "Land Acknowledgement",
-      logoName: "logo2.png"
-    },
-    {
-      id: uuidv4(),
-      companyName: "Women in Data",
-      logoName: "logo3.png"
-    },
-    {
-      id: uuidv4(),
-      companyName: "Partners in AI",
-      logoName: "logo4.png"
-    },
-    {
-      id: uuidv4(),
-      companyName: "Join Our Community",
-      logoName: "logo5.png"
-    },
-    {
-        id: uuidv4(),
-        companyName: "Partners in AI",
-        logoName: "logo6.png"
-      },
-      {
-        id: uuidv4(),
-        companyName: "Join Our Community",
-        logoName: "logo7.png"
-      },
-  ];
+//     },
+//     {
+//       id: uuidv4(),
+//       companyName: "data-iku",
+//       logoName: "data-iku.png"
+//     },
+//     {
+//       id: uuidv4(),
+//       companyName: "intellimedia",
+//       logoName: "intellimedia.png"
+//     },
+//     {
+//       id: uuidv4(),
+//       companyName: "ineqna",
+//       logoName: "inteqna.png"
+//     },
+//     {
+//       id: uuidv4(),
+//       companyName: "ISACA",
+//       logoName: "isaca.png"
+//     },
+//     {
+//         id: uuidv4(),
+//         companyName: "oracle",
+//         logoName: "oracle.png"
+//       },
+//       {
+//         id: uuidv4(),
+//         companyName: "tableau",
+//         logoName: "tableau.png"
+//       },
+// ];
 
-  export default LogoData;
+//   export default LogoData;

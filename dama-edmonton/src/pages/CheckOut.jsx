@@ -1,4 +1,5 @@
 import React, {useContext} from 'react'
+import Paypalcheckoutbutton from '../components/payPalCheckoutButton/PayPalCheckoutButton';
 import CartContext from '../context/cart/CartContext'
 import CurrencyFormat from 'react-currency-format';
 
@@ -9,7 +10,9 @@ export default function Checkout() {
 
     const { cartItems } = useContext(CartContext)
     
-    
+    const product = cartItems
+
+    console.log(product)
     
 
     return (
@@ -36,6 +39,9 @@ export default function Checkout() {
                         <div className="form-control">
                             <label htmlFor="email" className='form-label'> <span className="required">*</span>Last Name</label>
                             <input type="mailto:" name="email"  className='form-input' aria-required={true} required defaultValue="janesmith@gmail.com"/>
+                        </div>
+                        <div className="checkout-button-container">
+                            <Paypalcheckoutbutton product={product} />
                         </div>
                     </form>
                 </div>

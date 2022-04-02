@@ -3,11 +3,34 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick/lib/slider";
 import "./logoSlideShow.css";
-import LogoData from "./logodata";
+// import LogoData from "./logodata";
+import axios from 'axios';
 
-export default class LogoSlideShow extends Component {
+export default class LogoSlideShow extends React.Component {
+
+  state = {
+    logoDatas: [],
+    error: null,
+  };
+
+  componentDidMount = async () => {
+    try {
+      const response = await axios.get('http://localhost:1337/api/sponsor-partners');
+      this.setState({ logoDatas: response.data.data });
+    } catch (error) {
+      this.setState({ error });
+    }
+  };
+
 
     render() {
+      
+    const { error, LogoData } = this.state;
+
+    if (error) {
+      return <div>An error occured: {error.message}</div>;
+    }
+
         var settings = {
           dots: true,
           infinite: true,
@@ -49,17 +72,18 @@ export default class LogoSlideShow extends Component {
     return (
         <>
         <div className="logo-flex">
-           {LogoData.length===0?(
+           {this.state.logoDatas.length===0?(
                <div>
                    <span>Loading...</span>
                </div>
            ):(
                <Slider {...settings}>
                
-               {LogoData.map(current=>(
+               {this.state.logoDatas.map(current=>(
                     <div className="out" key={current.id}>
                         <div className="logo">
-                            <img className="logo-img" src={`assets/images/logo/${current.logoName}`} alt={`name${current.companyName}`}/>
+                            <img className="logo-img" src={`http://localhost:1337${current.attributes.url}`} alt={`${current.attributes.name}`}/>
+                            {console.log(current.id)}
                         </div>
                     </div>
                 )

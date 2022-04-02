@@ -19,33 +19,38 @@ import CheckOut from './pages/CheckOut'
 
 import CourseDetail from './components/courses/course-detail';
 import Navbar from './components/navbar/NavBar';
-import Cart from './components/cart/Cart';
 
+import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 
+const PAYPAL_KEY = process.env.REACT_APP_PAYPAL_CLIENT_ID
 
 function App() {
+  
   return (
-    <Router>
-        <Navbar/> 
-       
-        <Routes>  
-             
-            <Route index element={<HomePage />}/>
-            <Route path="/login" element={<Login />}/> 
-            <Route path="/aboutus" element={<About />}/>
-            <Route path="/register" element={<Register />}/>
-            <Route path="/memberships" element={<Memberships />}/> 
-            <Route path="/dashboard" element={<Dashboard />}/> 
-            <Route path="/newsletter" element={<Newsletter />}/> 
-            <Route path="/events" exact element={<EventPages />}/> 
-            <Route path="/events/:id" element={<EventDetail />}/> 
-            <Route path="/courses/:id" element={<CourseDetail />}/> 
-            <Route path="/courses" exact element={<Courses />}/> 
-            <Route path="/contact" element={<Contact />}/>
-            <Route path="/checkout" element={<CheckOut />}/>
-        </Routes>
-        <Footer/>
-    </Router>
+    <PayPalScriptProvider options={{ "client-id":  PAYPAL_KEY }}>
+        <div className="App">
+            <Router>
+                <Navbar/> 
+                <Routes>  
+                    <Route index element={<HomePage />}/>
+                    <Route path="/login" element={<Login />}/> 
+                    <Route path="/aboutus" element={<About />}/>
+                    <Route path="/register" element={<Register />}/>
+                    <Route path="/memberships" element={<Memberships />}/> 
+                    <Route path="/dashboard" element={<Dashboard />}/> 
+                    <Route path="/newsletter" element={<Newsletter />}/> 
+                    <Route path="/events" exact element={<EventPages />}/> 
+                    <Route path="/events/:id" element={<EventDetail />}/> 
+                    <Route path="/courses/:id" element={<CourseDetail />}/> 
+                    <Route path="/courses" exact element={<Courses />}/> 
+                    <Route path="/contact" element={<Contact />}/>
+                    <Route path="/checkout" element={<CheckOut />}/>
+                </Routes>
+                <Footer/>
+            </Router>
+        </div>
+    </PayPalScriptProvider>
+    
   );
 }
 
