@@ -8,11 +8,16 @@
         max-width: 1600px;
         margin: 0 auto;
 
+        .banner {
+            padding: 10rem 0 2rem 0;
+            margin-bottom: 2rem;
+        }
+
         .header-banner{
             text-align: center;
             margin-bottom: 4rem;
             padding: 1rem;
-            text-shadow: $txt-shadow-lt;
+            text-shadow: $txt-shadow-md;
 
             h2 {
                 margin-bottom: 1rem;

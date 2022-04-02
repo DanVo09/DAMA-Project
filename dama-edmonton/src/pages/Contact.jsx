@@ -14,10 +14,15 @@ export default function Contact() {
         <>
            <div className="contact-page-container">
                <div className="contact-page-wrapper">
+                <div className="banner" style={{background: `linear-gradient(rgba(255,255,255,0.6),
+            rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
                     <div className="header-banner">
                         <h2>how can we help you?</h2>
                         <p>Do you have a question? Feel free to ask us a question and we will get back to you within the next few business days</p>
                     </div>
+
+                </div>
+                    
                     <div className="contact-content-container">
                         <section className="contact-form-section">
                             <h3>Contact Us</h3>
