@@ -4,6 +4,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import CartContext from '../../context/cart/CartContext';
 import Cart from '../cart/Cart';
 
+
 export default function Navbar() {
 
   

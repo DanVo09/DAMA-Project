@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import EventSideBar from './event-sidebar';
 import EventData from './event-data';
 import EventSearchBar from './event-searchbar';
+import FeedBackForm from '../feedbackForm/feedbackForm';
 
 
 export default function EventDetail() {
@@ -43,9 +44,9 @@ export default function EventDetail() {
 
                     )
                 })}
-
                
             </div>
+            <FeedBackForm/>
            
         </div> 
         
