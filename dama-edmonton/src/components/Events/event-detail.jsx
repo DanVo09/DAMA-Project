@@ -3,11 +3,9 @@ import { Link, useParams } from 'react-router-dom';
 import EventSideBar from './event-sidebar';
 import EventData from './event-data';
 import EventSearchBar from './event-searchbar';
-<<<<<<< HEAD
 import FeedBackForm from '../feedbackForm/feedbackForm';
-=======
 import CartContext from '../../context/cart/CartContext';
->>>>>>> e3fb886b51bc169a6526e786901af4c509885073
+
 
 
 export default function EventDetail({obj}) {
