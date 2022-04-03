@@ -43,16 +43,16 @@ export default function EventSideBar(){
                 {upComingEventData.map((obj, index )=> {
                     return(
                         
-                        <div key={obj.id}  className= "event-detail">
+                        <div key={obj.id}  className="event-detail">
 
                                 <div className='title'>
                                     <h3>{obj.eventSpeaker}</h3>
                                     <div onClick={() => toggle(index)} key={index}>
                                         {click === index?
-                                            <RemoveIcon classname="remove-icon"/>
+                                            <RemoveIcon className="remove-icon"/>
                                         
                                             :
-                                            <AddIcon classname="remove-icon"/>}
+                                            <AddIcon className="remove-icon"/>}
                                     </div>
                                 </div>
                                 {click === index?
@@ -90,10 +90,10 @@ export default function EventSideBar(){
                                     <h3>{obj.eventSpeaker}</h3>
                                     <div onClick={() => pastEventToggle(index)} key={index}>
                                         {pastClick === index?
-                                            <RemoveIcon classname="remove-icon"/>
+                                            <RemoveIcon className="remove-icon"/>
                                         
                                             :
-                                            <AddIcon classname="remove-icon"/>}
+                                            <AddIcon className="remove-icon"/>}
                                     </div>
                                 </div>
                                 {pastClick === index?

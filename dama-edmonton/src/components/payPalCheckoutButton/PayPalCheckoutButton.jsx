@@ -36,6 +36,9 @@ export default function Paypalcheckoutbutton(props) {
                 label: "checkout",
                 tagline: "false"
             }}
+            onClick={(data, actions) => {
+                // validation
+            }}
             createOrder={(data, actions) => {
                 return actions.order.create({
                     purchase_units: [
@@ -56,7 +59,7 @@ export default function Paypalcheckoutbutton(props) {
                 handleApprove(data.orderID)
             }}
             onCancel={()=> {
-                
+
             }}
             onError={(err) => {
                 setError(err)
