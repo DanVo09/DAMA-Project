@@ -36,7 +36,7 @@ export default function EventDetail({obj}) {
                             </div>
                             <div className="event-content-detail">
                                 <div className="card-content-wrapper">
-                                    <h2>{obj.iitle}</h2>
+                                    <h2>{obj.title}</h2>
                                     <h3>{obj.eventSpeaker}</h3>
                                     <p>{obj.eventDate}</p>
                                     <p>{obj.eventDetail}</p>
