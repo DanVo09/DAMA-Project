@@ -4,12 +4,12 @@ import CourseSideBar from './course-sidebar';
 import CourseData from './course-data';
 import CartContext from '../../context/cart/CartContext';
 import SearchBar from '../searchBar/searchBar';
-import CurrencyFormat from 'react-currency-format';
+
 
 
 
 export default function CourseDetail({obj}) {
-    const { addToCart, addCartToStorage } = useContext(CartContext)
+    const { addCartToStorage } = useContext(CartContext)
     const {id} = useParams();
     const selectedCourse = CourseData.filter(obj => obj.id === id);
 
@@ -53,14 +53,14 @@ export default function CourseDetail({obj}) {
                         
                         <div key={obj.id}  className="course-content">
                             <div className="course-card-img-container">
-                                <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.coursePicture}`} alt="#" />
+                                <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.picture}`} alt="#" />
                             </div>
                             <div className="course-content-detail">
                                 <div className="card-content-wrapper">
-                                    <h2>{obj.courseTitle}</h2>
-                                    <h3>{obj.courseInstructor}</h3>
+                                    <h2>{obj.title}</h2>
+                                    <h3>{obj.instructor}</h3>
                                     <p>{obj.startDate}</p>
-                                    <p>{obj.courseDetail}</p>
+                                    <p>{obj.detail}</p>
                                     <Link to="#" id="selfStudy" onClick={ () => addCartToStorage(obj)}>Enroll</Link>
                                    
                                 </div>

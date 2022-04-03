@@ -13,7 +13,7 @@ export default function CourseSideBar() {
                 {CourseData.map((obj,id) => {
                     
                     return(
-                        <li key={obj.id}><Link to={`/courses/${obj.id}`} >{obj.courseTitle}</Link></li>
+                        <li key={obj.id}><Link to={`/courses/${obj.id}`} >{obj.title}</Link></li>
                     )
                 })}
             </ul>

@@ -19,11 +19,11 @@ export default function EventList(){
         return(                
             <div key={obj.id}  className="event-card">
                 <div className="event-card-img-container">
-                    <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.eventPicture}`} alt="#" />
+                    <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.picture}`} alt="#" />
                 </div>
                 <div className="event-card-content">
                     <div className="card-content-wrapper">
-                        <h2>{obj.eventTitle}</h2>
+                        <h2>{obj.title}</h2>
                         <h3>{obj.eventSpeaker}</h3>
                         <h4>{obj.eventDate}</h4>
                         <p>{obj.eventDetail}</p>

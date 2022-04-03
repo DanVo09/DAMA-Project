@@ -57,7 +57,7 @@ export default function EventSideBar(){
                                 </div>
                                 {click === index?
                                     <div className="topic-content">
-                                        <p>Topic: {obj.eventTitle}</p>
+                                        <p>Topic: {obj.title}</p>
                                         <p>Date: {obj.eventDate}</p>
                                         <p>Time: {obj.eventTime}</p>
                                         <Link to={`/events/${obj.id}`} >More infor</Link>
@@ -98,7 +98,7 @@ export default function EventSideBar(){
                                 </div>
                                 {pastClick === index?
                                     <div className="topic-content">
-                                        <p>Topic: {obj.eventTitle}</p>
+                                        <p>Topic: {obj.title}</p>
                                         <p>Date: {obj.eventDate}</p>
                                         <p>Time: {obj.eventTime}</p>
                                         <Link to={`/events/${obj.id}`} >More infor</Link>

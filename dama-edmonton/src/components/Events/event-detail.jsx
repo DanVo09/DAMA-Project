@@ -1,16 +1,21 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import EventSideBar from './event-sidebar';
 import EventData from './event-data';
 import EventSearchBar from './event-searchbar';
+<<<<<<< HEAD
 import FeedBackForm from '../feedbackForm/feedbackForm';
+=======
+import CartContext from '../../context/cart/CartContext';
+>>>>>>> e3fb886b51bc169a6526e786901af4c509885073
 
 
-export default function EventDetail() {
+export default function EventDetail({obj}) {
     const {id} = useParams();
     console.log(id);
     const selectedEvents = EventData.filter(obj => obj.id === id);
     console.log(selectedEvents);
+    const { addCartToStorage } = useContext(CartContext)
 
 
     
@@ -29,15 +34,15 @@ export default function EventDetail() {
                         
                         <div key={obj.id}  className="event-content">
                             <div className="event-card-img-container">
-                                <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.eventPicture}`} alt="#" />
+                                <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.picture}`} alt="#" />
                             </div>
                             <div className="event-content-detail">
                                 <div className="card-content-wrapper">
-                                    <h2>{obj.eventTitle}</h2>
+                                    <h2>{obj.iitle}</h2>
                                     <h3>{obj.eventSpeaker}</h3>
                                     <p>{obj.eventDate}</p>
                                     <p>{obj.eventDetail}</p>
-                                    <Link to="#">Register</Link>
+                                    <Link to="#" onClick={ () => addCartToStorage(obj)}>Register</Link>
                                 </div>
                             </div>
                         </div>
