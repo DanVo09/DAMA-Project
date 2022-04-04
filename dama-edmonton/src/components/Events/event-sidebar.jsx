@@ -18,7 +18,7 @@ export default function EventSideBar(){
 
     const current = new Date();
 
-    const upComingEventData = eventData.filter(obj=> new Date(obj.event_date)  > current)
+    const upComingEventData = eventData.filter(obj=> new Date(obj.event_date)  >= current)
     const PastEventData = eventData.filter(item=> new Date(item.event_date)  < current)
  
     const [click, setClick] = useState(false);

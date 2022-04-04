@@ -50,9 +50,6 @@ export default function CourseDetail({obj}) {
 
                     )
                 })}
-
-                
-
                  
             </div>
         </div> 

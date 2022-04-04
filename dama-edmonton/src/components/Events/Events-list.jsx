@@ -17,36 +17,37 @@ export default function EventList(){
     
     const current = new Date();
 
-    const upComingEventData = EventData.filter(obj=> new Date(obj.eventDate)  > current)
+    const upComingEventData = eventData.filter(obj=> new Date(obj.event_date)  >= current)
 
-    const [events, setEvents] = useState(upComingEventData);
+    console.log(upComingEventData)
+
+
     const [pageNumber, setPageNumber] = useState(0);
 
     const eventPerPage = 3
     const pagesVisited = pageNumber*eventPerPage
 
-    console.log(events)
    
-    const displayEvents = events.slice(pagesVisited, pagesVisited + eventPerPage).map((obj) =>{
+    const displayEvents = upComingEventData.slice(pagesVisited, pagesVisited + eventPerPage).map((obj) =>{
         return(                
-            <div key={obj.id}  className="event-card">
+            <div key={obj.event_id}  className="event-card">
                 <div className="event-card-img-container">
-                    <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.picture}`} alt="#" />
+                    <img className="event-card-img" src="/assets/images/events/2.jpg" alt="#" />
                 </div>
                 <div className="event-card-content">
                     <div className="card-content-wrapper">
-                        <h2>{obj.title}</h2>
-                        <h3>{obj.eventSpeaker}</h3>
-                        <h4>{obj.eventDate}</h4>
-                        <p>{obj.eventDetail}</p>
-                        <Link to={`/events/${obj.id}`} >Learn More/Register</Link>
+                        <h2>{obj.event_title}</h2>
+                        <h2>{obj.event_speaker}</h2>
+                        <p>{obj.event_date}</p>
+                        <p>${obj.event_price}</p>
+                        <Link to={`/events/${obj.event_id}`} >Learn More/Register</Link>
                     </div>
                 </div>
             </div>
 
         )
     });
-    const pageCount = Math.ceil(events.length / eventPerPage)
+    const pageCount = Math.ceil(upComingEventData.length / eventPerPage)
     const changePage = ({selected}) => {
         setPageNumber(selected);
     }

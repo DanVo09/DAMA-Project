@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import EventSideBar from './event-sidebar';
 import EventSearchBar from '../searchBar/event-searchBar';
-import FeedBackForm from '../feedbackForm/feedbackForm';
 import CartContext from '../../context/cart/CartContext';
 
 
@@ -24,9 +23,6 @@ export default function EventDetail({obj}) {
     const selectedEvents = eventData.filter(obj => obj.event_id === Number(id));
     
     const { addCartToStorage } = useContext(CartContext)
-
-
-    
 
     return (
          
@@ -62,7 +58,6 @@ export default function EventDetail({obj}) {
                 })}
                
             </div>
-            <FeedBackForm/>
            
         </div> 
         
