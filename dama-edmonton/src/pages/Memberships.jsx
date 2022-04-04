@@ -12,6 +12,8 @@ class Memberships extends React.Component {
     error: null,
   };
 
+  
+
   // Fetch your memberships immediately after the component is mounted
   componentDidMount = async () => {
     try {
@@ -27,6 +29,7 @@ class Memberships extends React.Component {
 
   render() {
     const { error, membership } = this.state;
+    
     
 
     // Print errors if any
