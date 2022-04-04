@@ -1,19 +1,26 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-import CourseData from "./course-data";
 import './course-sidebar.css';
 
 export default function CourseSideBar() {
+
+    const [data, setData] = useState([]);
+    useEffect(async ()=> {
+        let result = await fetch("http://dama.web.dmitcapstone.ca/api/all_courses");
+        result =await result.json();
+        setData(result);
+
+    },[])
     
     
     return(
          <div className='sidebar'>
             <h2>Online Courses</h2> 
             <ul>
-                {CourseData.map((obj,id) => {
+                {data.map((obj,id) => {
                     
                     return(
-                        <li key={obj.id}><Link to={`/courses/${obj.id}`} >{obj.title}</Link></li>
+                        <li key={obj.course_id}><Link to={`/courses/${obj.course_id}`} >{obj.course_name}</Link></li>
                     )
                 })}
             </ul>

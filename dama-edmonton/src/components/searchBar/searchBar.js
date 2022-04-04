@@ -1,19 +1,26 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './searchBar.css';
-import CourseData from "../courses/course-data";
 import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function SearchBar(){
+
+    const [courseData, setCourseData] = useState([]);
+    useEffect(async ()=> {
+        let result = await fetch("http://dama.web.dmitcapstone.ca/api/all_courses");
+        result =await result.json();
+        setCourseData(result);
+
+    },[])
     
     const [filteredData, setFilterData] = useState([]);
     const [wordEnter, setWordEnter] = useState("");
-    const handleFilter = (event) => {
-        const searchWord = event.target.value;
+    const handleFilter = (course) => {
+        const searchWord = course.target.value;
         setWordEnter(searchWord);
-        const newFilter = CourseData.filter((value)=>{
-            return value.courseTitle.toLowerCase().includes(searchWord.toLowerCase());
+        const newFilter = courseData.filter((value)=>{
+            return value.course_name.toLowerCase().includes(searchWord.toLowerCase());
         });
         if(searchWord===""){
             setFilterData([]);
@@ -22,6 +29,7 @@ export default function SearchBar(){
         }
        
     };
+
     const CloseInput = () => {
         setFilterData([]);
         setWordEnter("");
@@ -47,7 +55,7 @@ export default function SearchBar(){
                 {filteredData.slice(0,10).map((value,id)=>{
                     return(
                         <div>
-                            <Link to={`/courses/${value.id}`}>{value.courseTitle}</Link> 
+                            <Link to={`/courses/${value.id}`}>{value.course_name}</Link> 
                         </div>
                     )
                 })}

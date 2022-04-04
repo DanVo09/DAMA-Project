@@ -1,10 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import EventData from './event-data';
 import { Link } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 
 export default function EventList(){
 
+    const [eventData, setEventData] = useState([]);
+    useEffect(async ()=> {
+        let result = await fetch("http://dama.web.dmitcapstone.ca/api/all_events");
+        result =await result.json();
+        setEventData(result);
+
+    },[])
+
+    console.log(eventData)
+    
     const current = new Date();
 
     const upComingEventData = EventData.filter(obj=> new Date(obj.eventDate)  > current)
@@ -14,6 +24,8 @@ export default function EventList(){
 
     const eventPerPage = 3
     const pagesVisited = pageNumber*eventPerPage
+
+    console.log(events)
    
     const displayEvents = events.slice(pagesVisited, pagesVisited + eventPerPage).map((obj) =>{
         return(                

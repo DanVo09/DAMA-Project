@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import CourseSideBar from './course-sidebar';
-import CourseData from './course-data';
 import CartContext from '../../context/cart/CartContext';
 import SearchBar from '../searchBar/searchBar';
 
@@ -9,37 +8,20 @@ import SearchBar from '../searchBar/searchBar';
 
 
 export default function CourseDetail({obj}) {
+    
+    
     const { addCartToStorage } = useContext(CartContext)
     const {id} = useParams();
-    const selectedCourse = CourseData.filter(obj => obj.id === id);
-
-    
-
-/*
     const [data, setData] = useState([]);
     useEffect(async ()=> {
-        let result = await fetch("http://127.0.0.1:8000/api/courselist");
+        let result = await fetch("http://dama.web.dmitcapstone.ca/api/all_courses");
         result =await result.json();
         setData(result);
 
     },[])
-
     
-    console.warn("result", data)
-    <div className='test-data'>
-                    <h3>Test Data from Laravel</h3>
-                    {
-                        data.map((item)=>
-                            <div>
-                                <p>Course ID: {item.course_id}</p>
-                                <p>Course name: {item.course_name}</p>
-                                <p>Course description: {item.course_description}</p>
-                                <p>Course price: {item.course_price}</p>
-                            </div>
-                        )
-                    }
-                </div>
-*/
+    console.log(id)
+    const selectedCourse = data.filter(obj => obj.course_id === Number(id));
     return (
         <> 
         <div className="course-detail-page-wrapper">
@@ -47,20 +29,19 @@ export default function CourseDetail({obj}) {
             <div className='main-container'>
                 <CourseSideBar/>
                 
-                {selectedCourse.map((obj, id) => {
+                {selectedCourse.map((item) => {
                     
                     return(
                         
-                        <div key={obj.id}  className="course-content">
+                        <div key={item.id}  className="course-content">
                             <div className="course-card-img-container">
-                                <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.picture}`} alt="#" />
+                                <img className="event-card-img" src="/assets/images/events/2.jpg" alt="#" />
                             </div>
                             <div className="course-content-detail">
                                 <div className="card-content-wrapper">
-                                    <h2>{obj.title}</h2>
-                                    <h3>{obj.instructor}</h3>
-                                    <p>{obj.startDate}</p>
-                                    <p>{obj.detail}</p>
+                                    <h3>{item.course_name}</h3>
+                                    <p>Course price: ${item.course_price}</p>
+                                    <p>{item.course_description}</p>
                                     <Link to="#" id="selfStudy" onClick={ () => addCartToStorage(obj)}>Enroll</Link>
                                    
                                 </div>

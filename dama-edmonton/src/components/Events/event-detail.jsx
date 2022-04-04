@@ -1,18 +1,28 @@
 import React, { useState, useEffect, useContext} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import EventSideBar from './event-sidebar';
-import EventData from './event-data';
-import EventSearchBar from './event-searchbar';
+import EventSearchBar from '../searchBar/event-searchBar';
 import FeedBackForm from '../feedbackForm/feedbackForm';
 import CartContext from '../../context/cart/CartContext';
 
 
 
 export default function EventDetail({obj}) {
+
+    const [eventData, setEventData] = useState([]);
+    useEffect(async ()=> {
+        let result = await fetch("http://dama.web.dmitcapstone.ca/api/all_events");
+        result =await result.json();
+        setEventData(result);
+
+    },[])
+    
+    console.log(eventData)
+
     const {id} = useParams();
-    console.log(id);
-    const selectedEvents = EventData.filter(obj => obj.id === id);
-    console.log(selectedEvents);
+  
+    const selectedEvents = eventData.filter(obj => obj.event_id === Number(id));
+    
     const { addCartToStorage } = useContext(CartContext)
 
 
@@ -30,16 +40,19 @@ export default function EventDetail({obj}) {
                     
                     return(
                         
-                        <div key={obj.id}  className="event-content">
+                        <div key={obj.event_id}  className="event-content">
                             <div className="event-card-img-container">
-                                <img className="event-card-img" src={process.env.PUBLIC_URL + `/assets/images/${obj.picture}`} alt="#" />
+                                <img className="event-card-img" src="/assets/images/events/2.jpg" alt="#" />
                             </div>
                             <div className="event-content-detail">
                                 <div className="card-content-wrapper">
-                                    <h2>{obj.title}</h2>
-                                    <h3>{obj.eventSpeaker}</h3>
-                                    <p>{obj.eventDate}</p>
-                                    <p>{obj.eventDetail}</p>
+                                    <h3>{obj.event_title}</h3>
+                                    <p>Time: {obj.event_date}</p>
+                                    <p>City: {obj.event_city}</p>
+                                    <p>Price: ${obj.event_price}</p>
+                                    <p>Type: {obj.event_type}</p>
+                                    <p>{obj.event_description}</p>
+                                    
                                     <Link to="#" onClick={ () => addCartToStorage(obj)}>Register</Link>
                                 </div>
                             </div>
