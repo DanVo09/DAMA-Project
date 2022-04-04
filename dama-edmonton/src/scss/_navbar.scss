@@ -154,5 +154,25 @@
         left: 0%;
         width: 105%;
     } 
+
+    .membersMenu {
+
+        .dashboardLink {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            gap: 0.65rem;
+            margin-top: -0.35rem;
+
+            .dashboardImage {
+                width: 2.85rem;
+                height: 2.85rem;
+                border-radius: 50%;
+                object-fit: cover;
+                
+                border: 2px solid $yellow;
+            }
+        }
+    }
 }
 

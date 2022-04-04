@@ -46,7 +46,7 @@ export default function Paypalcheckoutbutton(props) {
                             
                             description: product.courseDescription,
                             amount: {
-                                value: product.price
+                                value: product.reduce((amount, item) => amount + item.price, 0)
                             }
                         }
                     ]

@@ -1,13 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import {Link, useNavigate} from 'react-router-dom';
 import CartContext from '../../context/cart/CartContext';
 import Cart from '../cart/Cart';
 
+import MembersMenu from '../membersMenu/MembersMenu';
+
 
 export default function Navbar() {
 
-  
+    const isLoggedIn = true;
     
     const { cartItems, showHideCart } = useContext( CartContext );
     const navigate = useNavigate();
@@ -77,7 +79,8 @@ export default function Navbar() {
                                 :
                                 <>
                                     <li className="navLinks">
-                                        <Link className="navItem" to="/login" onClick="window.location.reload();">Login</Link>
+                                        {isLoggedIn ? <MembersMenu/> : <Link className="navItem" to="/login" onClick="window.location.reload();">Login</Link>}
+                                        
                                     </li>
                                 </>
                             }
