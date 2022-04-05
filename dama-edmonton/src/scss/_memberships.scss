@@ -1,102 +1,26 @@
-.memberships-page h1,
-.memberships-page h2,
-.memberships-page h3,
-.memberships-page h4,
-.memberships-page p {
-    color: black;
-}
+.memberships-container {
 
-.memberships-page {
+    background-color: $off-white;
+    color: $dk-green;
+    padding-bottom: 2.75rem;
 
-    margin: 0.5rem;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    
-}
+    .memberships-wrapper {
 
-.memberships-wrapper {
+        padding-top: 4rem;
+        max-width: 1600px;
+        margin: 0 auto;
 
-    height: 100vh;
-    overflow-y: scroll;
-    padding-bottom: 8rem;
-    
-    .memberships {
-        h2, h3, p {
+        .banner {
             text-align: center;
-        }
+            padding: 10rem 0 2rem 0;
+            margin-bottom: 6rem;
 
-        h2 {
-            text-transform: uppercase;
-        }
-        
-        margin-top: 4rem;
-
-        div.membership-card {
-            padding: 1rem;
-            margin-bottom: 2rem;
-            margin-top: 2rem;
-            border-radius: 0.5rem;
-            background-color: $dk-green;
-            box-shadow: $box-bevel;
-            position: relative;
-
-            p.membership-description {
-                color: white;
-                padding: 0 1rem 1rem 1rem;
-                text-align: left;
-                margin-bottom: 4rem;
-            }
-
-            div {
-                background-color: $yellow;
-                border-radius: 0.5rem;
-                padding: 0.5rem 1rem;
-                width: 80%;
+            .header-banner {
+                max-width: 80%;
                 margin: 0 auto;
-                position: relative;
-                top: -2.5rem;
-                box-shadow: $box-bevel;
-                
-                h3 {
-                    color: #07342A;
-                }
-
-                p {
-                    text-align: center;
-                    color: #07342A;
-                }
-            }
-
-            div.purchase {
-                position: absolute;
-                bottom: 2rem;
-                text-align: center;
-                top: auto;
-                left: 10%;
-
-                a {
-                    color: #07342A;
-                }
+                text-shadow: $txt-shadow-md;
             }
         }
-    }
 
-}
-
-@media screen and (min-width: 750px) {
-    .individual-memberships,
-    .corporate-memberships {
-        div.membership-cards {
-            display: flex;
-            margin-top: 2rem;
-            justify-content: center;
-
-
-            div.membership-card {
-                margin: 1rem;
-                width: 30%;
-            }
-        }
     }
 }
