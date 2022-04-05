@@ -15,7 +15,7 @@ export default class LogoSlideShow extends React.Component {
 
   componentDidMount = async () => {
     try {
-      const response = await axios.get('http://localhost:1337/api/sponsor-partners');
+      const response = await axios.get('http://localhost:1337/api/sponsor-partners?populate=*');
       this.setState({ logoDatas: response.data.data });
     } catch (error) {
       this.setState({ error });
@@ -82,8 +82,8 @@ export default class LogoSlideShow extends React.Component {
                {this.state.logoDatas.map(current=>(
                     <div className="out" key={current.id}>
                         <div className="logo">
-                            <img className="logo-img" src={`http://localhost:1337${current.attributes.url}`} alt={`${current.attributes.name}`}/>
-                            {console.log(current.id)}
+                            <img className="logo-img" src={`http://localhost:1337${current.attributes.logo.data.attributes.url}`} alt={`${current.attributes.name}`}/>
+                            {console.log(current.attributes.logo.data.attributes.url)}
                         </div>
                     </div>
                 )
