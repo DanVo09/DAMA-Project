@@ -83,7 +83,6 @@ export default class LogoSlideShow extends React.Component {
                     <div className="out" key={current.id}>
                         <div className="logo">
                             <img className="logo-img" src={`http://localhost:1337${current.attributes.logo.data.attributes.url}`} alt={`${current.attributes.name}`}/>
-                            {console.log(current.attributes.logo.data.attributes.url)}
                         </div>
                     </div>
                 )
