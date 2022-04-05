@@ -7,6 +7,7 @@ use App\Models\Event;
 use App\Models\JobPostings;
 use App\Models\Member;
 use App\Models\MembershipType;
+use App\Http\Controllers\LoginController;
 
 // Courses
 Route::get('/all_courses', function () {
@@ -32,3 +33,7 @@ Route::get('/all_members', function () {
 Route::get('/all_membership_types', function () {
     return MembershipType::all();
 });
+
+
+// Login
+Route::post('/signin', 'App\Http\Controllers\LoginController@postLogin');

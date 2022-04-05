@@ -5,7 +5,7 @@ const Events = [
         eventTitle: "DATA SECURITY IN 2022",
         eventSpeaker: "Jon Snow",
         eventDate: "May 17th, 2022 | 12:00",
-        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate. "
     },
 
     {

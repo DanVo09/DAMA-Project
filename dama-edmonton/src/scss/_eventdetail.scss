@@ -81,16 +81,26 @@
 @media only screen and (min-width: 768px){
 
     .event-detail-page-wrapper {
-        .event-content {
-            display: flex;
-            justify-content: space-between;
-            .event-content-detail{
-                h2 {
-                text-align: left;
+        .main-container {
+
+            .sidebar {
+                position: sticky;
+                top: 9rem;
+            }
+
+            .event-content {
+                display: flex;
+                justify-content: space-between;
+                .event-content-detail{
+                    h2 {
+                    text-align: left;
+                    }
                 }
+    
             }
 
         }
+        
     }
 }
 

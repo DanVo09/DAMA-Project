@@ -19,8 +19,10 @@ export default function Newsletter() {
                     </div>
 
                 </div>
-                <Posts/>
-                <PostsSideBar/>
+                <div className="news-content">
+                    <PostsSideBar/>
+                    <Posts/>
+                </div>
            </div>
         </div>
     )

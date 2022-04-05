@@ -143,6 +143,10 @@
         .main-content {
             display: flex;
             justify-content: space-between;
+            .sidebar {
+                position: sticky;
+                top: 9rem;
+            }
 
             .event-list {
                 width: 60%;

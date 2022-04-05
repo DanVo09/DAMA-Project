@@ -6,6 +6,12 @@ import CloseIcon from '@mui/icons-material/Close';
 
 export default function SearchBar(){
 
+    function toggleHamburger() {
+
+        document.querySelector('.sidebar').classList.toggle('show');
+    
+      }
+
     const [courseData, setCourseData] = useState([]);
     useEffect(async ()=> {
         let result = await fetch("http://dama.web.dmitcapstone.ca/api/all_courses");
@@ -39,7 +45,7 @@ export default function SearchBar(){
         <>
         <div className='search-form'>
 
-            <button>Courses</button>
+            <button onClick={toggleHamburger} className="btn-toggle">Courses</button>
             <input type="text" name="search-bar" placeholder="Find a course" value={wordEnter} onChange={handleFilter}/>
             {filteredData.length === 0 
                 ? 

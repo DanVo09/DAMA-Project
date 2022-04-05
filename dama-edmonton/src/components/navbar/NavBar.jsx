@@ -3,8 +3,9 @@ import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import {Link, useNavigate} from 'react-router-dom';
 import CartContext from '../../context/cart/CartContext';
 import Cart from '../cart/Cart';
-
 import MembersMenu from '../membersMenu/MembersMenu';
+
+
 
 
 export default function Navbar() {
@@ -16,7 +17,7 @@ export default function Navbar() {
 
     function logOut(){
         localStorage.clear();
-        navigate('/register')
+        navigate('/login')
     }
 
     function toggleHamburger() {
@@ -73,14 +74,15 @@ export default function Navbar() {
                                 localStorage.getItem('user-info')?
                                 <>
                                 <li onClick={logOut} className="navLinks">
-                                Logout
+                                    <Link className="navItem" to="#" onClick="window.location.reload();">Logout</Link>
                                 </li>
+                                <MembersMenu/>
                                 </>
                                 :
                                 <>
                                     <li className="navLinks">
-                                        {isLoggedIn ? <MembersMenu/> : <Link className="navItem" to="/login" onClick="window.location.reload();">Login</Link>}
                                         
+                                    <Link className="navItem" to="/login" onClick="window.location.reload();">Login</Link>
                                     </li>
                                 </>
                             }

@@ -15,7 +15,7 @@
     .main-container {
         .sidebar {
             border: 1px solid $dk-green;
-            margin: 2rem 1rem;
+            margin: 0rem 1rem;
             border-radius: 0.5rem;
             box-shadow: $box-bevel;
             display: none;
@@ -53,6 +53,10 @@
                     }
                 }
             } 
+        }
+
+        .show {
+            display: block;
         }
 
         .content-detail {
@@ -177,9 +181,9 @@
             display: flex;
             justify-content: space-between;
             .sidebar {
-                display: block;
-                width: 40%;
-                height: fit-content;
+                position: sticky;
+                top: 9rem;
+                display: block;        
                 h2 {
                     font-size: 1rem;
                 }

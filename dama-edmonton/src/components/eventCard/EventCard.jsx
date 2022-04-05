@@ -23,7 +23,7 @@ export default function Eventcard() {
                                 <h2>{obj.eventTitle}</h2>
                                 <h3>{obj.eventSpeaker}</h3>
                                 <h4>{obj.eventDate}</h4>
-                                <p>{obj.eventDetail}</p>
+                                <p className='event-desc'>{obj.eventDetail}</p>
                                 <Link to="/events">Learn More/Register</Link>
                             </div>
                         </div>

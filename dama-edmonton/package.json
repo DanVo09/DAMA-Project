@@ -27,6 +27,8 @@
     "react-scripts": "5.0.0",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.4.8",
+    "sweetalert2-react-content": "^4.2.0",
     "three": "^0.138.3",
     "uuid": "^8.3.2",
     "uuidv4": "^6.2.12",
