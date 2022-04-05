@@ -7,6 +7,7 @@ use App\Models\Event;
 use App\Models\JobPostings;
 use App\Models\Member;
 use App\Models\MembershipType;
+use App\Http\Controllers\LoginController;
 
 // Courses
 Route::get('/all_courses', function () {

@@ -42,7 +42,6 @@ class LoginController extends Controller
                 Session::put('session_first_name', $getUserByEmail->first_name);
                 Session::put('session_last_name', $getUserByEmail->last_name);
                 Session::put('session_user_id', $getUserByEmail->user_id);
-               
 
                 return response()->json([
                     'status' => 200,

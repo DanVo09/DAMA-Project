@@ -59,6 +59,10 @@
         margin: 0 auto;
     }
 
+    .search-form button {
+        display: none;
+    }
+
     
 }
 
@@ -66,8 +70,5 @@
     .dataResult,
     .search-form {
         width: 50%;
-    }
-    .search-form button {
-        display: none;
     }
 }

@@ -6,6 +6,12 @@ import CloseIcon from '@mui/icons-material/Close';
 
 export default function EventSearchBar(){
 
+    function toggleHamburger() {
+
+        document.querySelector('.sidebar').classList.toggle('show');
+    
+      }
+
     const [eventData, setEventData] = useState([]);
     useEffect(async ()=> {
         let result = await fetch("http://dama.web.dmitcapstone.ca/api/all_events");
@@ -40,7 +46,7 @@ export default function EventSearchBar(){
         <>
         <div className='search-form'>
 
-            <button>Events</button>
+            <button onClick={toggleHamburger} className="btn-toggle">Events</button>
             <input type="text" name="search-bar" placeholder="Find an event" value={wordEnter} onChange={handleFilter}/>
             {filteredData.length === 0 
                 ? 

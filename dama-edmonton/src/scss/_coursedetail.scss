@@ -88,6 +88,10 @@
 
     .course-detail-page-wrapper {
         .main-container {
+            .sidebar {
+                position: sticky;
+                top: 9rem;
+            }
             .course-content {
                 display: flex;
                 justify-content: space-between;
