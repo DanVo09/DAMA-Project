@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-import './course-sidebar.css';
 
 export default function CourseSideBar() {
 
@@ -15,7 +14,7 @@ export default function CourseSideBar() {
     
     return(
          <div className='sidebar'>
-            <h2>Online Courses</h2> 
+            <h2>Courses</h2> 
             <ul>
                 {data.map((obj,id) => {
                     

@@ -30,7 +30,7 @@ class membershipController extends Controller
 
                //Store Session
                $request->session()->put(['id' => $login->id]);
-               return redirect('/');
+               return users::all();
         }   else {
                return back()->with('error', 'Email Or Password Wrong!');
             }   

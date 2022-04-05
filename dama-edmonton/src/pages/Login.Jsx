@@ -1,66 +1,87 @@
 
-import React, {useState, useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
-import { Link } from 'react-router-dom';
+import React, {Component, useEffect} from 'react'
+import { Link, useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
-export default function Login() {
+class Login extends Component{
 
+    state = {
+        email: '',
+        password: '',
+        error_list: [],
+    }
 
-    const [email,setEmail] =useState();
-    const [password,setPassword] =useState();
-    const navigate = useNavigate();
-
-    useEffect(()=>{
-        if(localStorage.getItem('user-info')){
-            navigate("/aboutus")
+    loginForm = async (e) => {
+        e.preventDefault();
+        const res = await axios.post('http://127.0.0.1:8000/api/signin', this.state);
+        if(res.data.status === 200)
+        {
+            console.log(this.state)
+            localStorage.setItem("user-info",JSON.stringify(this.state))
+            window.location.reload();
+            console.log(res.data.message)
+            fetch('http://127.0.0.1:8000/api/signin',{
+                method: 'post',
+                body: JSON.stringify(
+                    this.state
+                ),
+                headers: {
+                    'Accept':'application/json',
+                    'Content-Type':'application/json',
+                }
+            }).then(function(response){
+                response.json().then(function(resp){
+                    console.log(resp)
+                })
+            })
+        } else {
+            this.setState({
+                error_list: res.data.validate_err,
+           }); 
         }
-    })
-
-    async function login(){
-        
-        let item ={email,password};
-
-        let result = await fetch("http://localhost:8000/api/log-in",{
-            method:'POST',
-            body:JSON.stringify(item),
-            headers:{
-                "Content-Type":'application/json',
-                "Accept":'application/json'
-            }
-        })
-        
-        result = await result.json();
-        localStorage.setItem("user-info",JSON.stringify(result))
-        navigate("/aboutus")
-  
     }
 
 
-    return (
-        <>
-            <div className="login-form-container">
+    render(){
+        
+        return(
+            
+            <form onSubmit={this.loginForm} className="login-form-container">
                 <h1>Sign in to Your Account</h1>
                 
                 <div class="form">
                     <label for="email">Email</label>
-                    <input type="text" onChange={(e)=>setEmail(e.target.value)} name="email" placeholder='Email or Username'/>
+                    <input type="text" onChange={(item) => {this.setState({email:item.target.value})}} name="email" placeholder='Your email'/>
+                    <span className='error'>{this.state.error_list.email}</span>
                     <label for="name">Password</label>
-                    <input type="password" onChange={(e)=>setPassword(e.target.value)} name="password" placeholder='Password'/>
+                    <input type="password" onChange={(item) => {this.setState({password:item.target.value})}} name="password" placeholder='Password'/>
+                    <span className='error'>{this.state.error_list.password}</span>
                     <div className='optional-info'>
-                        
-                            <input type="checkbox" name="keeploggedin" value="keeploggedin"/>
-                            <label for="keeploggedin" className='keeploggedin'>Keep me logged in</label>
-                            
-                        
+                        <input type="checkbox" name="keeploggedin" value="keeploggedin"/>
+                        <label for="keeploggedin" className='keeploggedin'>Keep me logged in</label>
                         <Link to="/#">Forgot Password?</Link>
                     </div>
                     <Link to="/register">Create a New Account</Link>
-                    <button onClick={login}>Sign In</button>
+                    <button type='submit'>Sign In</button>
                     
                 </div>
-                  
-            </div>  
-        </>
+            </form>  
+        );
+    }
+}
+
+export default function (props){
+
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        if(localStorage.getItem('user-info')){
+            navigate("/dashboard")
+        }
+    })
+
+    return (
+        <Login/>
     )
 }
 

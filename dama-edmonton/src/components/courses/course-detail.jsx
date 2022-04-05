@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import CourseSideBar from './course-sidebar';
 import CartContext from '../../context/cart/CartContext';
 import SearchBar from '../searchBar/searchBar';
-
+import FeedBackForm from '../feedbackForm/feedbackForm';
 
 
 
@@ -52,6 +52,7 @@ export default function CourseDetail({obj}) {
                 })}
                  
             </div>
+            <FeedBackForm/>
         </div> 
         </>
     )

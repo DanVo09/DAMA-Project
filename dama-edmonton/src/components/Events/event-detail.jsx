@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import EventSideBar from './event-sidebar';
 import EventSearchBar from '../searchBar/event-searchBar';
 import CartContext from '../../context/cart/CartContext';
-
+import FeedBackForm from '../feedbackForm/feedbackForm';
 
 
 export default function EventDetail({obj}) {
@@ -58,6 +58,7 @@ export default function EventDetail({obj}) {
                 })}
                
             </div>
+            <FeedBackForm/>
            
         </div> 
         
