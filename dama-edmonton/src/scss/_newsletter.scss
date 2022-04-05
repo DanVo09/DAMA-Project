@@ -25,9 +25,7 @@
             display: flex;
 
             .posts{
-                flex: 9;
-                margin: 1.25rem;
-                padding: 0 1rem;
+                
             }
 
             // sidebar styling
@@ -91,6 +89,10 @@
 
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-around;
+                flex: 9;
+                margin: 1.25rem;
+                padding: 0 1rem;
 
                 .post {
 
