@@ -2,13 +2,21 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import React  from 'react'
+import React, {useEffect}  from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 export default function Dashboard() {
 
-    
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+      if(localStorage.getItem('user-info')){
+          navigate("/dashboard")
+      }
+  })
     
     return (
         <div className='dashboard-page'>
