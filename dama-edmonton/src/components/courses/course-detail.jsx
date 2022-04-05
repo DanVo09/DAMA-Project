@@ -4,6 +4,7 @@ import CourseSideBar from './course-sidebar';
 import CartContext from '../../context/cart/CartContext';
 import SearchBar from '../searchBar/searchBar';
 import FeedBackForm from '../feedbackForm/feedbackForm';
+import CertificatinInfo from './certification-info';
 
 
 
@@ -52,6 +53,7 @@ export default function CourseDetail({obj}) {
                 })}
                  
             </div>
+            <CertificatinInfo/>
             <FeedBackForm/>
         </div> 
         </>
