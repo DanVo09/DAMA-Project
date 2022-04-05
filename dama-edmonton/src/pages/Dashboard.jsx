@@ -54,7 +54,7 @@ export default function Dashboard() {
                 return (
                   <>
                     <div key={obj.user_id}>
-                    <img src="https://picsum.photos/360/360" alt="User profile image" />
+                    <img src="/assets/images/users/ellenripley.webp" alt="User profile image" />
                     <h2>{obj.first_name} {obj.last_name}</h2>
                     <p>Email: {obj.email}</p>
                     </div>
@@ -78,16 +78,32 @@ export default function Dashboard() {
               <div>
                 <h3>Your Courses and Events</h3>
                 <ul>
-                    <li><Link to="/#">course</Link></li>
-                    <li><Link to="/#">course</Link></li>
-                    <li><Link to="/#">course</Link></li>
-                    <li><Link to="/#">course</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">corem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
+                    <li><Link to="/#">orem ipsum dolor sit amet consectetur</Link></li>
                 </ul>
               </div>
             </section>
             <section className='user-feedback'>
               <h3>You have recently completed... course</h3>
                 <ul>
+                    <li><Link to="/#">Completed course</Link></li>
+                    <li><Link to="/#">Completed course</Link></li>
+                    <li><Link to="/#">Completed course</Link></li>
+                    <li><Link to="/#">Completed course</Link></li>
                     <li><Link to="/#">Completed course</Link></li>
                     <li><Link to="/#">Completed course</Link></li>
                     <li><Link to="/#">Completed course</Link></li>
