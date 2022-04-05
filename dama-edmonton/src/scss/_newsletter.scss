@@ -24,10 +24,6 @@
         .news-content {
             display: flex;
 
-            .posts{
-                
-            }
-
             // sidebar styling
 
             .posts-sidebar {
@@ -99,7 +95,9 @@
                     max-width: 24rem;
                     margin: 0 1.5rem 2.5rem 1.5rem;
                     padding: 1rem;
-                    background-color: $lt-blue-ol;
+                    padding-bottom: 2rem;
+                    background-color: $dk-blue;
+                    color: $off-white;
                     border-radius: 0.85rem;
                     box-shadow: $box-bevel;
 
@@ -112,7 +110,7 @@
 
                     .post-info {
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: column-reverse;
                         align-items: center;
 
                         .post-categories {
@@ -127,9 +125,11 @@
                         }
 
                         .post-title {
-                            border-bottom: 1px solid #222;
+                            border-bottom: 1px dotted $lt-green;
                             padding-bottom: 0.35rem;
                             text-align: center;
+                            color: $yellow;
+                            cursor: pointer;
                         }
     
                         .post-date {
@@ -147,9 +147,8 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         display: -webkit-box;
-                        -webkit-line-clamp: 3;
+                        -webkit-line-clamp: 4;
                         -webkit-box-orient: vertical;
-
                     }
 
                     
