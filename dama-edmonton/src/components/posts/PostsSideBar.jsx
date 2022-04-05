@@ -4,7 +4,7 @@ export default function PostsSideBar() {
     
 
     return (
-        <div className='posts-sidebar'>
+        <aside className='posts-sidebar'>
             <div className="sidebar-item">
                 <h2 className='sidebar-title'>About the Author</h2>
                 <img src={process.env.PUBLIC_URL + `/assets/images/users/1.jpeg`} alt="#" className='posts-img'/>
@@ -21,6 +21,6 @@ export default function PostsSideBar() {
                 </ul>
             </div>
             
-        </div>
+        </aside>
     )
 }

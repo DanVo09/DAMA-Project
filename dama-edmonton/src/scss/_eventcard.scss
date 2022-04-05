@@ -60,11 +60,16 @@
                 text-shadow: $txt-shadow-dk;
             }
     
-            p {
+            .event-desc {
                 text-shadow: $txt-shadow-dk;
                 border-bottom: 1px dotted $off-white;
                 padding-bottom: 0.5rem;
                 margin-bottom: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
             }
     
             a {
