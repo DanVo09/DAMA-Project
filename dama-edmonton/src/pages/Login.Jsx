@@ -2,6 +2,7 @@
 import React, {Component, useEffect} from 'react'
 import { Link, useNavigate} from 'react-router-dom';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 class Login extends Component{
 
@@ -9,6 +10,7 @@ class Login extends Component{
         email: '',
         password: '',
         error_list: [],
+        error:'',
     }
 
     loginForm = async (e) => {
@@ -18,26 +20,29 @@ class Login extends Component{
         {
             console.log(this.state)
             localStorage.setItem("user-info",JSON.stringify(this.state))
+            Swal.fire({  
+                icon: 'success',  
+                title: 'Successful!',  
+                text: res.data.message,  
+              }); 
             window.location.reload();
             console.log(res.data.message)
-            fetch('http://127.0.0.1:8000/api/signin',{
-                method: 'post',
-                body: JSON.stringify(
-                    this.state
-                ),
-                headers: {
-                    'Accept':'application/json',
-                    'Content-Type':'application/json',
-                }
-            }).then(function(response){
-                response.json().then(function(resp){
-                    console.log(resp)
-                })
-            })
+            
         } else {
             this.setState({
                 error_list: res.data.validate_err,
+                
            }); 
+
+           console.log(res.data.validate_err)
+           
+           if(res.data.validate_err === "Your email or password are incorrect.") {
+                Swal.fire({  
+                    icon: 'error',  
+                    title: 'Unsuccessful!',  
+                    text: res.data.validate_err,  
+                }); 
+           }
         }
     }
 
@@ -48,7 +53,6 @@ class Login extends Component{
             
             <form onSubmit={this.loginForm} className="login-form-container">
                 <h1>Sign in to Your Account</h1>
-                
                 <div class="form">
                     <label for="email">Email</label>
                     <input type="text" onChange={(item) => {this.setState({email:item.target.value})}} name="email" placeholder='Your email'/>
@@ -70,7 +74,7 @@ class Login extends Component{
     }
 }
 
-export default function (props){
+export default function (){
 
     const navigate = useNavigate();
 

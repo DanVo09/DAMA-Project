@@ -51,6 +51,7 @@ class LoginController extends Controller
             else 
             {
                 return response()->json([
+                    'status' => 500,
                     'validate_err' => 'Your email or password are incorrect.',
                 ]);
             }
