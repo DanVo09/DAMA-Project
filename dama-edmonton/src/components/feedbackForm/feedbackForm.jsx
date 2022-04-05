@@ -16,22 +16,22 @@ export default function FeedBackForm() {
                           <div>
                               <div>
                                     <input type="checkbox" name="email" value="email"/>
-                                    <label for="email"> eMail</label>
+                                    <label htmlFor="email"> eMail</label>
                               </div>
                               <div>
                                     <input type="checkbox" name="linkedin" value="linkedin"/>
-                                    <label for="linkedin">LinkedIn</label>
+                                    <label htmlFor="linkedin">LinkedIn</label>
                               </div>
                           </div>
 
                            <div>
                                <div>
                                     <input type="checkbox" name="damawebsite" value="damawebsite" />
-                                    <label for="damawebsite"> DAMA/ICCP Website</label>
+                                    <label htmlFor="damawebsite"> DAMA/ICCP Website</label>
                                </div>
                                <div>
                                     <input type="checkbox" value="other"/>
-                                    <label for="other"> Other</label>
+                                    <label htmlFor="other"> Other</label>
                                </div>
                                
                                 
@@ -39,12 +39,12 @@ export default function FeedBackForm() {
                             
                       </div>
                       <div>
-                        <label for="other-way"> If other please specify:</label>
+                        <label htmlFor="other-way"> If other please specify:</label>
                         <input type="text" name="other-way"/>
                       </div>
                   </div>
                   <div>
-                        <label for="instruction-preparation">Speaker/instructor preparation</label>
+                        <label htmlFor="instruction-preparation">Speaker/instructor preparation</label>
                         <select name="instruction-preparation" id="instruction-preparation" >
                             <option value="Exceeded Expectations">Exceeded Expectations</option>
                             <option value="Meet Expectation">Meet Expectation</option>
@@ -52,24 +52,24 @@ export default function FeedBackForm() {
                             <option value="other">other</option>
                         </select>
                         <div>
-                            <label for="other-way"> If other please specify:</label>
+                            <label htmlFor="other-way"> If other please specify:</label>
                             <input type="text" name="other-way"/>
                         </div>
                   </div>
                   <div>
-                        <label for="topic">What other topics/speakers would you like us to bring to you?</label>
+                        <label htmlFor="topic">What other topics/speakers would you like us to bring to you?</label>
                         <input type="text" name="topic"/>
                   </div>
                   <div>
-                        <label for="course-name">Name of Webinar/course</label>
+                        <label htmlFor="course-name">Name of Webinar/course</label>
                         <input type="text" name="course-name"/>
                   </div>
                   <div>
-                        <label for="course-date">Date of Webinar/Course </label>
+                        <label htmlFor="course-date">Date of Webinar/Course </label>
                         <input type="date" name="course-date"/>
                   </div>
                   <div>
-                        <label for="quality">Facility/Access/Quality</label>
+                        <label htmlFor="quality">Facility/Access/Quality</label>
                         <select name="quality" id="quality" >
                             <option value="Excellent">Excellent</option>
                             <option value="Meet Expectation">Meet Expectation</option>
@@ -77,12 +77,12 @@ export default function FeedBackForm() {
                             <option value="other">other</option>
                         </select>
                         <div>
-                            <label for="other-quality"> If other please specify:</label>
+                            <label htmlFor="other-quality"> If other please specify:</label>
                             <input type="text" name="other-quality"/>
                         </div>
                   </div>
                   <div>
-                        <label for="course-content">Course Content </label>
+                        <label htmlFor="course-content">Course Content </label>
                         <select name="course-content" id="course-content" >
                             <option value="Exceeded Expectations">Exceeded Expectations</option>
                             <option value="Meet Expectation">Meet Expectation</option>
@@ -90,13 +90,13 @@ export default function FeedBackForm() {
                             <option value="other">other</option>
                         </select>
                         <div>
-                            <label for="other-course-content"> If other please specify:</label>
+                            <label htmlFor="other-course-content"> If other please specify:</label>
                             <input type="text" name="other-course-content"/>
                         </div>
                   </div>
                   
                   <div className="user-name">
-                        <label for="name">Name (Optional)</label>
+                        <label htmlFor="name">Name (Optional)</label>
                         <div>
                             <input type="text" name="lastname" placeholder="Lastname"/>
                             <input type="text" name="firstname" placeholder="Firstname"/>
@@ -104,7 +104,7 @@ export default function FeedBackForm() {
                         
                   </div>
                   <div>
-                        <label for="email">Email (Optional)</label>
+                        <label htmlFor="email">Email (Optional)</label>
                         <input type="email" name="email"/>
                   </div>
                 </div>

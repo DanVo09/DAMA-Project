@@ -4,47 +4,112 @@ import { v4 as uuidv4 } from "uuid";
 const EventData = [
     {
         id:uuidv4(),
-        eventPicture: "events/1.jpg",
-        eventTitle: "DATA SECURITY IN 2022",
+        picture: "events/1.jpg",
+        title: "DATA SECURITY IN 2022",
         eventSpeaker: "Jon Snow",
-        eventDate: "May 17th, 2022 | 12:00",
-        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        eventDate: "May 17th, 2022",
+        eventTime:"12:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
     },
 
     {
         id:uuidv4(),
-        eventPicture: "events/2.jpg",
-        eventTitle: "Canadian Data Summit",
+        picture: "events/2.jpg",
+        title: "Canadian Data Summit",
         eventSpeaker: "Arya Stark",
-        eventDate: "May 24th, 2022 | 8:00",
-        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        eventDate: "July 19, 2022",
+        eventTime:"12:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
     },
 
     {
         id:uuidv4(),
-        eventPicture: "events/3.jpg",
-        eventTitle: "Data Management Conference",
+        picture: "events/3.jpg",
+        title: "Data Management Conference",
         eventSpeaker: "Burt Reynolds",
-        eventDate: "June 14th-17th, 2022 | 8:00",
-        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        eventDate: "March 17, 2022",
+        eventTime:"12:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
     },
 
     {
         id:uuidv4(),
-        eventPicture: "events/4.jpg",
-        eventTitle: "Natural Language Data Management & Interfaces",
+        picture: "events/4.jpg",
+        title: "Natural Language Data Management & Interfaces",
         eventSpeaker: "Edgar Allen Poe",
-        eventDate: "June 21st, 2022 | 11:00",
-        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        eventDate: "April 17, 2022",
+        eventTime:"11:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
     },
 
     {
         id:uuidv4(),
-        eventPicture: "events/5.jpg",
-        eventTitle: "Edmonton DAMA Annual General Meeting",
+        picture: "events/5.jpg",
+        title: "Edmonton DAMA Annual General Meeting",
         eventSpeaker: "Sir Patrick Stewart",
-        eventDate: "July 7th, 2022 | 21:00",
-        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate."
+        eventDate: "May 28, 2022",
+        eventTime:"9:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
+    },
+
+    {
+        id:uuidv4(),
+        picture: "events/5.jpg",
+        title: "Edmonton DAMA Annual General Meeting",
+        eventSpeaker: "Sir Patrick Stewart",
+        eventDate: "February 28, 2022",
+        eventTime:"9:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
+    },
+
+    {
+        id:uuidv4(),
+        picture: "events/5.jpg",
+        title: "Edmonton DAMA Annual General Meeting",
+        eventSpeaker: "Sir Patrick Stewart",
+        eventDate: "January 28, 2022",
+        eventTime:"11:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
+    },
+
+    {
+        id:uuidv4(),
+        picture: "events/2.jpg",
+        title: "Canadian Data Summit",
+        eventSpeaker: "Arya Stark",
+        eventDate: "July 19, 2022",
+        eventTime:"12:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
+    },
+
+    {
+        id:uuidv4(),
+        picture: "events/3.jpg",
+        title: "Data Management Conference",
+        eventSpeaker: "Burt Reynolds",
+        eventDate: "March 17, 2022",
+        eventTime:"12:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
+    },
+
+    {
+        id:uuidv4(),
+        picture: "events/4.jpg",
+        title: "Natural Language Data Management & Interfaces",
+        eventSpeaker: "Edgar Allen Poe",
+        eventDate: "April 17, 2022",
+        eventTime:"11:00",
+        eventDetail: "Niche market business model canvas paradigm shift stock. Pitch accelerator gen-z business model canvas twitter burn rate.",
+        price: 0
     }
 ]
 

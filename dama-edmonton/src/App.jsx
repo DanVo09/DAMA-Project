@@ -15,7 +15,8 @@ import Register from "./pages/SignUp";
 import Memberships from "./pages/Memberships";
 import Footer from './components/footer/footer';
 import Dashboard from "./pages/Dashboard";
-import CheckOut from './pages/CheckOut'
+import CheckOut from './pages/CheckOut';
+import JobsBoard from './pages/JobsBoard';
 
 import CourseDetail from './components/courses/course-detail';
 import Navbar from './components/navbar/NavBar';
@@ -24,10 +25,16 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 
 const PAYPAL_KEY = process.env.REACT_APP_PAYPAL_CLIENT_ID
 
+const initialOptions = {
+    "client-id":  PAYPAL_KEY,
+    currency: "CAD",
+    intent: "capture"
+}
+
 function App() {
   
   return (
-    <PayPalScriptProvider options={{ "client-id":  PAYPAL_KEY }}>
+    <PayPalScriptProvider options={initialOptions}>
         <div className="App">
             <Router>
                 <Navbar/> 
@@ -45,6 +52,7 @@ function App() {
                     <Route path="/courses" exact element={<Courses />}/> 
                     <Route path="/contact" element={<Contact />}/>
                     <Route path="/checkout" element={<CheckOut />}/>
+                    <Route path="/jobsboard" element={<JobsBoard />}/>
                 </Routes>
                 <Footer/>
             </Router>

@@ -17,3 +17,7 @@
 ### 2. Create memberMenu component
 ### 3. Create News Section
 ### 4. 
+## Dan
+### 1. Style About Us, Events, Course, SignIn/SignUp Pages 
+### 2. Create search bar function, logo slide-show, 
+### 3. Integrate Laravel and React

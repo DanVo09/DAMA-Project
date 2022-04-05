@@ -9,8 +9,10 @@ class UserController extends Controller
     
     function register(Request $req)
     {
+        
         $user = new User;
-        $user->name= $req->input('name');
+        $user->first_name= $req->input('first_name');
+        $user->last_name= $req->input('last_name');
         $user->email= $req->input('email');
         $user->password= Hash::make($req->input('password'));
         $user->save();

@@ -20,7 +20,7 @@ export default function Login() {
         
         let item ={email,password};
 
-        let result = await fetch("http://localhost:8000/api/login",{
+        let result = await fetch("http://localhost:8000/api/log-in",{
             method:'POST',
             body:JSON.stringify(item),
             headers:{

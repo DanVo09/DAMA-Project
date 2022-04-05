@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import CartContext from '../context/cart/CartContext';
+
 
 class Memberships extends React.Component {
   // State of your application
@@ -9,6 +11,8 @@ class Memberships extends React.Component {
     corpmemberships: [],
     error: null,
   };
+
+  
 
   // Fetch your memberships immediately after the component is mounted
   componentDidMount = async () => {
@@ -21,8 +25,12 @@ class Memberships extends React.Component {
     }
   };
 
+  
+
   render() {
     const { error, membership } = this.state;
+    
+    
 
     // Print errors if any
     if (error) {

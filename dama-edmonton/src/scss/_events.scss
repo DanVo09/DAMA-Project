@@ -78,7 +78,39 @@
                     color: $off-white;
                 }
             }
-        } 
+        }
+        
+        .paginationBtn {
+            display: flex;
+            justify-content: center;
+            text-decoration: underline;
+            cursor: pointer;
+            a:hover {
+                font-weight: lighter;
+            }
+            
+            .pageNumberBtn {
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+
+            .nextBtn, .previousBtn {
+                text-transform: none;
+            }
+
+            .nextBtn {
+                padding-left: 0.5rem;
+            }
+
+            .previousBtn {
+                padding-right: 0.5rem;
+            }
+
+            .paginationActive {
+                border: 1px solid $dk-green;
+                border-radius: 0.2rem;
+            }
+        }
     }
 }
 

@@ -11,10 +11,19 @@ export default function Cartitem({item}) {
     return (
         <>
             <li className='cartItem-item'>
-              <img src={process.env.PUBLIC_URL + `/assets/images/${item.coursePicture}`} alt='' className='cartItem-img' />
+              <img src={process.env.PUBLIC_URL + `/assets/images/${item.picture}`} alt='' className='cartItem-img' />
               <div className="cart-item-content">
                   <p className='cartItem-title'>
-                    {item.courseTitle}
+                    {item.title}
+                  </p>
+                  <p>
+                    {item.eventSpeaker}
+                  </p>
+                  <p>
+                    {item.eventDate}
+                  </p>
+                  <p>
+                    {item.eventTime}
                   </p>
                   <div className="cartItem-price-container">
                     <CurrencyFormat className='cartItem-currency' value={item.price} displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
