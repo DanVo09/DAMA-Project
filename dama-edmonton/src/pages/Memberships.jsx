@@ -40,9 +40,9 @@ class Memberships extends React.Component {
     return (
       <div className='memberships-page'>
         <div className="memberships-wrapper">
-          <section>
-            <h2>Why Become a Member</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit nam assumenda, odit, corrupti, vitae eveniet tenetur nobis libero consequatur pariatur quas ullam perferendis rem fuga repellat inventore maxime beatae delectus.</p>
+          <section className='hero-banner' style={{background: `linear-gradient(rgba(255,255,255,0.6),
+            rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
+            <h1>BECOME A MEMBER</h1>
           </section>
           <section className="individual-memberships memberships">
             <h2>individual membership options</h2>
