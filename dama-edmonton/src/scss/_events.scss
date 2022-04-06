@@ -38,6 +38,10 @@
     }
     .event-list {
         padding: 1rem;
+        h2 {
+            color: $dk-green;
+            text-align: left;
+        }
 
         .event-card {
             margin-bottom: 1.5rem;
@@ -67,6 +71,7 @@
                     padding-top: 3rem;
                     padding-bottom: 1rem;
                     font-size: 1.5rem;
+                    color: $off-white;
                 }
                 h3 {
                     font-size: 1.2rem;

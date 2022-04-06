@@ -47,8 +47,7 @@ export default Courses;
 
 import FeedBackForm from '../components/feedbackForm/feedbackForm';
 import CourseSideBar from '../components/courses/course-sidebar';
-import CallIcon from '@mui/icons-material/Call';
-import EmailIcon from '@mui/icons-material/Email';
+import CertificatinInfo from '../components/courses/certification-info';
 import ComputerIcon from '@mui/icons-material/Computer';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import CheckIcon from '@mui/icons-material/Check';
@@ -124,15 +123,7 @@ export default function Course() {
 
           </div>
 
-          <div className='certification-content'>
-            <h2>Certification Examinations</h2>
-          
-              <ul>
-                <li><a href="#"><CallIcon className='call-icon'/> 1.800.843.8227 </a> to schedule a date and time to take the Data Governance and Stewardship Professional examination or </li>
-                <li><a href="#"><EmailIcon className='email-icon'/> damaedmonton@gmail.com </a> with your preferred dates for an online proctored examination. </li>
-              </ul>
-          </div>
-
+          <CertificatinInfo/>
         </div>
 
         <div className='feedback'>

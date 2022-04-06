@@ -15,20 +15,9 @@ class Login extends Component{
 
     loginForm = async (e) => {
         e.preventDefault();
-        const res = await axios.post('http://127.0.0.1:8000/api/signin', this.state);
-        if(res.data.status === 200)
+        const res = await axios.post('http://dama.web.dmitcapstone.ca/api/signin', this.state);
+        if(res.data.validate_err)
         {
-            console.log(this.state)
-            localStorage.setItem("user-info",JSON.stringify(this.state))
-            Swal.fire({  
-                icon: 'success',  
-                title: 'Successful!',  
-                text: res.data.message,  
-              }); 
-            window.location.reload();
-            console.log(res.data.message)
-            
-        } else {
             this.setState({
                 error_list: res.data.validate_err,
                 
@@ -43,6 +32,29 @@ class Login extends Component{
                     text: res.data.validate_err,  
                 }); 
            }
+            
+        } else {
+
+            let result = await fetch("http://dama.web.dmitcapstone.ca/api/signin", {
+                method:'POST',
+                body:JSON.stringify(this.state),
+                headers:{
+                    "Content-Type":'application/json',
+                    "Accept":'application/json'
+                }
+            })
+            result = await result.json();
+            localStorage.setItem("user-info",JSON.stringify(result))
+
+            Swal.fire({  
+                icon: 'success',  
+                title: 'Successful!',  
+                text: 'You are Logged in',  
+              }); 
+            window.location.reload();
+            console.log(res.data.message)
+
+            
         }
     }
 

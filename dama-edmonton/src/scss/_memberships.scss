@@ -4,8 +4,11 @@
 .memberships-page p {
     color: black;
 }
+.memberships-container {
 
-.memberships-page {
+    background-color: $off-white;
+    color: $dk-green;
+    padding-bottom: 2.75rem;
 
     // margin: 0.5rem;
     position: relative;
@@ -13,8 +16,11 @@
     overflow: hidden;
     
 }
+    .memberships-wrapper {
 
-.memberships-wrapper {
+        padding-top: 4rem;
+        max-width: 1600px;
+        margin: 0 auto;
 
     height: 100vh;
     overflow-y: scroll;
@@ -48,19 +54,13 @@
             background-color: $dk-blue;
             box-shadow: $box-bevel;
             position: relative;
+        .banner {
+            text-align: center;
+            padding: 10rem 0 2rem 0;
+            margin-bottom: 6rem;
 
-            p.membership-description {
-                color: white;
-                padding: 0 1rem 1rem 1rem;
-                text-align: left;
-                margin-bottom: 4rem;
-            }
-
-            div {
-                background-color: $yellow;
-                border-radius: 0.5rem;
-                padding: 0.5rem 1rem;
-                width: 80%;
+            .header-banner {
+                max-width: 80%;
                 margin: 0 auto;
                 position: relative;
                 top: -2.5rem;
@@ -121,6 +121,10 @@
                 font-size: 2rem;
             }
         }
+                text-shadow: $txt-shadow-md;
+            }
+        }
+
     }
 
 }
