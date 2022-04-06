@@ -15,7 +15,9 @@
     display: none;
      
     }
-
+    .sidebar h2 {
+        color: #07342A;
+    }
     .sidebar h3,
     .sidebar p,
     .sidebar li,
