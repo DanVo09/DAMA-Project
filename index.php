@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        window.location.href = '/dama-edmonton';
-    </script>
+    <?php
+        header('location: /dama-edmonton/src/index.js')
+    ?>
 </body>
 </html>
