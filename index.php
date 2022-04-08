@@ -7,8 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        header('location: /dama-edmonton/src/index.js')
-    ?>
+    <h1>Hello, World!</h1>
 </body>
 </html>
