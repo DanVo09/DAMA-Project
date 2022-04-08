@@ -21,7 +21,7 @@ aside.dashboard-sidebar {
     width: max-content;
     // height: 100vh;
     padding: 1rem;
-    background: $yellow;
+    background: $lt-blue;
 
     .sidebar-icon {
         display: flex;
@@ -29,13 +29,23 @@ aside.dashboard-sidebar {
         margin-bottom: 1rem;
 
         p {
-            color: $dk-green;
+            color: $off-white;
         }
 
         svg {
-            fill: $dk-green;
+            fill: $off-white;
             margin-right: 1rem;
             font-size: 2.95rem;
+        }
+    }
+
+    .sidebar-icon:hover {
+        svg {
+            fill: $yellow;
+        }
+
+        p {
+            color: $yellow;
         }
     }
 }
@@ -43,6 +53,8 @@ aside.dashboard-sidebar {
 .dashboard-cards {
     display: grid;
     grid-template-columns: 40% 60%;
+    max-width: 80rem;
+    margin-left: 1rem;
     width: 1500px;
     margin: 2rem auto;
 
@@ -86,7 +98,7 @@ aside.dashboard-sidebar {
     .user-profile {
         padding: 1rem;
         border-radius: 0.5rem;
-        background-color: $dk-green;
+        background-color: $dk-blue;
         box-shadow: $box-bevel;
         margin: 1rem;
         position: relative;
@@ -126,12 +138,15 @@ aside.dashboard-sidebar {
         }
 
         button {
-            background-color: $yellow;
+            background-color: $lt-blue;
             border: none;
             border-radius: 0.5rem;
             padding: 0.5rem 1rem;
             width: 80%;
             box-shadow: $box-bevel;
+            color: white;
+            position: absolute;
+            left: 10%;
             color: $dk-green;
             bottom: 2rem;
             text-decoration: none;
@@ -139,6 +154,11 @@ aside.dashboard-sidebar {
             font-weight: bold;
             width: fit-content;
             margin: 1rem;
+        }
+
+        button:hover {
+            background-color: $yellow;
+            color: black;
         }
     }
 
