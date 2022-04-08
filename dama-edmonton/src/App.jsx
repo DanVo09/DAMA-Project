@@ -50,7 +50,7 @@ function App() {
                     <Route path="/events" exact element={<EventPages />}/> 
                     <Route path="/events/:id" element={<EventDetail />}/> 
                     <Route path="/courses/:id" element={<CourseDetail />}/> 
-                    <Route path="/courses" exact element={<Courses />}/> 
+                    <Route path="/courses" exact element={<Courses />}/>
                     <Route path="/contact" element={<Contact />}/>
                     <Route path="/checkout" element={<CheckOut />}/>
                     <Route path="/jobsboard" element={<JobsBoard />}/>

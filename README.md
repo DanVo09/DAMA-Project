@@ -21,3 +21,8 @@
 ### 1. Style About Us, Events, Course, SignIn/SignUp Pages 
 ### 2. Create search bar function, logo slide-show, 
 ### 3. Integrate Laravel and React
+
+
+email derekepp9@gmail.com
+username depp4
+pass DerekJason1!
