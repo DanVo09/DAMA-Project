@@ -88,10 +88,7 @@
 
     .course-detail-page-wrapper {
         .main-container {
-            .sidebar {
-                position: sticky;
-                top: 9rem;
-            }
+
             .course-content {
                 display: flex;
                 justify-content: space-between;
@@ -121,6 +118,7 @@
             .sidebar {
                 display: block;
                 width: 30%;
+                height: auto;
                 h2{
                     text-align: left;
                 }
@@ -158,7 +156,7 @@
             }
 
             .course-content {
-                width: 78%;
+                width: 70%;
                
             }
         }

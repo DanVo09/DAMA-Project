@@ -27,7 +27,7 @@
           
             h2 {
                 text-align: center;
-                padding: 1rem;
+                padding: 0.5rem 1rem;
                 background-color: $yellow;
                 border-radius: 0.5rem;
             }
@@ -149,12 +149,12 @@
             display: flex;
             justify-content: space-between;
             .sidebar {
-                position: sticky;
-                top: 9rem;
-                display: block;        
+                display: block;
+                height: auto;        
                 h2 {
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     color: $dk-green;
+                    text-align: left;
                 }
             }
 
@@ -173,6 +173,7 @@
         .main-container {
             .sidebar {
                 width: 30%;
+                height: auto;
             }
             .content-detail {
                 .content-detail-flex {

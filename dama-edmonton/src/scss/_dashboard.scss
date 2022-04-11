@@ -1,170 +1,240 @@
-.dashboard-page h1,
-.dashboard-page h2,
-.dashboard-page h3,
-.dashboard-page h4,
-.dashboard-page p {
-    color: black;
-}
-
-h2 {
-    color: $off-white;
-    text-align: center;
-}
-
 .dashboard-page {
-    display: flex;
-}
+    h1, h2, h3 p, a {
+        color: $dk-green;
+        line-height: 1.5;
+    }
 
-aside.dashboard-sidebar {
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    // height: 100vh;
-    padding: 1rem;
-    background: $lt-blue;
 
-    .sidebar-icon {
+    .side-bar-button {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        margin-bottom: 1rem;
-
-        p {
-            color: $off-white;
-        }
-
-        svg {
-            fill: $off-white;
-            margin-right: 1rem;
-            font-size: 2.95rem;
-        }
-    }
-
-    .sidebar-icon:hover {
-        svg {
-            fill: $yellow;
-        }
-
-        p {
-            color: $yellow;
-        }
-    }
-}
-
-.dashboard-cards {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    max-width: 80rem;
-    margin-left: 1rem;
-    width: 1500px;
-    margin: 2rem auto;
-
-    .user-courses,
-    .user-feedback {
-        grid-column: 2 / 3;
-    }
-
-    .user-profile {
-        grid-row: 1 / 3;
-        height: 45rem;
+        margin: 1rem 1rem 0 1rem;
+        padding: 0.5rem 1rem;
         background-color: $yellow;
-    }
-
-    ::-webkit-scrollbar {
-        width: 0.5rem;
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background-color: $yellow;
-        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-      }
-
-    .user-courses,
-    .user-feedback {
-        position: relative;
-        overflow: scroll;
-        max-height: 20rem;
-        width: 60%;
-        margin-left: auto;
-    }
-
-    ul {
-        padding: 0 1rem 1rem 1rem;
-        margin: 0;
-    }
-
-    .user-courses,
-    .user-feedback,
-    .user-profile {
-        padding: 1rem;
         border-radius: 0.5rem;
-        background-color: $dk-blue;
-        box-shadow: $box-bevel;
-        margin: 1rem;
-        position: relative;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        padding: 1.5rem;
-        height: fit-content;
+
+        .arrow-btn-icon {
+            fill: $dk-green;
+        }
+    }
+
+    .dashboard-sidebar {
+        background-color: $dk-green;
+        margin: 0 1rem 1rem 1rem;
+        border-radius: 0.5rem;
+        display: none;
 
         h2 {
+            color: $dk-green;
+            padding: 0.5rem 1rem;
+            background-color: $yellow;
+            font-size: 1.5rem;
+
+        }
+
+        .sidebar-icon {
             color: $off-white;
+            display: flex;
+            justify-content: left;
+            padding: 1rem;
+            border-bottom: 1px solid $off-white;
+
+            p {
+                padding-left: 1rem;
+            }
+        }
+    }
+
+    .dashboard-cards {
+        .user-profile {
+            margin: 1rem 0;
+            padding: 1rem;
+            img {
+                border-radius: 50%;
+                padding: 1rem;
+                margin: 0 auto;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                color: $dk-green;
+                padding-bottom: 0.5rem;
+                line-height: 1.5;
+                
+            }
+
+            .edit-btn {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                a {
+                    padding: 0.5rem 1rem;
+                    background-color: $yellow;
+                    border-radius: 0.5rem;
+                }
+                a:hover {
+                    background-color: $dk-green;
+                    color: $off-white;
+                }
+            }
+
         }
 
-        h3{
-            color: $yellow;
-            padding: 0 1rem 1rem 1rem;
-        } 
-        p {
-            color: white;
-            text-align: left;
-            padding: 0.5rem;
+        .user-courses {
+            margin: 2rem 1rem;
+            h3, th, td, p {
+                color: $dk-green;
+            }
+            table {
+                display: none;
+            }
+            
         }
 
-        img {
-            margin: auto;
+        .course-history-list {
+            .course-history-detail{
+                border: 1px solid $dk-green;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        width: 50%;
+                        a {
+                            text-transform: capitalize;
+                            font-weight: none;
+                        }
+                    }
+
+                    
+                }
+            }
+          
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .dashboard-page  {
+        .dashboard-cards {
+            .user-courses {
+                h3 {
+                    padding: 1rem;
+                    text-align: center;
+                }
+
+
+                 td, th {
+                    padding: 0.5rem 1rem;
+                }
+                table {
+                    display: block;
+                    padding: 1rem;
+                    margin: 0 auto;
+                    border: 1px solid $dk-green;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                    border-radius: 0.5rem;
+                    tr{
+                        td {
+                            a{
+                                text-transform: capitalize;
+                                font-weight: none;
+                            }
+                        }
+                    } 
+                }
+
+                .course-history-list {
+                    display: none;
+                   
+                 }
+
+                
+            }
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .dashboard-page  {
+        display: flex;
+        justify-content: space-between;
+        .side-bar-button {
+            display: none;
+        }
+
+        .dashboard-sidebar {
+            margin-top: 2rem;
+            display: block;
             width: 40%;
-            border-radius: 50%;
-            margin-bottom: 1rem;
+
         }
 
-        li {
-            list-style: none;
-            padding-bottom: 0.5rem;
-            a {
-                text-decoration: underline;
-                cursor: pointer;
+        .dashboard-cards {
+            width: 60%;
+            .user-profile {
+                img {
+                    width: 30%;
+                }
+            }
+
+            .user-courses {
+                td, th {
+                    padding: 0.5rem;
+                }
             }
         }
 
-        button {
-            background-color: $lt-blue;
-            border: none;
-            border-radius: 0.5rem;
-            padding: 0.5rem 1rem;
-            width: 80%;
-            box-shadow: $box-bevel;
-            color: white;
-            position: absolute;
-            left: 10%;
-            color: $dk-green;
-            bottom: 2rem;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            width: fit-content;
-            margin: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .dashboard-page {
+        justify-content: center;
+        .dashboard-sidebar {
+            width: 30%;
+
         }
 
-        button:hover {
-            background-color: $yellow;
-            color: black;
+        .dashboard-cards {
+            width: 55%;
+
+            .user-courses {
+                td, th {
+                    padding: 0.5rem 1.5rem;
+                }
+            }
         }
     }
 
-    .user-courses {
-        h3, p {
-            text-align: left;
+}
+
+@media only screen and (min-width: 1600px){
+    .dashboard-page {
+        justify-content: start;
+        max-width: 1600px;
+        margin: 0 auto;
+        .dashboard-sidebar {
+            width: 20%;
+
+        }
+
+        .dashboard-cards {
+            width: 70%;
+            margin-left: 5rem;
+            .user-courses {
+                td, th {
+                    padding: 0.5rem 3rem;
+                }
+            }
         }
     }
 }

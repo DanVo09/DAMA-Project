@@ -1,0 +1,72 @@
+.job-page-wrapper {
+    h1, h2, p, h3, a {
+        color: $dk-green;
+    }
+
+    h1 {
+        text-align: center;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+
+    .job-list {
+        .job-detail {
+            border: 1px solid $dk-green;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 0.5rem;
+
+            h2 {
+                padding-bottom: 1rem;
+            }
+
+            .apply-links {
+                margin: 2rem 0 1rem 0;
+                a {
+                    padding: 0.5rem;
+                    margin-right: 0.5rem;
+                    background-color: $yellow;
+                    border-radius: 0.5rem;
+                }
+
+                a:hover {
+                    background-color: $dk-green;
+                    color: $off-white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .job-page-wrapper{
+        .job-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .job-detail {
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .job-page-wrapper{
+        .job-list {
+            .job-detail {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .job-page-wrapper{
+        .job-list {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+    }
+}

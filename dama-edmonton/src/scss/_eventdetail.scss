@@ -83,11 +83,6 @@
     .event-detail-page-wrapper {
         .main-container {
 
-            .sidebar {
-                position: sticky;
-                top: 9rem;
-            }
-
             .event-content {
                 display: flex;
                 justify-content: space-between;
@@ -112,6 +107,7 @@
             .sidebar {
                 display: block;
                 width: 30%;
+                height: auto;
             }
 
             .event-content {
@@ -142,11 +138,11 @@
             max-width: 1600px;
             margin: 0 auto;
             .sidebar {
-                width: 30%;
+                width: 20%;
             }
 
             .course-content {
-                width: 68%;
+                width: 70%;
                
             }
         }
