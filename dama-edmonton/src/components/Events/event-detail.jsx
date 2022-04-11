@@ -58,7 +58,7 @@ export default function EventDetail({obj}) {
                 })}
                
             </div>
-            <FeedBackForm/>
+            {/* <FeedBackForm/> */}
            
         </div> 
         

@@ -62,14 +62,15 @@
 
                 a {
                     background-color: $yellow;
-                    padding: 0.5rem 1rem;
-                    border-radius: 0.5rem;
-                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    @extend %btn;
+                    box-shadow: $box-bevel;
+                    max-width: 12rem;
+                    transition: all 0.3s ease-in-out;
                 }
 
                 a:hover {
                     background-color: $dk-green;
-                    color: $off-white;
+                    color: $yellow;
                 }
             }
         }
