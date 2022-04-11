@@ -58,29 +58,18 @@
                 }
 
                 a {
-<<<<<<< HEAD
                     background-color: $lt-blue;
                     color: $off-white;
                     padding: 0.5rem 1rem;
                     border-radius: 1rem;
-                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                   
                 }
 
                 a:hover {
                     background-color: $dk-blue;
-=======
-                    background-color: $yellow;
-                    @extend %btn;
-                    box-shadow: $box-bevel;
-                    max-width: 12rem;
                     transition: all 0.3s ease-in-out;
                 }
 
-                a:hover {
-                    background-color: $dk-green;
-                    color: $yellow;
->>>>>>> baea8148fb4708393e2f743e310ffd001462e17e
-                }
             }
         }
         
