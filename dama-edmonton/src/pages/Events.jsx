@@ -11,8 +11,7 @@ export default function EventPages() {
     return (
         <>
         <div className='event-page-wrapper'>
-            <div className='course-banner' style={{background: `linear-gradient(rgba(255,255,255,0.6),
-                rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
+            <div className='course-banner' style={{background: ` url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
                 <h1>EVENTS - PAST AND PRESENT</h1>
             </div>
             <EventSearchBar/>

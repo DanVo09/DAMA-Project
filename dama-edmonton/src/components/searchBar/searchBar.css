@@ -37,8 +37,9 @@
 }
 
 .search-form button {
-    background-color: #e8ef1a;
+    background-color: #058ED9;
     border: none;
+    color: #f5f5f5;
 }
 
 .search-icon {
