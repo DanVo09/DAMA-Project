@@ -26,7 +26,8 @@
     }
 
     .sidebar .main-title {
-        background-color: #e8ef1a;
+        background-color: $yellow;
+        box-shadow: $box-bevel;
         display: flex;
         justify-content: space-between;
         border-radius: 0.5rem;
