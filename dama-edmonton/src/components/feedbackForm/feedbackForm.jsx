@@ -1,6 +1,6 @@
 import React from "react";
 
-import './feedbackForm.css';
+
 export default function FeedBackForm() {
     
 
@@ -9,6 +9,7 @@ export default function FeedBackForm() {
           <div className="feedbackform">
               <h2>Course Feedback (Fully Confidential)</h2>
               <p>Webinar-Course Feedback Survey</p>
+              <form action="POST">
               <div className="form-detail">
                   <div className="checkbox">
                       <p>How did you hear about this webinar or courses?</p>
@@ -16,7 +17,7 @@ export default function FeedBackForm() {
                           <div>
                               <div>
                                     <input type="checkbox" name="email" value="email"/>
-                                    <label htmlFor="email"> eMail</label>
+                                    <label htmlFor="email"> Email</label>
                               </div>
                               <div>
                                     <input type="checkbox" name="linkedin" value="linkedin"/>
@@ -111,8 +112,8 @@ export default function FeedBackForm() {
 
                   <input type="submit" name="submit" id="submit" />
 
-              
 
+              </form>
           </div>
         </>
     )

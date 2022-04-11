@@ -4,6 +4,19 @@
     padding-bottom: 3rem;
     padding-top: 3rem;
 
+    form {
+
+        background-color: $dk-blue;
+        color: $off-white;
+        border-radius: 1.15rem;
+        box-shadow: $box-bevel;
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 2rem 0;
+
+    }
+
+
 }
 
 .feedbackform  h2 {
@@ -16,12 +29,15 @@
     padding-bottom: 2rem;
 }
 
-.feedbackform label {
-    color: black;
-}
+
 
 .form-detail {
     padding: 1rem;
+
+    input[type=checkbox]{
+        width: 2rem;
+    }
+    
 }
 
 .form-detail p {
@@ -31,6 +47,9 @@
 .form-detail label, input,  select {
     width: 100%;
     margin-bottom: 1rem;
+    border-radius: 0.85rem;
+    border: none;
+    padding: 0.65rem 0 0.65rem 0.5rem;
     
 }
 .form-detail input,  select {
@@ -63,15 +82,13 @@
 }
 
 #submit {
-    background: #e8ef1a;
-    border: none;
-    padding: 0.5rem 1rem;
-    width: fit-content;
-    border-radius: 0.5rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: bold;
+    background: $yellow;
+    transition: all 0.3s ease-in-out;
+    @extend %btn;
+    box-shadow: $box-bevel;
+    max-width: 60rem;
+    margin: 2rem auto;
+
 }
 #submit:hover {
     background-color: #07342A;
