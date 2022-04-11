@@ -31,7 +31,7 @@ export default class Director extends React.Component {
 
         return(
         <>
-            <section className="person-profile">
+            {/* <section className="person-profile">
                 <h2>DAMA Edmonton Board of Directors</h2>
                 <div className="person-profile-flex">
                     {presidentData.map((obj, id) => {
@@ -64,7 +64,7 @@ export default class Director extends React.Component {
                         })}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="person-profile">
                 <h3>Data Management - Data Science - Thought Leaders</h3>
