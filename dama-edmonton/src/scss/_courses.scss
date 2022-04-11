@@ -34,7 +34,6 @@
                 text-align: center;
                 padding: 0.5rem 1rem;
                 background-color: $dk-blue;
-                box-shadow: $box-bevel;
                 border-radius: 0.5rem;
                 color: $off-white;
             }
@@ -53,7 +52,6 @@
                        
                         display: block;
                         padding: 1rem;
-                        box-shadow: $box-bevel;
                     }
 
                     a:hover {
@@ -110,16 +108,13 @@
                     padding: 0.5rem 1rem;
                     border-radius: 1rem;
                     border: 5px solid $off-white;
-                    @extend %btn;
-                    background-color: $yellow;
-                    box-shadow: $box-bevel;
                     padding: 0.5rem 1rem;
                     border-radius: 0.5rem;
                     transition: all 0.3s ease-in-out;
+                    color: $off-white;
 
                     &:hover {
-                        background-color: $dk-green;
-                        color: $yellow;
+                        background-color: $dk-blue;
                     }
                 }
             }
