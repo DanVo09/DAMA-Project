@@ -64,10 +64,13 @@
         font-weight: bold;
         cursor: pointer;
         width: fit-content;
+        transition: all 0.3s ease-in-out;
+        box-shadow: $box-bevel;
     }
 
     #submit-btn:hover {
-        color: $off-white;
+        background-color: $dk-green;
+        color: $yellow;
     }
 
     input:first-of-type {

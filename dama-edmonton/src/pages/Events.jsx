@@ -20,9 +20,9 @@ export default function EventPages() {
                <EventSideBar/>
                 <EventList/>
             </div>
-            <div className='feedback'>
+            {/* <div className='feedback'>
                 <FeedBackForm/>
-            </div>
+            </div> */}
         
         </div>  
         </>

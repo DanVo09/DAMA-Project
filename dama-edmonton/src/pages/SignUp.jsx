@@ -40,7 +40,7 @@ export default function Register() {
     }
     
     return (
-        <>
+        <div className='form-wrapper'>
           <div className="signup-form-container">
             <h1>Register A New Account</h1>
                 
@@ -64,7 +64,7 @@ export default function Register() {
                     <button onClick={signUp}>Sign Up</button>
                 </div>   
           </div>
-        </>
+        </div>
     )
 }
 

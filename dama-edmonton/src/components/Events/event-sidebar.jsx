@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
-import './event-sidebar.css';
+
 
 
 export default function EventSideBar(){

@@ -33,12 +33,17 @@
             h2 {
                 text-align: center;
                 padding: 0.5rem 1rem;
+<<<<<<< HEAD
                 background-color: $dk-blue;
+=======
+                background-color: $yellow;
+                box-shadow: $box-bevel;
+>>>>>>> baea8148fb4708393e2f743e310ffd001462e17e
                 border-radius: 0.5rem;
                 color: $off-white;
             }
 
-            h2, li {
+            li {
                 border-bottom: 1px solid white;
             }
 
@@ -52,6 +57,7 @@
                        
                         display: block;
                         padding: 1rem;
+                        box-shadow: $box-bevel;
                     }
 
                     a:hover {
@@ -104,10 +110,24 @@
                     }
                 }
                 a {
+<<<<<<< HEAD
                     background-color: $lt-blue;
                     padding: 0.5rem 1rem;
                     border-radius: 1rem;
                     border: 5px solid $off-white;
+=======
+                    @extend %btn;
+                    background-color: $yellow;
+                    box-shadow: $box-bevel;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: $dk-green;
+                        color: $yellow;
+                    }
+>>>>>>> baea8148fb4708393e2f743e310ffd001462e17e
                 }
             }
 
