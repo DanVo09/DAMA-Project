@@ -30,6 +30,7 @@
             padding: 0.5rem 1rem;
             background-color: $yellow;
             font-size: 1.5rem;
+            box-shadow: $box-bevel;
 
         }
 
@@ -42,6 +43,11 @@
 
             p {
                 padding-left: 1rem;
+                transition: all 0.3s ease-in-out;
+            }
+
+            p:hover {
+                color: $yellow;
             }
         }
     }
@@ -70,14 +76,19 @@
             .edit-btn {
                 margin-top: 1rem;
                 margin-bottom: 1rem;
+            
                 a {
+                    @extend %btn;
                     padding: 0.5rem 1rem;
                     background-color: $yellow;
-                    border-radius: 0.5rem;
+                    box-shadow: $box-bevel;
+                    transition: all 0.3s ease-in-out;
+                    max-width: 20rem;
+                   
                 }
                 a:hover {
                     background-color: $dk-green;
-                    color: $off-white;
+                    color: $yellow;
                 }
             }
 
