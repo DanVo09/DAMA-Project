@@ -20,16 +20,17 @@
     }
 
     .dashboard-sidebar {
-        background-color: $dk-green;
+        background-color: $lt-blue;
         margin: 0 1rem 1rem 1rem;
         border-radius: 0.5rem;
         display: none;
 
         h2 {
-            color: $dk-green;
+            color: $off-white;
             padding: 0.5rem 1rem;
-            background-color: $yellow;
+            background-color: $dk-blue;
             font-size: 1.5rem;
+            border-radius: 0.5rem;
 
         }
 
@@ -42,7 +43,13 @@
 
             p {
                 padding-left: 1rem;
+                font-size: 1.2rem;
             }
+
+        }
+
+        a:hover {
+            background-color: $dk-blue;
         }
     }
 
@@ -72,12 +79,12 @@
                 margin-bottom: 1rem;
                 a {
                     padding: 0.5rem 1rem;
-                    background-color: $yellow;
-                    border-radius: 0.5rem;
+                    background-color: $lt-blue;
+                    border-radius: 1rem;
+                    color: $off-white;
                 }
                 a:hover {
-                    background-color: $dk-green;
-                    color: $off-white;
+                    background-color: $dk-blue;
                 }
             }
 
@@ -85,8 +92,13 @@
 
         .user-courses {
             margin: 2rem 1rem;
-            h3, th, td, p {
+
+            h3 {
                 color: $dk-green;
+            }
+            
+            th, td, p {
+                color: $off-white;
             }
             table {
                 display: none;
@@ -96,11 +108,11 @@
 
         .course-history-list {
             .course-history-detail{
-                border: 1px solid $dk-green;
-                padding: 0.5rem;
+                padding: 1rem;
                 border-radius: 0.5rem;
                 margin-top: 1rem;
                 margin-bottom: 1rem;
+                background-color: $lt-green;
                 div {
                     display: flex;
                     justify-content: space-between;
@@ -109,6 +121,7 @@
                         a {
                             text-transform: capitalize;
                             font-weight: none;
+                            color: $off-white;
                         }
                     }
 
@@ -132,13 +145,13 @@
 
 
                  td, th {
-                    padding: 0.5rem 1rem;
+                    padding: 0.5rem;
                 }
                 table {
                     display: block;
                     padding: 1rem;
                     margin: 0 auto;
-                    border: 1px solid $dk-green;
+                    background-color: $lt-green;
                     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
                     border-radius: 0.5rem;
                     tr{
@@ -146,6 +159,11 @@
                             a{
                                 text-transform: capitalize;
                                 font-weight: none;
+                                color: $off-white;
+                            }
+
+                            a:hover {
+                                color: $dk-green;
                             }
                         }
                     } 

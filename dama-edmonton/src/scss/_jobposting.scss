@@ -1,17 +1,26 @@
 .job-page-wrapper {
-    h1, h2, p, h3, a {
-        color: $dk-green;
+     h2, p, h3, a {
+        color: $off-white;
+    }
+
+
+    .course-banner {
+        padding: 10rem 1rem;
     }
 
     h1 {
         text-align: center;
-        padding-top: 10rem;
-        padding-bottom: 10rem;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 2rem;
+        color: $dk-green;
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(2255,255,255,0.6) );
     }
 
     .job-list {
         .job-detail {
-            border: 1px solid $dk-green;
+            background-color: $lt-green;
             padding: 1rem;
             margin: 1rem;
             border-radius: 0.5rem;
@@ -25,13 +34,13 @@
                 a {
                     padding: 0.5rem;
                     margin-right: 0.5rem;
-                    background-color: $yellow;
-                    border-radius: 0.5rem;
+                    background-color: $lt-blue;
+                    border: 5px solid $off-white;
+                    border-radius: 1rem;
                 }
 
                 a:hover {
-                    background-color: $dk-green;
-                    color: $off-white;
+                    background-color: $dk-blue;
                 }
             }
         }

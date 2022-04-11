@@ -4,12 +4,10 @@
     }
     .main-container {
         .sidebar {
-            border: 1px solid $dk-green;
             margin: 2rem 1rem;
             border-radius: 0.5rem;
-            box-shadow: $box-bevel;
             display: none;
-            background-color: $dk-green;
+            background-color: $lt-blue;
              li, a {
                 color: white;
             }
@@ -31,8 +29,7 @@
                     }
 
                     a:hover {
-                        background-color: $yellow;
-                        color: $dk-green;
+                        color: $dk-blue;
                     }
                 }
             } 
@@ -61,15 +58,15 @@
                 }
 
                 a {
-                    background-color: $yellow;
+                    background-color: $lt-blue;
+                    color: $off-white;
                     padding: 0.5rem 1rem;
-                    border-radius: 0.5rem;
+                    border-radius: 1rem;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 }
 
                 a:hover {
-                    background-color: $dk-green;
-                    color: $off-white;
+                    background-color: $dk-blue;
                 }
             }
         }
