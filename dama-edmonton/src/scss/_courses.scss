@@ -1,25 +1,30 @@
 .course-page-wrapper {
 
+    .course-banner {
+        padding: 10rem 1rem;
+    }
+
+    h1 {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 2rem;
+        color: $dk-green;
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(2255,255,255,0.6) );
+    }
+
     color: $dk-green;
     li,a {
         color: $dk-green;
     }
 
-    .course-banner {
-        h1 {
-            text-align: center;
-            font-size: 1.5rem;
-            padding: 5rem 1rem;
-        }
-    }
     .main-container {
         .sidebar {
-            border: 1px solid $dk-green;
             margin: 0rem 1rem;
-            border-radius: 0.5rem;
-            box-shadow: $box-bevel;
+            border-radius: 1rem;
             display: none;
-            background-color: $dk-green;
+            background-color: $lt-blue;
              ul li, a {
                 color: white;
                 text-transform: uppercase;
@@ -27,12 +32,13 @@
           
             h2 {
                 text-align: center;
-                padding: 1rem;
-                background-color: $yellow;
+                padding: 0.5rem 1rem;
+                background-color: $dk-blue;
                 border-radius: 0.5rem;
+                color: $off-white;
             }
 
-            h2, li {
+            li {
                 border-bottom: 1px solid white;
             }
 
@@ -49,8 +55,7 @@
                     }
 
                     a:hover {
-                        background-color: $yellow;
-                        color: $dk-green;
+                        background-color: $dk-blue;
                     }
                 }
             } 
@@ -64,10 +69,9 @@
             .course-card {
                 border: 1px solid $dk-green;
                 margin: 2rem 1rem;
-                border-radius: 0.5rem;
-                box-shadow: $box-bevel;
+                border-radius: 1rem;
                 padding: 1rem 1rem 2rem 1rem;
-                background-color: $dk-blue;
+                background-color: $lt-green;
                 color: $off-white;
                 .icon {
                     margin: 0 auto;
@@ -93,24 +97,32 @@
                     padding: 0;
                     margin: 0;
                     .check-icon {
-                        color: $yellow;
+                        color: $off-white;
                         font-size: 2rem;
                         margin-right: 1rem;
                         }
                     }
                 }
                 a {
-                    background-color: $yellow;
+                    background-color: $lt-blue;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    border: 5px solid $off-white;
                     padding: 0.5rem 1rem;
                     border-radius: 0.5rem;
+                    transition: all 0.3s ease-in-out;
+                    color: $off-white;
+
+                    &:hover {
+                        background-color: $dk-blue;
+                    }
                 }
             }
 
             .note {
-                background-color: $dk-blue;
+                background-color: $lt-green;
                 margin: 1rem;
                 border-radius: 0.5rem;
-                box-shadow: $box-bevel;
                 padding: 1rem 0.5rem;
                 .icon-container {
                     .note-icon {
@@ -138,23 +150,15 @@
 
 @media only screen and (min-width: 768px){
     .course-page-wrapper {
-        .course-banner {
-            h1 {
-                padding-top: 10rem;
-                padding-bottom: 10rem;
-                font-size: 2rem;
-            }
-        }
         .main-container {
             display: flex;
             justify-content: space-between;
             .sidebar {
-                position: sticky;
-                top: 9rem;
-                display: block;        
+                display: block;
+                height: auto;        
                 h2 {
-                    font-size: 1rem;
-                    color: $dk-green;
+                    font-size: 1.5rem;
+                    text-align: left;
                 }
             }
 
@@ -173,6 +177,7 @@
         .main-container {
             .sidebar {
                 width: 30%;
+                height: auto;
             }
             .content-detail {
                 .content-detail-flex {

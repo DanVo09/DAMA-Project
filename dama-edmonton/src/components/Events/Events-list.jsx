@@ -17,7 +17,7 @@ export default function EventList(){
     
     const current = new Date();
 
-    const upComingEventData = eventData.filter(obj=> new Date(obj.event_date)  >= current)
+    const upComingEventData = eventData.filter(obj=> new Date(obj.event_date)  <= current)
 
     console.log(upComingEventData)
 
@@ -37,7 +37,7 @@ export default function EventList(){
                 <div className="event-card-content">
                     <div className="card-content-wrapper">
                         <h2>{obj.event_title}</h2>
-                        <h2>{obj.event_speaker}</h2>
+                        <h3>Mr Speaker</h3>
                         <p>{obj.event_date}</p>
                         <p>${obj.event_price}</p>
                         <Link to={`/events/${obj.event_id}`} >Learn More/Register</Link>

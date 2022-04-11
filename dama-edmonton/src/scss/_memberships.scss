@@ -1,128 +1,77 @@
-.memberships-page h2,
-.memberships-page h3,
-.memberships-page h4,
-.memberships-page p {
-    color: black;
-}
-.memberships-container {
+.membership-content {
 
-    background-color: $off-white;
     color: $dk-green;
-    padding-bottom: 2.75rem;
 
-    // margin: 0.5rem;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    
-}
+    .banner {
+        text-align: center;
+        padding: 10rem 0 10rem 0;
+        margin-bottom: 4rem;
+
+        .header-banner {
+            max-width: 80%;
+            margin: 0 auto;
+            
+        }
+    }
+
     .memberships-wrapper {
 
-        padding-top: 4rem;
+        
+        padding-top: 2rem;
         max-width: 1600px;
         margin: 0 auto;
+        color: $dk-green;
 
-    height: 100vh;
-    overflow-y: scroll;
-    padding-bottom: 8rem;
-
-    .hero-banner {
-        h1 {
-            text-align: center;
-            font-size: 1.5rem;
-            padding: 5rem 1rem;
-            color: $dk-green;
-        }
-    }
-    
-    .memberships {
-        h2, h3, p {
-            text-align: center;
-        }
-
-        h2 {
-            text-transform: uppercase;
-        }
-        
-        margin-top: 4rem;
-
-        div.membership-card {
-            padding: 1rem;
-            margin-bottom: 2rem;
-            margin-top: 2rem;
-            border-radius: 0.5rem;
+        .member-benefits {
             background-color: $dk-blue;
+            color: $off-white;
             box-shadow: $box-bevel;
-            position: relative;
-        .banner {
-            text-align: center;
-            padding: 10rem 0 2rem 0;
-            margin-bottom: 6rem;
+            padding: 1rem;
+            border-radius: 0.85rem;
+            margin-bottom: 4rem;
 
-            .header-banner {
-                max-width: 80%;
-                margin: 0 auto;
-                position: relative;
-                top: -2.5rem;
-                box-shadow: $box-bevel;
-                
-                h3 {
-                    color: #07342A;
-                }
-
-                p {
-                    text-align: center;
-                    color: #07342A;
-                }
+            h3 {
+                color: $yellow;
+                margin: 2rem 0;
             }
 
-            div.purchase {
-                position: absolute;
-                bottom: 2rem;
-                text-align: center;
-                top: auto;
-                left: 10%;
-                background-color: $lt-blue;
-
-                a {
-                    color: white;
-                }
-            }
-            div.purchase:hover {
-                background-color: $yellow;
-
-                a {
-                    color: black;
-                }
-            }
-        }
-    }
-
-    @media screen and (min-width: 750px) {
-        .individual-memberships,
-        .corporate-memberships {
-            div.membership-cards {
+            li {
+                font-size: 1.25rem;
                 display: flex;
-                margin-top: 2rem;
-                justify-content: center;
-    
-    
-                div.membership-card {
-                    margin: 1rem;
-                    width: 30%;
-                }
+                align-items: flex-start;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            svg {
+                color: $yellow;
+                font-size: 2.15rem;
             }
         }
 
-        .hero-banner {
-            h1 {
-                padding-top: 10rem;
-                padding-bottom: 10rem;
-                font-size: 2rem;
+        .monthly-meetings {
+            background-color: $dk-blue;
+            color: $off-white;
+            box-shadow: $box-bevel;
+            padding: 1rem;
+            padding-bottom: 4rem;
+            border-radius: 0.85rem;
+            margin-bottom: 4rem;
+
+            h3 {
+                color: $yellow;
+                margin: 2rem 0;
             }
-        }
-                text-shadow: $txt-shadow-md;
+
+            p {
+                margin-bottom: 1rem;
             }
         }
 
     }
+}
+    
+   
+
+
+    

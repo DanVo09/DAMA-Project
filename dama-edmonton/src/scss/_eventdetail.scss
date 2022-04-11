@@ -4,12 +4,10 @@
     }
     .main-container {
         .sidebar {
-            border: 1px solid $dk-green;
             margin: 2rem 1rem;
             border-radius: 0.5rem;
-            box-shadow: $box-bevel;
             display: none;
-            background-color: $dk-green;
+            background-color: $lt-blue;
              li, a {
                 color: white;
             }
@@ -31,8 +29,7 @@
                     }
 
                     a:hover {
-                        background-color: $yellow;
-                        color: $dk-green;
+                        color: $dk-blue;
                     }
                 }
             } 
@@ -61,16 +58,18 @@
                 }
 
                 a {
-                    background-color: $yellow;
+                    background-color: $lt-blue;
+                    color: $off-white;
                     padding: 0.5rem 1rem;
-                    border-radius: 0.5rem;
-                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    border-radius: 1rem;
+                   
                 }
 
                 a:hover {
-                    background-color: $dk-green;
-                    color: $off-white;
+                    background-color: $dk-blue;
+                    transition: all 0.3s ease-in-out;
                 }
+
             }
         }
         
@@ -82,11 +81,6 @@
 
     .event-detail-page-wrapper {
         .main-container {
-
-            .sidebar {
-                position: sticky;
-                top: 9rem;
-            }
 
             .event-content {
                 display: flex;
@@ -112,6 +106,7 @@
             .sidebar {
                 display: block;
                 width: 30%;
+                height: auto;
             }
 
             .event-content {
@@ -142,11 +137,11 @@
             max-width: 1600px;
             margin: 0 auto;
             .sidebar {
-                width: 30%;
+                width: 20%;
             }
 
             .course-content {
-                width: 68%;
+                width: 70%;
                
             }
         }

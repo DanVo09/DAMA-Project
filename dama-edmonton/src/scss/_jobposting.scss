@@ -1,0 +1,81 @@
+.job-page-wrapper {
+     h2, p, h3, a {
+        color: $off-white;
+    }
+
+
+    .course-banner {
+        padding: 10rem 1rem;
+    }
+
+    h1 {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 2rem;
+        color: $dk-green;
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(2255,255,255,0.6) );
+    }
+
+    .job-list {
+        .job-detail {
+            background-color: $lt-green;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 0.5rem;
+
+            h2 {
+                padding-bottom: 1rem;
+            }
+
+            .apply-links {
+                margin: 2rem 0 1rem 0;
+                a {
+                    padding: 0.5rem;
+                    margin-right: 0.5rem;
+                    background-color: $lt-blue;
+                    border: 5px solid $off-white;
+                    border-radius: 1rem;
+                }
+
+                a:hover {
+                    background-color: $dk-blue;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .job-page-wrapper{
+        .job-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .job-detail {
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .job-page-wrapper{
+        .job-list {
+            .job-detail {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .job-page-wrapper{
+        .job-list {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+    }
+}
