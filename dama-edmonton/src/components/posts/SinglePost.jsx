@@ -5,10 +5,21 @@ export default function Singlepost() {
 
     return (
         <div className='single-container'>
+            <div className="banner" style={{background: `linear-gradient(rgba(255,255,255,0.6),
+                rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
+                        <div className="header-banner">
+                            <h2>Our Newsletter</h2>
+                            <p>Stay informed about what is happening with the DAMA - Edmonton community</p>
+                        </div>
+
+                </div>
             <div className="single-wrapper">
-                <img src={process.env.PUBLIC_URL + `/assets/images/events/2.jpg`} alt="" className='post-img'/>
-                <h1 className="single-post-title">A Beginners Guide to MongoDB</h1>
-                <h3 className="single-post-date">1 hour ago</h3>
+                <div className="post-header">
+                    <img src={process.env.PUBLIC_URL + `/assets/images/events/2.jpg`} alt="" className='post-img'/>
+                    <h1 className="single-post-title">A Beginners Guide to MongoDB</h1>
+                    <h3 className='single-post-author'>Sarah Kerrigan</h3>
+                    <h3 className="single-post-date">1 hour ago</h3>
+                </div>
                 <pre className='single-post-content'>{`
                     College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 

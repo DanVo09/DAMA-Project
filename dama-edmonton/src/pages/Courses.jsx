@@ -103,7 +103,7 @@ export default function Course() {
                         <li><CheckIcon className='check-icon'/>Cohort Paced, 12 week program</li>
                         <li><CheckIcon className='check-icon'/>One hour weekly live discussion and Q&#38;A</li>
                       </ul>
-                      <a href="#">Learn More &#62;</a>
+                      <a href="#" className='course-btn'>Learn More &#62;</a>
                     </div>
                   </div>
               </div>

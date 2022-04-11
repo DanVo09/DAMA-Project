@@ -3,23 +3,28 @@
     color: $dk-green;
     padding-bottom: 2.75rem;
 
+    .banner {
+        text-align: center;
+        padding: 10rem 0 10rem 0;
+        margin-bottom: 6rem;
+
+        .header-banner {
+            max-width: 80%;
+            margin: 0 auto;
+            
+        }
+    }
+
     .news-wrapper{
+
+        h4 {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
 
         padding-top: 4rem;
         max-width: 1600px;
         margin: 0 auto;
-
-        .banner {
-            text-align: center;
-            padding: 10rem 0 2rem 0;
-            margin-bottom: 6rem;
-
-            .header-banner {
-                max-width: 80%;
-                margin: 0 auto;
-                text-shadow: $txt-shadow-md;
-            }
-        }
 
         .news-content {
             display: flex;

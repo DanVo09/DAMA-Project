@@ -46,6 +46,7 @@
                        
                         display: block;
                         padding: 1rem;
+                        box-shadow: $box-bevel;
                     }
 
                     a:hover {
@@ -100,9 +101,17 @@
                     }
                 }
                 a {
+                    @extend %btn;
                     background-color: $yellow;
+                    box-shadow: $box-bevel;
                     padding: 0.5rem 1rem;
                     border-radius: 0.5rem;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: $dk-green;
+                        color: $yellow;
+                    }
                 }
             }
 

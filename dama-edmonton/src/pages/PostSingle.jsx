@@ -8,7 +8,7 @@ export default function Postsingle() {
     return (
         <div className='post-single-container'>
             <div className="post-single-wrapper">
-                <PostsSideBar/>
+                
                 <Singlepost/>
             </div>
         </div>
