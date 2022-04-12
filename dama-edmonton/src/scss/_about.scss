@@ -18,25 +18,30 @@
     }
 
     a {
-        @extend %btn;
-        box-shadow: $btn-shadow;
         color: white;
-        background-color: $dk-green;
+        background-color: $lt-blue;
+        border: 5px solid $off-white;
         padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
+        border-radius: 1rem;
         display: block;
         margin: 1rem auto;
         text-align: center;
         width: fit-content;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     a:active,
     a:hover {
-        color: $dk-green;
-        background-color: $yellow;
+        background-color: $dk-blue;
     }
 
     .about-title {
+
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(2255,255,255,0.6) );
+        padding: 2rem;
+        border-radius: 2rem;
+        width: fit-content;
+        
         p{
             padding: 2rem 1rem 1rem 1rem;
         }
@@ -57,22 +62,24 @@
             margin-bottom: 2rem;
             margin-top: 2rem;
             border-radius: 0.5rem;
-            background-color: $dk-green;
-            box-shadow: $box-bevel;
+            background-color: $lt-green;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             p{
                 color: white;
                 padding: 0 1rem 1rem 1rem;
                 text-align: left;
             }
             h3 {
-                background-color: $yellow;
+                background-color: $lt-blue;
+                color: $off-white;
                 border-radius: 0.5rem;
                 padding: 0.5rem 1rem;
                 width: 80%;
                 margin: 0 auto;
                 position: relative;
                 top: -2.5rem;
-                box-shadow: $box-bevel;
+                border: 5px solid $off-white;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
         }
     }

@@ -20,6 +20,9 @@ import JobsBoard from './pages/JobsBoard';
 import PostSingle from './pages/PostSingle';
 import CourseDetail from './components/courses/course-detail';
 import Navbar from './components/navbar/NavBar';
+import InsertJob from './components/jobs/insertJob';
+import SelfStudy from './pages/SelfStudy';
+import InstructorLed from './pages/instructorlead';
 
 import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 
@@ -54,7 +57,10 @@ function App() {
                     <Route path="/contact" element={<Contact />}/>
                     <Route path="/checkout" element={<CheckOut />}/>
                     <Route path="/jobsboard" element={<JobsBoard />}/>
+                    <Route path="/insertjob" element={<InsertJob />}/>
                     <Route path="/post" element={<PostSingle />}/>
+                    <Route path="/selfstudy" element={<SelfStudy />}/>
+                    <Route path="/instructorlead" element={<InstructorLed />}/>
                 </Routes>
                 <Footer/>
             </Router>

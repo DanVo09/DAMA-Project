@@ -4,13 +4,9 @@ import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 
+
 export default function SearchBar(){
 
-    function toggleHamburger() {
-
-        document.querySelector('.sidebar').classList.toggle('show');
-    
-      }
 
     const [jobData, setJobData] = useState([]);
     useEffect(async ()=> {
@@ -45,7 +41,7 @@ export default function SearchBar(){
         <>
         <div className='search-form'>
 
-            <button onClick={toggleHamburger} className="btn-toggle">Job</button>
+            <button className="btn-toggle show"><Link to="/insertjob">Post a Job</Link></button>
             <input type="text" name="search-bar" placeholder="Find a job" value={wordEnter} onChange={handleFilter}/>
             {filteredData.length === 0 
                 ? 

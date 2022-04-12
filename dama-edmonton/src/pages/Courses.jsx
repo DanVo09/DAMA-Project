@@ -84,7 +84,7 @@ export default function Course() {
                           <li><CheckIcon className='check-icon'/>Work at your own pace</li>
                           <li><CheckIcon className='check-icon'/>Ideal for Experienced Data Professionals</li>
                       </ul>
-                      <Link to="#">Learn More &#62;</Link>
+                      <Link to="/selfstudy">Learn More &#62;</Link>
                     </div>
                   
                   </div>
@@ -102,7 +102,7 @@ export default function Course() {
                         <li><CheckIcon className='check-icon'/>Cohort Paced, 12 week program</li>
                         <li><CheckIcon className='check-icon'/>One hour weekly live discussion and Q&#38;A</li>
                       </ul>
-                      <a href="#" className='course-btn'>Learn More &#62;</a>
+                      <a href="/instructorlead" className='course-btn'>Learn More &#62;</a>
                     </div>
                   </div>
               </div>

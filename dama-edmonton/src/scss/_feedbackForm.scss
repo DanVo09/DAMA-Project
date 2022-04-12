@@ -9,7 +9,6 @@
         background-color: $dk-blue;
         color: $off-white;
         border-radius: 1.15rem;
-        box-shadow: $box-bevel;
         max-width: 70rem;
         margin: 0 auto;
         padding: 2rem 0;
@@ -78,17 +77,17 @@
 }
 
 #submit {
-    background: $yellow;
+    background: $lt-blue;
     transition: all 0.3s ease-in-out;
     @extend %btn;
-    box-shadow: $box-bevel;
     max-width: 60rem;
     margin: 2rem auto;
+    color: $off-white;
+    border: 5px solid $off-white;
 
 }
 #submit:hover {
-    background-color: #07342A;
-    color: #e8ef1a;
+    background-color: $dk-blue;
 }
 
 

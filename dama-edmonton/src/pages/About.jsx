@@ -12,8 +12,7 @@ export default function Aboutus() {
       
         <>
         <div className="about-page-wrapper">
-            <div className="banner" style={{background: `linear-gradient(rgba(255,255,255,0.6),
-            rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") top/cover no-repeat` }}>
+            <div className="banner" style={{background: `url("assets/images/profile-picture/background.jpg") top/cover no-repeat` }}>
                 <div className="about-title">
                     <h2>Edmonton Data management Association</h2>
                     <p>Business Analytics, Data Analytics, Internet of Things Analytics, Data Science, Data Management, Data Governance, Data Operations and Security, Data Stewardship, Data Modeling.</p>
