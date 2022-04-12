@@ -1,0 +1,156 @@
+.selfstudy-page-wrapper {
+
+    .selfstudy-banner {
+        padding: 10rem 1rem;
+    }
+
+    h1 {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 2rem;
+        color: $dk-green;
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(2255,255,255,0.6) );
+    }
+
+    color: $dk-green;
+
+    .main-container {
+        .sidebar {
+            margin: 0rem 1rem;
+            border-radius: 1rem;
+            display: none;
+            background-color: $lt-blue;
+             
+            h2 {
+                text-align: center;
+                padding: 0.5rem 1rem;
+                background-color: $dk-blue;
+                border-radius: 0.5rem;
+                color: $off-white;
+            }
+
+            li {
+                border-bottom: 1px solid white;
+            }
+
+            ul{
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    margin: 0;
+                    a {
+                       
+                        display: block;
+                        padding: 1rem;
+                    }
+
+                    a:hover {
+                        background-color: $dk-blue;
+                    }
+                }
+            } 
+        }
+
+        .show {
+            display: block;
+        }
+
+        .content-detail {
+            padding: 1rem;
+
+            h2 {
+                text-align: center;
+                padding-bottom: 2rem;
+            }
+
+            p {
+                padding-bottom: 1rem;
+            }
+
+            h3 {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+
+      
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+    .selfstudy-page-wrapper {
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            .sidebar {
+                display: block;
+                height: auto;        
+                h2 {
+                    font-size: 1.5rem;
+                    text-align: left;
+                }
+            }
+
+            .content-detail {
+                width: 60%;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    .selfstudy-page-wrapper {
+
+        .main-container {
+            .sidebar {
+                width: 30%;
+                height: auto;
+            }
+            .content-detail {
+                width: 70%;
+               h2 {
+                   text-align: left;
+               }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .selfstudy-page-wrapper {
+
+        .main-container {
+            max-width: 1600px;
+            margin: 2rem auto;
+            .sidebar {
+                width: 20%;
+            }
+
+            .content-detail {
+                width: 70%;
+                .content-detail-flex {
+                    display: flex;
+                    justify-content: space-between;
+                    .course-card {
+                        width: 48%;
+                        height: 35rem;
+                        margin-left: 2rem;
+                        margin-right: 2rem;
+                        .course-card-content {
+                            justify-content: space-between;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}
