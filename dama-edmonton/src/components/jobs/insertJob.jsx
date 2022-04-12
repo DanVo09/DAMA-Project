@@ -9,21 +9,23 @@ class InsertAJob extends Component{
         company_name: '',
         location: '',
         job_desc:'',
-        user_id: JSON.parse(localStorage.getItem("user-info")).map(obj => obj.user_id),
+        user_id: Number (JSON.parse(localStorage.getItem("user-info")).map(obj => obj.user_id)),
         error_list:[],
         
     }
 
 
-    
-
     handleInput = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
         });
+
+
     }
     postJob = async (e) => {
         e.preventDefault();
+
+        
 
         const res = await axios.post('http://dama.web.dmitcapstone.ca/api/job_inserted', this.state);
         if(res.data.validate_err)
@@ -61,7 +63,6 @@ class InsertAJob extends Component{
                 <div className="form">
                     <label htmlFor="job_title">Job Title</label>
                     <input type="text" id="job_title" onChange={this.handleInput} value={this.setState.job_title} name="job_title"/>
-                    <span className='error'>{this.state.user_id}</span>
                     <span className='error'>{this.state.error_list.job_title}</span>
                     <label htmlFor="company_name">Company Name</label>
                     <input type="text" id="company_name" onChange={this.handleInput} value={this.setState.company_name} name="company_name"/>

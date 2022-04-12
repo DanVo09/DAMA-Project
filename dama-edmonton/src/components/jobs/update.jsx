@@ -10,7 +10,7 @@ class UpdateAJob extends Component{
         location: '',
         job_desc:'',
         error_list:[],
-        user_id: JSON.parse(localStorage.getItem("user-info")).map(obj => obj.user_id),
+        user_id: Number(JSON.parse(localStorage.getItem("user-info")).map(obj => obj.user_id)),
     }
 
 
