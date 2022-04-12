@@ -28,7 +28,8 @@ import UpdateJob from './components/jobs/update';
 import Profile from './components/dashboard/profile';
 import CourseHistory from './components/dashboard/coursehistory';
 import EventHistory from './components/dashboard/eventhistory';
-import { PayPalScriptProvider } from '@paypal/react-paypal-js'
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import ApplyJob from './components/jobs/applyjob';
 
 
 const PAYPAL_KEY = process.env.REACT_APP_PAYPAL_CLIENT_ID
@@ -70,6 +71,7 @@ function App() {
                     <Route path="/coursehistory" element={<CourseHistory />}/>
                     <Route path="/eventhistory" element={<EventHistory />}/>
                     <Route path="/profile" element={<Profile />}/>
+                    <Route path="/applyjob" element={<ApplyJob />}/>
                 </Routes>
                 <Footer/>
             </Router>

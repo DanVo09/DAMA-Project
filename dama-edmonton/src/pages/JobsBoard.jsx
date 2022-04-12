@@ -31,7 +31,7 @@ export default function Jobsboard() {
                        
                         <div className='apply-links'>
                             <Link to={`/updatejob/${obj.posting_id}`}>Edit</Link>
-                            <Link to="#">Apply Now</Link>
+                            <Link to="/applyjob">Apply Now</Link>
                             <Link to="#">More Detail</Link>
                         </div>
                         
