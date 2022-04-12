@@ -11,10 +11,9 @@ export default function Memberships() {
   return (
     
         <section className="membership-content">
-              <div className="banner" style={{background: `linear-gradient(rgba(255,255,255,0.6),
-            rgba(2255,255,255,0.6) ), url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
+              <div className="banner" style={{background: `url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
                 <div className="header-banner">
-                    <h2>Memberships</h2>
+                    <h1>Memberships</h1>
                   
                 </div>
 

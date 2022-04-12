@@ -3,15 +3,17 @@
     color: $dk-green;
 
     .banner {
-        text-align: center;
-        padding: 10rem 0 10rem 0;
-        margin-bottom: 4rem;
+        padding: 10rem 1rem;
+    }
 
-        .header-banner {
-            max-width: 80%;
-            margin: 0 auto;
-            
-        }
+    h1 {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 2rem;
+        color: $dk-green;
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(2255,255,255,0.6) );
     }
 
     .memberships-wrapper {

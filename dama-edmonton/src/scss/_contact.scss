@@ -4,19 +4,17 @@
     padding-bottom: 2.75rem;
 
     .banner {
-        padding: 10rem 0 2rem 0;
-        margin-bottom: 6rem;
+        padding: 10rem 1rem;
     }
 
-    .header-banner{
+    .header-banner {
         text-align: center;
-        margin-bottom: 4rem;
-        padding: 1rem;
-        
-
-        h2 {
-            margin-bottom: 1rem;
-        }
+        width: fit-content;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 2rem;
+        color: $dk-green;
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(2255,255,255,0.6) );
     }
 
     .contact-page-wrapper{
