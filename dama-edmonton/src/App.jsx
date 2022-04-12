@@ -25,7 +25,9 @@ import SelfStudy from './pages/SelfStudy';
 import InstructorLed from './pages/instructorlead';
 import ChangePassword from './pages/ChangePassword';
 import UpdateJob from './components/jobs/update';
-
+import Profile from './components/dashboard/profile';
+import CourseHistory from './components/dashboard/coursehistory';
+import EventHistory from './components/dashboard/eventhistory';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 
 
@@ -65,6 +67,9 @@ function App() {
                     <Route path="/selfstudy" element={<SelfStudy />}/>
                     <Route path="/instructorlead" element={<InstructorLed />}/>
                     <Route path="/changepassword" element={<ChangePassword />}/>
+                    <Route path="/coursehistory" element={<CourseHistory />}/>
+                    <Route path="/eventhistory" element={<EventHistory />}/>
+                    <Route path="/profile" element={<Profile />}/>
                 </Routes>
                 <Footer/>
             </Router>
