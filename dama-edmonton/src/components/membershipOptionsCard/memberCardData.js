@@ -33,7 +33,7 @@ const MemberCardData = [
     {
         id:uuidv4(),
         title: "Student Membership",
-        detail: "Individual membership for students",
+        detail: "Individual membership for IT and Data Students",
         price: 25
     }
 

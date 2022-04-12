@@ -20,6 +20,7 @@ export default function Memberships() {
 
             </div>
             <div className="memberships-wrapper">
+              <p className='benefits-subtext'>Purchase your DAMA Membership today to recieve exclusive benefits such as free attendance to any of our meetings!</p>
               <div className="member-benefits-container">
                 <div className="member-benefits">
                   <h3>Membership Benefits</h3>
@@ -45,6 +46,9 @@ export default function Memberships() {
            
               <div className="membership-options">
                   <h2 className='membership-options-title'>Our Membership Options</h2>
+                  <p className="member-options-subtext">
+                    With 5 plans to choose from DAMA has many different ways to accomodate the membership needs of you or your company.
+                  </p>
                   <div className="membership-options-container">
                       <Membershipcards />
                   </div>

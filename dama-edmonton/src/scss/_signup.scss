@@ -38,22 +38,21 @@
         }
 
         button {
-            padding: 0.5rem;
-            @extend %btn;
-            margin-top: 2rem;
-            box-shadow: $box-bevel;
-            font-weight: bold;
-            cursor: pointer;
-            background-color: $yellow;
-            color: $dk-green;
-            border: none;
+
+            background-color: $lt-blue;
+            color: $off-white;
+            padding: 0.5rem 1rem;
+            border: 5px solid $off-white;
+            border-radius: 1rem;
             transition: all 0.3s ease-in-out;
+            margin-top: 2rem;
+
+            &:hover {
+                background-color: $dk-blue;
+            }
         }
 
-        button:hover {
-            background-color: $dk-green;
-            color: $yellow;
-        }
+       
 
     }
 
