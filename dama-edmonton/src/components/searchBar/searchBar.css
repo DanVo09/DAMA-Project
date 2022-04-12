@@ -39,6 +39,7 @@
     background-color: #058ED9;
     border: none;
     color: #f5f5f5;
+    width: fit-content;
 }
 
 .search-icon {
@@ -63,6 +64,11 @@
 
     .search-form button {
         display: none;
+    }
+
+    .search-form .show {
+        display: block;
+        width: 10rem;
     }
 }
 
