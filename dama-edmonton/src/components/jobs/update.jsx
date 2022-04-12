@@ -11,6 +11,7 @@ class UpdateAJob extends Component{
         job_desc:'',
         error_list:[],
         user_id: Number(JSON.parse(localStorage.getItem("user-info")).map(obj => obj.user_id)),
+     
     }
 
 
@@ -22,13 +23,25 @@ class UpdateAJob extends Component{
         });
     }
 
-    async dataEditPosting(match) {
-        const job_id = this.props.match.params.id;
-        console.log(job_id);
-       
+    async dataEditPosting() {
+        const posting_id = this.props.match.params.id;
+        console.log(posting_id);
+
+       const res = await axios.get(`http://dama.web.dmitcapstone.ca/api/update_job/${posting_id}`, this.state);
+
+       if(res.data) {
+           this.setState({
+            job_title: res.data.JobPostings.job_title,
+            company_name: res.data.JobPostings.company_name,
+            location: res.data.JobPostings.location,
+            job_desc:res.data.JobPostings.job_desc,
+           });
+       }
+
+
     }
 
-/*
+
     updateJob = async (e) => {
         e.preventDefault();
 
@@ -46,17 +59,11 @@ class UpdateAJob extends Component{
                 text: res.data.message,  
               }); 
 
-            this.setState({
-                job_title: '',
-                company_name: '',
-                location: '',
-                job_desc:'',
-            });
         }
     
 
 }
-*/
+
     render(){
         return(
             <div className="form-wrapper">
