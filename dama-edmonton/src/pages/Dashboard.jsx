@@ -57,7 +57,7 @@ export default function Dashboard() {
             <Link to="/jobsboard" className='sidebar-icon'><BookOutlinedIcon className="courses-icon"/><p>Courses History</p></Link>
             <Link to="/jobsboard" className='sidebar-icon'><CalendarTodayIcon className="calendar-icon"/><p>Events History</p></Link>
             <Link to="/jobsboard" className='sidebar-icon'><WorkOutlineIcon className="job-icon"/><p>Job Postings</p></Link>
-            <Link to="/jobsboard" className='sidebar-icon'><LockOpenIcon className="courses-icon"/><p>Change Password</p></Link>
+            <Link to="/changepassword" className='sidebar-icon'><LockOpenIcon className="courses-icon"/><p>Change Password</p></Link>
             <Link to="/jobsboard" className='sidebar-icon'><ExitToAppIcon className="courses-icon"/><p>Sign-out</p></Link>
           </aside>
           <div className='dashboard-cards'>

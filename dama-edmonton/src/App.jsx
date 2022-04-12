@@ -23,7 +23,7 @@ import Navbar from './components/navbar/NavBar';
 import InsertJob from './components/jobs/insertJob';
 import SelfStudy from './pages/SelfStudy';
 import InstructorLed from './pages/instructorlead';
-
+import ChangePassword from './pages/ChangePassword';
 import UpdateJob from './components/jobs/update';
 
 import { PayPalScriptProvider } from '@paypal/react-paypal-js'
@@ -64,6 +64,7 @@ function App() {
                     <Route path="/post" element={<PostSingle />}/>
                     <Route path="/selfstudy" element={<SelfStudy />}/>
                     <Route path="/instructorlead" element={<InstructorLed />}/>
+                    <Route path="/changepassword" element={<ChangePassword />}/>
                 </Routes>
                 <Footer/>
             </Router>
