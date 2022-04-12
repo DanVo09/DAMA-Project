@@ -69,6 +69,20 @@
         }
 
     }
+
+    .memberCard-container{
+        background-color: $lt-green;
+        color: $off-white;
+        margin: 2rem 0;
+        padding: 1rem;
+        border-radius: 0.85rem;
+        max-width: 28rem;
+        box-shadow: $box-bevel;
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+    }
 }
     
    

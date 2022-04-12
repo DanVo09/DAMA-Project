@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import CartContext from '../context/cart/CartContext';
 import CheckIcon from '@mui/icons-material/Check';
+import Membershipcards from '../components/membershipOptionsCard/MembershipCards';
 
 export default function Memberships() {
   
@@ -75,6 +76,7 @@ export default function Memberships() {
                       </aside>
                       <div className="membership-options">
                           <h2>Our Membership Options</h2>
+                          <Membershipcards />
                       </div>
                     </div>
                   </section>
