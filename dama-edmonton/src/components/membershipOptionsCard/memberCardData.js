@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 const MemberCardData = [
     {
         id:uuidv4(),
-        title: "Corporate Membership - Unlimited",
+        title: "Corporate - Unlimited",
         detail: "You can add an unlimited number of named members to your plan",
         price: 1500
     },
