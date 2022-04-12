@@ -26,9 +26,8 @@
 
         .contact-form-section {
             padding: 1rem;
-            background-color: $dk-green;
+            background-color: $dk-blue;
             color: $off-white;
-            box-shadow: $box-bevel;
             max-width: 50rem;
             border-radius: 0.85rem;
             margin: 0 auto;
@@ -65,11 +64,17 @@
             }
 
             .contact-submit-btn {
-                @extend %btn;
-                box-shadow: $box-bevel;
-                background-color: $yellow;
-                color: $dk-green;
+                background-color: $lt-blue;
+                color: $off-white;
+                padding: 0.5rem 1rem;
+                border: 5px solid $off-white;
+                border-radius: 1rem;
+                transition: all 0.3s ease-in-out;
                 margin-top: 4rem;
+    
+                &:hover {
+                    background-color: $dk-blue;
+                }
             }
             
         }

@@ -76,7 +76,7 @@ class Login extends Component{
                         <div className='optional-info'>
                             <input type="checkbox" name="keeploggedin" value="keeploggedin"/>
                             <label for="keeploggedin" className='keeploggedin'>Keep me logged in</label>
-                            <Link to="/#">Forgot Password?</Link>
+                            <Link to="/changepassword">Forgot Password?</Link>
                         </div>
                         <Link to="/register">Create a New Account</Link>
                         <button type='submit'>Sign In</button>

@@ -30,6 +30,7 @@ export default function Jobsboard() {
                         <p>{obj.job_desc.length < 120  ? `${obj.job_desc}` : `${obj.job_desc.substring(0, 120)}...`}</p>
                        
                         <div className='apply-links'>
+                            <Link to={`/updatejob/${obj.posting_id}`}>Edit</Link>
                             <Link to="#">Apply Now</Link>
                             <Link to="#">More Detail</Link>
                         </div>

@@ -53,14 +53,14 @@ export default function Dashboard() {
           
           <aside className='dashboard-sidebar'>
             <h2>My Account</h2>
-            <Link to="/jobsboard" className='sidebar-icon'><FolderSharedIcon className="upload-icon"/><p>Profile</p></Link>
-            <Link to="/jobsboard" className='sidebar-icon'><BookOutlinedIcon className="courses-icon"/><p>Courses History</p></Link>
-            <Link to="/jobsboard" className='sidebar-icon'><CalendarTodayIcon className="calendar-icon"/><p>Events History</p></Link>
+            <Link to="/profile" className='sidebar-icon'><FolderSharedIcon className="upload-icon"/><p>Profile</p></Link>
+            <Link to="/coursehistory" className='sidebar-icon'><BookOutlinedIcon className="courses-icon"/><p>Courses History</p></Link>
+            <Link to="/eventhistory" className='sidebar-icon'><CalendarTodayIcon className="calendar-icon"/><p>Events History</p></Link>
             <Link to="/jobsboard" className='sidebar-icon'><WorkOutlineIcon className="job-icon"/><p>Job Postings</p></Link>
-            <Link to="/jobsboard" className='sidebar-icon'><LockOpenIcon className="courses-icon"/><p>Change Password</p></Link>
+            <Link to="/changepassword" className='sidebar-icon'><LockOpenIcon className="courses-icon"/><p>Change Password</p></Link>
             <Link to="/jobsboard" className='sidebar-icon'><ExitToAppIcon className="courses-icon"/><p>Sign-out</p></Link>
           </aside>
-          <div className='dashboard-cards'>
+          <div className='dashboard-cards' id="profile">
           <section  className='user-profile'>
             {name.map((obj, user_id) => {
                 return (

@@ -22,13 +22,23 @@
         margin: 0 auto;
         color: $dk-green;
 
+        .benefits-subtext {
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.85rem;
+            margin-bottom: 4rem;
+        }
+
         .member-benefits {
-            background-color: $dk-blue;
+            background-color: $lt-blue;
             color: $off-white;
             box-shadow: $box-bevel;
             padding: 1rem;
             border-radius: 0.85rem;
+            max-width: 44rem;
+            margin: 0 auto;
             margin-bottom: 4rem;
+           
 
             h3 {
                 color: $yellow;
@@ -50,12 +60,14 @@
         }
 
         .monthly-meetings {
-            background-color: $dk-blue;
+            background-color: $lt-blue;
             color: $off-white;
             box-shadow: $box-bevel;
             padding: 1rem;
             padding-bottom: 4rem;
             border-radius: 0.85rem;
+            max-width: 44rem;
+            margin: 0 auto;
             margin-bottom: 4rem;
 
             h3 {
@@ -69,6 +81,107 @@
         }
 
     }
+
+    .membership-options-title {
+        font-size: 1.85rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .member-options-subtext {
+        font-size: 1.45rem;
+        font-weight: bold;
+        text-align: center;
+        max-width: 60rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+
+    .membership-options-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .memberCard-container{
+        background-color: $lt-green;
+        color: $off-white;
+        margin: 2rem 0;
+        padding: 2rem;
+        padding-bottom: 4rem;
+        border-radius: 0.85rem;
+        max-width: 28rem;
+
+        .membercard-content {
+            
+            
+            margin-top: 3rem;
+        }
+        
+
+        .membercard-title {
+
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted $off-white;
+            font-size: 1.45rem;
+        }
+
+        .membercard-desc {
+            margin: 2rem 0;
+            font-size: 1.35rem;
+        }
+
+        .membercard-price {
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: $yellow;
+            font-size: 1.55rem;
+        }
+
+        .membercard-btn {
+            background-color: $lt-blue;
+            color: $off-white;
+            padding: 0.5rem 1rem;
+            border: 5px solid $off-white;
+            border-radius: 1rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $dk-blue;
+            }
+
+
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .membership-options-container {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+
+    }
+
+    .member-benefits,
+    .monthly-meetings{
+        padding: 2rem !important;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .member-benefits-container {
+        display: flex;
+        gap: 4rem;
+
+       
+    }
+
 }
     
    

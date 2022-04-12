@@ -25,6 +25,7 @@
             border-radius: 1rem;
             display: none;
             background-color: $lt-blue;
+            box-shadow: $box-bevel;
              ul li, a {
                 color: white;
                 text-transform: uppercase;
@@ -72,6 +73,7 @@
                 border-radius: 1rem;
                 padding: 1rem 1rem 2rem 1rem;
                 background-color: $lt-green;
+                box-shadow: $box-bevel;
                 color: $off-white;
                 .icon {
                     margin: 0 auto;
@@ -121,6 +123,7 @@
 
             .note {
                 background-color: $lt-green;
+                box-shadow: $box-bevel;
                 margin: 1rem;
                 border-radius: 0.5rem;
                 padding: 1rem 0.5rem;
