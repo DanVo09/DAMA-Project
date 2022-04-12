@@ -45,6 +45,7 @@
             .event-card-content {
                 color: $off-white;
                 background-color: $lt-green;
+                box-shadow: $box-bevel;
                 padding: 2rem 1rem 3rem 1rem;
                 border-radius: 0.5rem;
                 h2 {
@@ -148,6 +149,7 @@
 
                 .event-card-content {
                     padding-top: 5rem;
+                    
                     h2 {
                         padding-top: 5rem;
                     }
