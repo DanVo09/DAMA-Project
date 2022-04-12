@@ -17,7 +17,7 @@ export default function EventList(){
     
     const current = new Date();
 
-    const upComingEventData = eventData.filter(obj=> new Date(obj.event_date)  <= current)
+    const upComingEventData = eventData.filter(obj=> new Date(obj.event_date)  >= current)
 
     console.log(upComingEventData)
 
