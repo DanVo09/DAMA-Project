@@ -23,8 +23,8 @@ Route::get('/all_jobs', function () {
     return JobPostings::where('job_filled_yn', 'N')->get();
 });
 Route::post('/job_inserted','App\Http\Controllers\JobPostingsApiController@insert');
-Route::get('/job_filled','App\Http\Controllers\JobPostingsApiController@delete');
-Route::post('/job_updated','App\Http\Controllers\JobPostingsApiController@insertUpdate');
+Route::get('/job_filled/{posting_id}','App\Http\Controllers\JobPostingsApiController@delete');
+Route::post('/job_updated//{posting_id}','App\Http\Controllers\JobPostingsApiController@insertUpdate');
 
 
 // Users

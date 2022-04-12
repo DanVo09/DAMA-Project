@@ -60,9 +60,9 @@ class JobPostingsApiController extends Controller
             ]);
     }
 
-    public function update(Request $request) {
+    public function update(Request $request, $posting_id) {
         $posting_id = $request->query('id');
-        return JobPostings::where('posting_id', $posting_id)->get();
+        return JobPostings::Find('$posting_id');
     }
 
     public function InsertUpdate(Request $request) {
