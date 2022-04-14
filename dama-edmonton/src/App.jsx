@@ -63,7 +63,7 @@ function App() {
                     <Route path="/checkout" element={<CheckOut />}/>
                     <Route path="/jobsboard" element={<JobsBoard />}/>
                     <Route path="/insertjob" element={<InsertJob />}/>
-                    <Route path="/updatejob/:id" element={<UpdateJob />}/>
+                    <Route path="/updatejob/:posting_id" element={<UpdateJob />}/>
                     <Route path="/post" element={<PostSingle />}/>
                     <Route path="/selfstudy" element={<SelfStudy />}/>
                     <Route path="/instructorlead" element={<InstructorLed />}/>

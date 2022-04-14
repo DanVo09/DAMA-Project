@@ -1,10 +1,12 @@
-import React, {Component, useEffect, useState}  from "react";
+import React, {Component }  from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 
+
 class UpdateAJob extends Component{
     state = {
+       
         job_title: '',
         company_name: '',
         location: '',
@@ -23,29 +25,18 @@ class UpdateAJob extends Component{
         });
     }
 
-    async dataEditPosting() {
-        const posting_id = this.props.match.params.id;
-        console.log(posting_id);
+    async componentDidMount() {
 
-       const res = await axios.get(`http://dama.web.dmitcapstone.ca/api/update_job/${posting_id}`, this.state);
+        const id = this.props.match.params.id;
 
-       if(res.data) {
-           this.setState({
-            job_title: res.data.JobPostings.job_title,
-            company_name: res.data.JobPostings.company_name,
-            location: res.data.JobPostings.location,
-            job_desc:res.data.JobPostings.job_desc,
-           });
-       }
-
+        console.log(id)
 
     }
 
 
     updateJob = async (e) => {
         e.preventDefault();
-
-        const res = await axios.post('http://dama.web.dmitcapstone.ca/api/job_updated', this.state);
+        const res = await axios.post("http://dama.web.dmitcapstone.ca/api/job_updated/", this.state);
         if(res.data.validate_err)
         {
             this.setState({
@@ -95,13 +86,9 @@ class UpdateAJob extends Component{
     }
 }
 
-export default function UpdateJob() {
-    return(
 
-        <UpdateAJob/>
-           
+export default function UpdateJob() {
+    return (
+        <UpdateAJob />
     )
 }
-
-
-
