@@ -76,7 +76,7 @@ export default function Dashboard() {
               {userMembership.map((obj, user_membership_id) => {
                 return (
                   < >
-                  <div key={obj.ser_membership_id}>
+                  <div key={obj.user_membership_id}>
                   <p>Membership expiry date: {obj.expiry_date}</p> 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem autem eum aspernatur corrupti est iusto consectetur at in. Iusto consequuntur earum, sapiente distinctio accusantium commodi facere impedit expedita adipisci?</p>
                   </div>

@@ -20,28 +20,28 @@ function UpdateJob() {
     }, [posting_id])
 
     console.log(jobdata)
-
+    const jobtitle = jobdata.map(obj => obj.job_desc)
+    console.log(jobtitle)
 
     return(
 
         <div className="form-wrapper">
           <form  className="login-form-container">
-            <h1>Edit a Job</h1>
-            <p>Title: {jobdata.job_title}</p>
+            <h1>Edit A Job</h1>
                     <div className="form">
                         
                     <label htmlFor="job_title">Job Title</label>
-                    <input type="text" value={jobdata.job_title}  name="job_title"/>
+                    <input type="text" defaultValue={jobdata.map(obj => obj.job_title)}   name="job_title"/>
                     <span className='error'></span>
                     <label htmlFor="company_name">Company Name</label>
-                    <input type="text" value={jobdata.company_name} name="company_name"  />
+                    <input type="text" defaultValue={jobdata.map(obj => obj.company_name)} name="company_name"  />
 
                     <label htmlFor="location">Location</label>
-                    <input type="text" value={jobdata.location}  name="location"  />
+                    <input type="text" defaultValue={jobdata.map(obj => obj.location)}  name="location"  />
                     <span className='error'></span>
 
                     <label htmlFor="job_desc">Job Description</label>
-                    <textarea name="job_desc" value={jobdata.job_desc}  ></textarea>
+                    <textarea name="job_desc" defaultValue={jobdata.map(obj => obj.job_desc)} ></textarea>
                     <span className='error'></span>
 
                     <button type='submit'>Update Job</button>

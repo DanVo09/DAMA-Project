@@ -67,15 +67,15 @@ class Login extends Component{
                 <form onSubmit={this.loginForm} className="login-form-container">
                     <h1>Sign in to Your Account</h1>
                     <div class="form">
-                        <label for="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input type="text" onChange={(item) => {this.setState({email:item.target.value})}} name="email" placeholder='Your email'/>
                         <span className='error'>{this.state.error_list.email}</span>
-                        <label for="name">Password</label>
+                        <label htmlFor="name">Password</label>
                         <input type="password" onChange={(item) => {this.setState({password:item.target.value})}} name="password" placeholder='Password'/>
                         <span className='error'>{this.state.error_list.password}</span>
                         <div className='optional-info'>
                             <input type="checkbox" name="keeploggedin" value="keeploggedin"/>
-                            <label for="keeploggedin" className='keeploggedin'>Keep me logged in</label>
+                            <label htmlFor="keeploggedin" className='keeploggedin'>Keep me logged in</label>
                             <Link to="/changepassword">Forgot Password?</Link>
                         </div>
                         <Link to="/register">Create a New Account</Link>

@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 
 
-export default function SearchBar(){
+export default function JobSearchBar(){
 
 
     const [jobData, setJobData] = useState([]);
@@ -40,8 +40,6 @@ export default function SearchBar(){
     return(
         <>
         <div className='search-form'>
-
-            <button className="btn-toggle show"><Link to="/insertjob">Post a Job</Link></button>
             <input type="text" name="search-bar" placeholder="Find a job" value={wordEnter} onChange={handleFilter}/>
             {filteredData.length === 0 
                 ? 

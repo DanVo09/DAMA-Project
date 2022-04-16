@@ -1,11 +1,10 @@
+
 import React, {useState, useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import JobSearchBar from '../components/searchBar/job-SearchBar';
-import JobMenu from '../components/jobs/jobmenu';
+import JobSearchBar from '../searchBar/job-SearchBar';
+import JobMenu from './jobmenu';
+export default function UserJobList () {
 
-
-
-export default function Jobsboard() {
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -15,6 +14,16 @@ export default function Jobsboard() {
         }
     })
 
+    const [name, setName] = useState(() => {
+        // getting stored value
+        const saved = localStorage.getItem("user-info");
+        const initialValue = JSON.parse(saved);
+        return initialValue || "";
+      });
+
+      const userId = Number(name.map(obj => obj.user_id));
+      console.log(userId)
+
     const [data, setData] = useState([]);
     useEffect(async ()=> {
         let result = await fetch("http://dama.web.dmitcapstone.ca/api/all_jobs");
@@ -23,8 +32,12 @@ export default function Jobsboard() {
 
     },[])
 
-    return (
-        <>
+
+    const filterData = data.filter(obj=> obj.user_id  === userId)
+
+    console.log(filterData)
+
+    return(
         <div className="job-page-wrapper">
             <div className='course-banner' style={{background: `url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
                 <h1>Jobs Board</h1>
@@ -32,7 +45,7 @@ export default function Jobsboard() {
             <JobSearchBar/>
            <JobMenu/>
             <div  className='job-list'>
-            {data.map((obj) => {
+            {filterData.map((obj) => {
                 return(
                     <div key={obj.posting_id}  className="job-detail">
                         <h2>{obj.job_title}</h2>
@@ -40,7 +53,8 @@ export default function Jobsboard() {
                         <p>{obj.location}</p>
                         <p>{obj.job_desc.length < 120  ? `${obj.job_desc}` : `${obj.job_desc.substring(0, 120)}...`}</p>
                         <div className='apply-links'>
-                            <Link to="/applyjob">Apply Now</Link>
+                            <Link to={`/updatejob/${obj.posting_id}`}>Edit</Link>
+                            <Link to="/applyjob">Delete</Link>
                             <Link to="#">More Detail</Link>
                         </div>
                         
@@ -51,6 +65,5 @@ export default function Jobsboard() {
             })}
            </div>
         </div>
-        </>
     )
 }
