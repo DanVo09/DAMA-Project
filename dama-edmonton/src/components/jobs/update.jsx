@@ -42,8 +42,6 @@ function UpdateJob() {
     const [job_desc,setJobDesc]=useState("")
     const [error, setError]=useState([])
   
-  
-    
 
     async function JobUpdated(e)
     {
@@ -76,7 +74,7 @@ function UpdateJob() {
                     <div className="form">
                         
                     <label htmlFor="job_title">Job Title</label>
-                    <input type="text" defaultValue={ (job_title)? job_title: filterJobData.map(obj => obj.job_title)} onChange={(e)=>setCompanyName(e.target.value)}  name="job_title"/>
+                    <input type="text" defaultValue={ (job_title)? job_title: filterJobData.map(obj => obj.job_title)} onChange={(e)=>setJobTitle(e.target.value)}  name="job_title"/>
                     <span className='error'>{error.job_title}</span>
 
                     <label htmlFor="company_name">Company Name</label>
