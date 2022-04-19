@@ -23,7 +23,7 @@ export default function MembersMenu({obj}) {
                 return (
                     <ul key={obj.user_id} className="membersMenu">
                         <li>
-                            <Link to="/dashboard" className='dashboardLink'><img src="/assets/images/users/ellenripley.webp" alt="#" className='dashboardImage' />{obj.first_name}    {obj.last_name}</Link>
+                            <Link to="/dashboard" className='dashboardLink'><img src="/assets/images/profile-picture/example1.jpg" alt="#" className='dashboardImage' />{obj.first_name}    {obj.last_name}</Link>
                         </li>
                         {/* <li>
                             <Link to="/jobsboard">Jobs Board</Link>

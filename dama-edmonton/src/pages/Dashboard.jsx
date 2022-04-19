@@ -29,7 +29,11 @@ export default function Dashboard() {
     return setClick(null)
   }
 
- 
+    function logOut(){
+      localStorage.clear();
+      navigate('/login')
+  }
+
   
 
     return (
@@ -48,7 +52,7 @@ export default function Dashboard() {
             <Link to="/eventhistory" className='sidebar-icon'><CalendarTodayIcon className="calendar-icon"/><p>Events History</p></Link>
             <Link to="/jobsboard" className='sidebar-icon'><WorkOutlineIcon className="job-icon"/><p>Job Postings</p></Link>
             <Link to="/changepassword" className='sidebar-icon'><LockOpenIcon className="courses-icon"/><p>Change Password</p></Link>
-            <Link to="/jobsboard" className='sidebar-icon'><ExitToAppIcon className="courses-icon"/><p>Sign-out</p></Link>
+            <Link to="/jobsboard" className='sidebar-icon'><ExitToAppIcon className="courses-icon"/><p onClick={logOut}>Sign-out</p></Link>
           </aside>
           <div className='dashboard-cards' id="profile">
             <UserProfileCard/>

@@ -43,16 +43,28 @@ export default function EventDetail({obj}) {
                             <div className="event-content-detail">
                                 <div className="card-content-wrapper">
                                     <h3>{obj.event_title}</h3>
+                                    <p>{obj.event_description}</p>
                                     <p>Time: {obj.event_date}</p>
                                     <p>City: {obj.event_city}</p>
-                                    <p>Price: ${obj.event_price}</p>
                                     <p>Type: {obj.event_type}</p>
-                                    <p>{obj.event_description}</p>
-                                    <div className='membershiplink'> 
-                                        <Link to="/memberships" >Register membership to get discount</Link>
-                                    </div>
                                   
-                                    <Link to="#" onClick={ () => addCartToStorage(obj)}>Register</Link>
+                                   
+                                  {new Date(obj.event_date) >= new Date()?
+                                     <>
+                                        <p>Price: ${obj.event_price}</p>
+                                        <div className='membershiplink'> 
+                                            <Link to="/memberships" >Register membership to get discount</Link>
+                                        </div>
+                                        <Link to="#" onClick={ () => addCartToStorage(obj)}>Register</Link>
+                                    </>
+                                    :
+                                    <>
+                                     <div className='membershiplink'> 
+                                        <Link to="#" >Download Presentation Document</Link>
+                                     </div>
+                                    </>
+                                    }
+                                    
                                 </div>
                             </div>
                         </div>
