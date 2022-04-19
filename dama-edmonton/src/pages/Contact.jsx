@@ -12,7 +12,7 @@ export default function Contact() {
     return (
         <>
            <div className="contact-page-container">
-                <div className="banner" style={{background: `url("assets/images/profile-picture/background.jpg") top/cover no-repeat` }}>
+                <div className="banner" style={{background: `url("assets/images/profile-picture/background.jpg") center/cover no-repeat` }}>
                     <div className="header-banner">
                         <h2>how can we help you?</h2>
                         <p>Do you have a question? Feel free to ask us a question and we will get back to you within the next few business days</p>
