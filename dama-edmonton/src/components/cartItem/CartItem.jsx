@@ -11,15 +11,11 @@ export default function Cartitem({item}) {
     return (
         <>
             <li className='cartItem-item'>
-              <img src={process.env.PUBLIC_URL + `/assets/images/${item.picture}`} alt='' className='cartItem-img' />
               <div className="cart-item-content">
                   <p className='cartItem-title'>
-<<<<<<< HEAD
-                    {item.event_title} {item.course_name}
-=======
-                    {item.course_name}
+
                     {item.event_title}
->>>>>>> b3f901945c3f52c2f1fddf16d4c7937688949df6
+                    {item.course_name}
                   </p>
                   <p>
                     {item.eventSpeaker} {item.course_type_name}
@@ -31,7 +27,12 @@ export default function Cartitem({item}) {
                     {item.event_type}
                   </p>
                   <div className="cartItem-price-container">
-                    <CurrencyFormat className='cartItem-currency' value={item.event_price} displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                    {item.event_price?
+                      <CurrencyFormat className='cartItem-currency' value={item.event_price} displayType="text" prefix="$ " thousandSeparator="," decimalSeparator="." fixedDecimalScale={true} decimalScale={2}/>
+                      :
+                      <CurrencyFormat className='cartItem-currency' value={item.course_price} displayType="text" prefix="$ " thousandSeparator="," decimalSeparator="." fixedDecimalScale={true} decimalScale={2}/>
+                    }
+                    
                     <DeleteIcon className='CartItem-delete' onClick={() => removeItem(item.id)}>
                       Remove
                     </DeleteIcon>

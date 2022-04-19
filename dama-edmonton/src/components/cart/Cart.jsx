@@ -32,7 +32,7 @@ export default function Cart() {
                     <div className="cart-total">
                         <h3>Cart Total</h3>
                         <div className="cart-currency">
-                            <CurrencyFormat value={cartItems.reduce((amount, item) => amount + item.price, 0)}displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                            <CurrencyFormat value={cartItems.reduce((amount, item) => amount + item.course_price + item.event_price, 0)}displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
                         </div>
                         <Link className="checkOut-btn" to="/checkout" onClick="window.location.reload();">Proceed to Checkout</Link>
                     </div>
