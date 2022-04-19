@@ -22,26 +22,8 @@ export default function CourseDetail({obj}) {
     },[])
     
     console.log(id)
-    const selectedCourse = data.filter(obj => obj.course_id === Number(id) && obj.course_type_name === "Instructor Led" );
+    const selectedCourse = data.filter(obj => obj.course_id === Number(id) );
 
-    const [SelfStudyData, setSelfStudyData] = useState([]);
-    const [InstructorLedData, setInstructorLedData] = useState([]);
-
-     const SelfStudy = () => {
-
-        const selectedCourse = data.filter(obj => obj.course_id === Number(id) && obj.course_type_name === "Self Study" );
-        setSelfStudyData(selectedCourse);
-        setInstructorLedData([]);
-    }
-
-    const InstructorLed= () => {
-
-        const selectedCourse = data.filter(obj => obj.course_id === Number(id) && obj.course_type_name === "Instructor Led" );
-        setInstructorLedData(selectedCourse);
-        setSelfStudyData([]);
-    }
-
-    
 
    
     return (
@@ -50,104 +32,32 @@ export default function CourseDetail({obj}) {
             <SearchBar/>
             <div className='main-container'>
                 <CourseSideBar/>
-                {InstructorLedData.length === 0 && SelfStudyData.length === 0?
-                    <>
-                    {selectedCourse.map((item) => {
-                    
-                            return(
-                                
-                                <div key={item.id}  className="course-content">
-                                    <div className="course-card-img-container">
-                                        <img className="event-card-img" src="/assets/images/events/2.jpg" alt="#" />
-                                    </div>
-                                    <div className="course-content-detail">
-                                        <div className="card-content-wrapper">
-                                            <h3>{item.course_name}</h3>
-                                            <p>{item.course_type_name}</p>
-                                            <div>
-                                                <button onClick={InstructorLed}> Instructor Led </button>
-                                                <button onClick={SelfStudy}> Self Study </button>
-                                            </div>
-                                            <p>Course price: ${item.course_price}</p>
-                                            <p>{item.course_description}</p>
-                                            <Link to="#" id={item.course_type_name} onClick={ () => addCartToStorage(obj)}>Enroll</Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            )
-                        })}
-                    </>
-                :
-                <>
-                 {SelfStudyData.length !==0 &&  InstructorLedData.length === 0 &&(
-                    <>
-                    {SelfStudyData.map((item) => {
-                                        
-                        return(
-                            
-                            <div key={item.id}  className="course-content">
-                                <div className="course-card-img-container">
-                                    <img className="event-card-img" src="/assets/images/events/2.jpg" alt="#" />
-                                </div>
-                                <div className="course-content-detail">
-                                    <div className="card-content-wrapper">
-                                        <h3>{item.course_name}</h3>
-                                        <p>{item.course_type_name}</p>
-                                        <div>
-                                            <button onClick={InstructorLed}> Instructor Led </button>
-                                            <button onClick={SelfStudy}> Self Study </button>
-                                        </div>
-                                        <p>Course price: ${item.course_price}</p>
-                                        <p>{item.course_description}</p>
-                                        <Link to="#" id={item.course_type_name} onClick={ () => addCartToStorage(obj)}>Enroll</Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                        )
-                    })}
-                    </>
-                )}
-                
-                </>
-                
-                }
-
-                {InstructorLedData.length !==0 &&  SelfStudyData.length === 0 &&(
-                    <>
-                    {InstructorLedData.map((item) => {
-                                        
-                        return(
-                            
-                            <div key={item.id}  className="course-content">
-                                <div className="course-card-img-container">
-                                    <img className="event-card-img" src="/assets/images/events/2.jpg" alt="#" />
-                                </div>
-                                <div className="course-content-detail">
-                                    <div className="card-content-wrapper">
-                                        <h3>{item.course_name}</h3>
-                                        <p>{item.course_type_name}</p>
-                                        <div>
-                                            <button onClick={InstructorLed}> Instructor Led </button>
-                                            <button onClick={SelfStudy}> Self Study </button>
-                                        </div>
-                                        <p>Course price: ${item.course_price}</p>
-                                        <p>{item.course_description}</p>
-                                        <Link to="#" id={item.course_type_name} onClick={ () => addCartToStorage(obj)}>Enroll</Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                        )
-                    })}
-                    </>
-                )}
-
                
-                
-                
-                 
+                {selectedCourse.map((item) => {
+                    
+                    return(
+                        
+                        <div key={item.id}  className="course-content">
+                            <div className="course-card-img-container">
+                                <img className="event-card-img" src="/assets/images/events/2.jpg" alt="#" />
+                            </div>
+                            <div className="course-content-detail">
+                                <div className="card-content-wrapper">
+                                    <h3>{item.course_name}</h3>
+                                    <p>{item.course_type_name}</p>
+                                    <p>Course price: ${item.course_price}</p>
+                                    <p>{item.course_description}</p>
+                                    <div className='membershiplink'> 
+                                        <Link to="/memberships" >Register membership to get discount</Link>
+                                    </div>
+                                    <Link to="#" onClick={ () => addCartToStorage(item)}>Enroll</Link>
+                                </div>
+                            </div>
+                        </div>
+
+                    )
+                })}
+               
             </div>
             <CertificatinInfo/>
             <FeedBackForm/>

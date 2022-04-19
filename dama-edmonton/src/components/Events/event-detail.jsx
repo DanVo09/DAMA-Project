@@ -48,7 +48,10 @@ export default function EventDetail({obj}) {
                                     <p>Price: ${obj.event_price}</p>
                                     <p>Type: {obj.event_type}</p>
                                     <p>{obj.event_description}</p>
-                                    
+                                    <div className='membershiplink'> 
+                                        <Link to="/memberships" >Register membership to get discount</Link>
+                                    </div>
+                                  
                                     <Link to="#" onClick={ () => addCartToStorage(obj)}>Register</Link>
                                 </div>
                             </div>

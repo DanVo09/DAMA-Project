@@ -80,6 +80,22 @@
                 background-color: $dk-blue;
             }
 
+            .membershiplink {
+                margin-bottom: 2rem;
+                a {
+                    background-color: white;
+                    color: $dk-green;
+                    padding: 1rem 0;
+                    text-transform: none;
+                    text-decoration: underline;
+                    font-size: 1.2rem;
+                }
+
+                a:hover {
+                    text-transform: uppercase;
+                }
+            } 
+
             button {
                 background-color: $lt-blue;
                 padding: 0.5rem 1rem;
