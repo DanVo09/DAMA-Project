@@ -21,18 +21,24 @@ export default function Dashboard() {
       }
   })
 
+  const [click, setClick] = useState(false);
+
   function toggleHamburger() {
 
     document.querySelector('.dashboard-sidebar').classList.toggle('show');
-
+    return setClick(null)
   }
+
+ 
+  
 
     return (
       <>
         <div className='dashboard-page'>
           <div className='side-bar-button'>
             <button  onClick={toggleHamburger}>My Account</button>
-            <KeyboardArrowUpIcon  className='arrow-btn-icon'/> 
+            {click === null?  <KeyboardArrowUpIcon  className='arrow-btn-icon'/>  :  <KeyboardArrowDownIcon  className='arrow-btn-icon'/> }
+           
           </div>
           
           <aside className='dashboard-sidebar'>

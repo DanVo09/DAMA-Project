@@ -27,14 +27,6 @@ function UpdateJob() {
 
     const {posting_id} = useParams();
 
-    useEffect(async ()=> {
-        let result = await fetch(`http://dama.web.dmitcapstone.ca/api/update_job?id=${posting_id}`);
-        result = await result.json();
-        setjobdata(result);
-        
-
-    }, [posting_id])
-
     const filterJobData = jobdata.filter(obj=> obj.user_id  === userId)
 
     const [job_title,setJobTitle]=useState("")
@@ -42,7 +34,20 @@ function UpdateJob() {
     const [location,setLocation]=useState("")
     const [job_desc,setJobDesc]=useState("")
     const [error, setError]=useState([])
-  
+
+    useEffect(async ()=> {
+        
+        const result = await axios.get(`http://dama.web.dmitcapstone.ca/api/update_job?id=${posting_id}`);
+       
+            setJobTitle(result.data.map(obj => obj.job_title).toString());
+            setCompanyName(result.data.map(obj => obj.company_name).toString());
+            setLocation(result.data.map(obj => obj.location).toString());
+            setJobDesc(result.data.map(obj => obj.job_desc).toString());
+
+    },[posting_id])
+
+    
+    
 
     async function JobUpdated(e)
     {
@@ -75,19 +80,19 @@ function UpdateJob() {
                     <div className="form">
                         
                     <label htmlFor="job_title">Job Title</label>
-                    <input type="text" defaultValue={ (job_title)? job_title: filterJobData.map(obj => obj.job_title)} onChange={(e)=>setJobTitle(e.target.value)}  name="job_title"/>
+                    <input type="text" defaultValue={job_title} onChange={(e)=>setJobTitle(e.target.value)}  name="job_title"/>
                     <span className='error'>{error.job_title}</span>
 
                     <label htmlFor="company_name">Company Name</label>
-                    <input type="text" defaultValue={ (company_name)? company_name: filterJobData.map(obj => obj.company_name)} onChange={(e)=>setCompanyName(e.target.value)}  name="company_name" />
+                    <input type="text" defaultValue={company_name} onChange={(e)=>setCompanyName(e.target.value)}  name="company_name" />
                     <span className='error'>{error.company_name}</span>
 
                     <label htmlFor="location">Location</label>
-                    <input type="text" defaultValue={ (location)? location: filterJobData.map(obj => obj.location)}  onChange={(e)=>setLocation(e.target.value)}  name="location"  />
+                    <input type="text" defaultValue={location}  onChange={(e)=>setLocation(e.target.value)}  name="location"  />
                     <span className='error'>{error.location}</span>
 
                     <label htmlFor="job_desc">Job Description</label>
-                    <textarea name="job_desc" col="5" rows="5" defaultValue={ (job_desc)? job_desc: filterJobData.map(obj => obj.job_desc)} onChange={(e)=>setJobDesc(e.target.value)}  ></textarea>
+                    <textarea name="job_desc" col="5" rows="5" defaultValue={job_desc} onChange={(e)=>setJobDesc(e.target.value)}  ></textarea>
                     <span className='error'>{error.job_desc}</span>
 
                     <button type='submit' onClick={JobUpdated}>Update Job</button>

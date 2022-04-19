@@ -60,7 +60,7 @@ export default function JobSearchBar(){
                 {filteredData.slice(0,10).map((value,id)=>{
                     return(
                         <div>
-                            <Link to={`/courses/${value.posting_id}`}>{value.job_title}</Link> 
+                            <Link to={`/jobsboard/${value.posting_id}`}>{value.job_title}</Link> 
                         </div>
                     )
                 })}
