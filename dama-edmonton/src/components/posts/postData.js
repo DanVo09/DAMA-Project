@@ -2,8 +2,9 @@ import { v4 as uuidv4 } from "uuid";
 
 const PostData = [
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -19,8 +20,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -36,8 +38,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -53,8 +56,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -70,8 +74,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -87,8 +92,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -104,8 +110,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -121,8 +128,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -138,8 +146,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 
@@ -155,8 +164,9 @@ const PostData = [
     },
 
     {
-        userid:uuidv4(),
+        id:uuidv4(),
         picture: "users/ellenripley.webp",
+        title: "A Guide to MongoDB",
         author: "James Kirk",
         desc: `College Dropout, overenthusiastic founder. AngelList reading Beta-tester. Zoom supported product manager. Product Hunt posting, digital E-vape tool. Techno-king ride sharing app.
 

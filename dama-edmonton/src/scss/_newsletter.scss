@@ -125,9 +125,10 @@
                             margin: 0.5rem 0;
 
                             .post-category {
-                                font-size: 0.885rem;
+                                font-size: 1.25rem;
                                 display: inline-block;
                                 margin-right: 1rem;
+                                font-weight: bold;
                             }
                         }
 
@@ -143,7 +144,7 @@
                             margin-top: 0.35rem;
                             font-style: italic;
                             font-size: 0.925rem;
-                            color: $dk-blue;
+                            color: $off-white;
                             margin-top: 1rem;
                             margin-bottom: 1rem;
                         }
