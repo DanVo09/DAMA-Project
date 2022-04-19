@@ -94,7 +94,7 @@ export default function Course() {
                       <CastForEducationIcon className='title-icons'/>
                     </div>
                     <div className='course-card-content'>
-                        <h2>Instrutor-Led, Group Study-paced Learning</h2>
+                        <h2>Instructor-Led, Group Study-paced Learning</h2>
                       
                       <ul>
                         <li><CheckIcon className='check-icon'/>$1295</li>
