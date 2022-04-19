@@ -8,7 +8,6 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import GoogleMapLoader from '../components/googleMap/GoogleMap'
 
 export default function Contact() {
-    
 
     return (
         <>

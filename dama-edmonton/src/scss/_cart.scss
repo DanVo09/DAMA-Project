@@ -5,7 +5,8 @@
     background-color: $dk-blue-ol;
     color: $off-white;
     width: 100%;
-    height: 100%;
+    height: 90%;
+    overflow-y: scroll;
     backdrop-filter: blur(5px);
     display: flex;
     flex-direction: column;
@@ -24,9 +25,9 @@
 
     .cart-inner-wrapper {
         height: max-content;
-        max-height: 75vh;
+        max-height: 100%;
         max-width: 50rem;
-        overflow-y: auto;
+        overflow-y: scroll;
         text-shadow: $txt-shadow-dk;
 
 

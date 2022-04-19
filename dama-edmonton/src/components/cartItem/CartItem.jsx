@@ -14,7 +14,8 @@ export default function Cartitem({item}) {
               <img src={process.env.PUBLIC_URL + `/assets/images/${item.picture}`} alt='' className='cartItem-img' />
               <div className="cart-item-content">
                   <p className='cartItem-title'>
-                    {item.title}
+                    {item.course_name}
+                    {item.event_title}
                   </p>
                   <p>
                     {item.eventSpeaker}
