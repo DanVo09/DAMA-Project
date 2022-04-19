@@ -18,7 +18,7 @@
 ### 3. Create News Section
 ### 4. 
 ## Dan
-### 1. Style About Us, Events, Course, SignIn/SignUp Pages 
+### 1. Style About Us, Events, Course, SignIn/SignUp Pages, job posting, user dashboard 
 ### 2. Create search bar function, logo slide-show, 
 ### 3. Integrate Laravel and React
 
