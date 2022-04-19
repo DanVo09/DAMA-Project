@@ -40,7 +40,7 @@ export default function Jobsboard() {
                         <p>{obj.location}</p>
                         <p>{obj.job_desc.length < 120  ? `${obj.job_desc}` : `${obj.job_desc.substring(0, 120)}...`}</p>
                         <div className='apply-links'>
-                            <Link to="/applyjob">Apply Now</Link>
+                            <Link to={`/applyjob/${obj.posting_id}`}>Apply Now</Link>
                             <Link to={`/jobsboard/${obj.posting_id}`}>More Detail</Link>
                         </div>
                         

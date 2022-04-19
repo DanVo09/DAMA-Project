@@ -45,6 +45,7 @@ export default function CourseDetail({obj}) {
                                 <div className="card-content-wrapper">
                                     <h3>{item.course_name}</h3>
                                     <p>{item.course_type_name}</p>
+                                    <p>Course Type: {item.course_type_name}</p>
                                     <p>Course price: ${item.course_price}</p>
                                     <p>{item.course_description}</p>
                                     <div className='membershiplink'> 

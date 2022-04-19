@@ -74,7 +74,7 @@ function App() {
                     <Route path="/jobsboard/:posting_id" element={<JobDetail />}/>
                     <Route path="/insertjob" element={<InsertJob />}/>
                     <Route path="/updatejob/:posting_id" element={<UpdateJob />}/>
-                    <Route path="/applyjob" element={<ApplyJob />}/>
+                    <Route path="/applyjob/:id" element={<ApplyJob />}/>
                     <Route path="/userjobposting" element={<UserJobList />}/>
 
                 </Routes>

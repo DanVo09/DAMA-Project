@@ -47,6 +47,10 @@
             .cart-item-content{
                 width: 100%;
 
+                p {
+                    color: $off-white;
+                }
+
                 .cartItem-title {
                     margin-bottom: 1rem;
                 }

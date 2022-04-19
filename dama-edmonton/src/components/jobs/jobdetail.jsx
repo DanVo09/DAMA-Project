@@ -41,7 +41,7 @@ export default function JobDetail() {
                                     <p> {obj.company_name}</p>
                                     <p>Location: {obj.location}</p>
                                     <p>Description: {obj.job_desc}</p>
-                                    <Link to="/applyjob">Apply Now</Link>
+                                    <Link to={`/applyjob/${obj.posting_id}`}>Apply Now</Link>
                                 </div>
                             </div>
                         </div>

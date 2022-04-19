@@ -14,19 +14,19 @@ export default function Cartitem({item}) {
               <img src={process.env.PUBLIC_URL + `/assets/images/${item.picture}`} alt='' className='cartItem-img' />
               <div className="cart-item-content">
                   <p className='cartItem-title'>
-                    {item.title}
+                    {item.event_title} {item.course_name}
                   </p>
                   <p>
-                    {item.eventSpeaker}
+                    {item.eventSpeaker} {item.course_type_name}
                   </p>
                   <p>
-                    {item.eventDate}
+                    {item.event_date}
                   </p>
                   <p>
-                    {item.eventTime}
+                    {item.event_type}
                   </p>
                   <div className="cartItem-price-container">
-                    <CurrencyFormat className='cartItem-currency' value={item.price} displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                    <CurrencyFormat className='cartItem-currency' value={item.event_price} displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
                     <DeleteIcon className='CartItem-delete' onClick={() => removeItem(item.id)}>
                       Remove
                     </DeleteIcon>
