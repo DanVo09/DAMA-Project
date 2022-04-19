@@ -42,6 +42,9 @@
                 }
             } 
         }
+        .show {
+            display: block;
+        }
         .course-content {
             
         .course-card-img-container {
@@ -58,6 +61,7 @@
                 padding-bottom: 1rem;
                 font-size: 1.5rem;
             }
+
             p {
                 padding-bottom: 0.5rem;
             }
@@ -73,6 +77,19 @@
             }
 
             a:hover {
+                background-color: $dk-blue;
+            }
+
+            button {
+                background-color: $lt-blue;
+                padding: 0.5rem 1rem;
+                margin-right: 1rem;
+                color: $off-white;
+                border: none;
+                border-radius: 1rem;
+            }
+            button:active,
+            button:hover {
                 background-color: $dk-blue;
             }
         }

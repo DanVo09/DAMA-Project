@@ -1,6 +1,10 @@
-.event-detail-page-wrapper {
-    h2,h3, p, a {
+.job-detail-page-wrapper {
+    h2,h3, p {
         color: $dk-green;
+    }
+
+    a {
+        color: $off-white;
     }
     .main-container {
         .sidebar {
@@ -9,12 +13,12 @@
             display: none;
             background-color: $lt-blue;
             box-shadow: $box-bevel;
-             li, a {
-                color: white;
-            }
-
-            li {
-                border-bottom: 1px solid white;
+            h2 {
+                color: $off-white;
+                padding: 0.5rem 1rem;
+                background-color: $dk-blue;
+                font-size: 1.5rem;
+                border-radius: 0.5rem;
             }
 
             ul{
@@ -23,14 +27,26 @@
                 li {
                     list-style: none;
                     margin: 0;
+                    border-bottom: 1px solid $off-white;
                     a {
                         text-transform: none;
                         display: block;
                         padding: 1rem;
+                        color: $off-white;
+
+                        h3 {
+                            color: $off-white;
+                        }
+
+                        p{
+                            color: $off-white;
+                            font-weight: normal;
+                        }
+                        
                     }
 
                     a:hover {
-                        color: $dk-blue;
+                        background-color: $dk-blue;
                     }
                 }
             } 
@@ -40,13 +56,7 @@
             display: block;
         }
         .event-content {
-            
-            .event-card-img-container {
-                padding: 1rem;
-                img {
-                    width: 100%;
-                }
-            }
+            padding: 1rem;
 
             .event-content-detail {
                 padding: 1rem 1rem 2rem 1rem;
@@ -84,7 +94,7 @@
 
 @media only screen and (min-width: 768px){
 
-    .event-detail-page-wrapper {
+    .job-detail-page-wrapper {
         .main-container {
 
             .event-content {
@@ -104,7 +114,7 @@
 }
 
 @media only screen and (min-width: 1024px){
-    .event-detail-page-wrapper {
+    .job-detail-page-wrapper {
         .main-container {
             display: flex;
             justify-content: space-between;
@@ -117,12 +127,6 @@
             .event-content {
                 margin-top: 1rem;
                 width: 68%;
-                .event-card-img-container {
-                    width: 30%;
-                    img {
-                        object-fit: cover;
-                    }
-                }
                 .event-content-detail {
                     width: 68%;
                     h2 {
@@ -137,7 +141,7 @@
 }
 
 @media only screen and (min-width: 1400px) {
-    .event-detail-page-wrapper {
+    .job-detail-page-wrapper {
         .main-container {
             max-width: 1600px;
             margin: 0 auto;

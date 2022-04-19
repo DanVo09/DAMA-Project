@@ -1,5 +1,5 @@
 .job-page-wrapper {
-     h2, p, h3, a {
+     button,h2, p, h3, a {
         color: $off-white;
     }
 
@@ -46,15 +46,19 @@
 
             .apply-links {
                 margin: 2rem 0 1rem 0;
-                a {
+                
+                button, a {
                     padding: 0.5rem;
                     margin-right: 0.5rem;
                     background-color: $lt-blue;
                     border: 5px solid $off-white;
                     border-radius: 1rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    cursor: pointer;
                 }
 
-                a:hover {
+               button:hover, a:hover {
                     background-color: $dk-blue;
                 }
             }

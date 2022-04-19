@@ -31,6 +31,7 @@ function UpdateJob() {
         let result = await fetch(`http://dama.web.dmitcapstone.ca/api/update_job?id=${posting_id}`);
         result = await result.json();
         setjobdata(result);
+        
 
     }, [posting_id])
 

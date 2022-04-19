@@ -6,7 +6,11 @@ import CloseIcon from '@mui/icons-material/Close';
 
 
 export default function JobSearchBar(){
+    function toggleHamburger() {
 
+        document.querySelector('.sidebar').classList.toggle('show');
+    
+      }
 
     const [jobData, setJobData] = useState([]);
     useEffect(async ()=> {
@@ -40,6 +44,7 @@ export default function JobSearchBar(){
     return(
         <>
         <div className='search-form'>
+        <button onClick={toggleHamburger} className="btn-toggle">Jobs</button>
             <input type="text" name="search-bar" placeholder="Find a job" value={wordEnter} onChange={handleFilter}/>
             {filteredData.length === 0 
                 ? 

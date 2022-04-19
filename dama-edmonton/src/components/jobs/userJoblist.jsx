@@ -3,6 +3,12 @@ import React, {useState, useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import JobSearchBar from '../searchBar/job-SearchBar';
 import JobMenu from './jobmenu';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { FormControlUnstyledContext } from '@mui/base';
+
+
+
 export default function UserJobList () {
 
     const navigate = useNavigate();
@@ -22,7 +28,7 @@ export default function UserJobList () {
       });
 
       const userId = Number(name.map(obj => obj.user_id));
-      console.log(userId)
+
 
     const [data, setData] = useState([]);
     useEffect(async ()=> {
@@ -31,6 +37,22 @@ export default function UserJobList () {
         setData(result);
 
     },[])
+
+    async function DeleteJob(e, posting_id)
+    {
+        console.log(`http://dama.web.dmitcapstone.ca/api/job_filled?id=${posting_id}`)
+        e.preventDefault();
+        const res = await axios.get(`http://dama.web.dmitcapstone.ca/api/job_filled?id=${posting_id}`);
+        
+        Swal.fire({  
+            icon: 'success',  
+            title: 'Successful!',  
+            text: res.data.message,  
+        }); 
+    
+
+    }
+
 
 
     const filterData = data.filter(obj=> obj.user_id  === userId)
@@ -54,8 +76,8 @@ export default function UserJobList () {
                         <p>{obj.job_desc.length < 120  ? `${obj.job_desc}` : `${obj.job_desc.substring(0, 120)}...`}</p>
                         <div className='apply-links'>
                             <Link to={`/updatejob/${obj.posting_id}`}>Edit</Link>
-                            <Link to="/applyjob">Delete</Link>
-                            <Link to="#">More Detail</Link>
+                            <button onClick={(e) => DeleteJob(e, Number(obj.posting_id))}>Delete</button>
+                            <Link to={`/jobsboard/${obj.posting_id}`}>More Detail</Link>
                         </div>
                         
                     </div>

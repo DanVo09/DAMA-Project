@@ -27,7 +27,7 @@ export default function Membershipcards({obj}) {
                 <div className='memberCard-container' key={obj.membership_id}>
                     <div className="membercard-content">
                         <h3 className="membercard-title">{obj.membership_type}</h3>
-                        <p className="membercard-desc">You can add an unlimited number of named members to your plan</p>
+                        <p className="membercard-desc">{obj.membership_desc}</p>
                         <p className="membercard-price">${obj.membership_price}</p>
                         <button className="membercard-btn" onClick={ () => addCartToStorage(obj)}>Purchase</button>
                     </div>
