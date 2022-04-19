@@ -23,11 +23,7 @@ function UpdateJob() {
 
       const userId = Number(name.map(obj => obj.user_id));
 
-    const [jobdata, setjobdata] = useState([]);
-
     const {posting_id} = useParams();
-
-    const filterJobData = jobdata.filter(obj=> obj.user_id  === userId)
 
     const [job_title,setJobTitle]=useState("")
     const [company_name,setCompanyName]=useState("")
@@ -67,6 +63,8 @@ function UpdateJob() {
                 title: 'Successful!',  
                 text: res.data.message,  
               }); 
+            
+              navigatesecue("/jobsboard")
         }
     
 
