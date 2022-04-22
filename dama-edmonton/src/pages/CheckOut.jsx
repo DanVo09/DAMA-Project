@@ -21,7 +21,7 @@ export default function Checkout() {
             <div className="checkout-wrapper">
                 <h2>Secure Check Out</h2>
                 <div className="checkout-form">
-                    <p>Your Order Details</p>
+                    <p className='order-main-title'>Your Order Details</p>
                     <div className="checkout-items-wrapper">
                         <ul>
                             {product.map(item => (
@@ -29,10 +29,11 @@ export default function Checkout() {
                                 <img src={process.env.PUBLIC_URL + `/assets/images/${item.coursePicture}`} alt='' className='checkoutItem-img' />
                                 <div className="checkout-item-content">
                                     <p className='checkoutItem-title'>
-                                      {item.courseTitle}
+                                      {item.course_title}
+                                      {item.event_title}
                                     </p>
                                     <div className="checkoutItem-price-container">
-                                      <CurrencyFormat className='checkoutItem-currency' value={item.price} displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                                      <CurrencyFormat className='checkoutItem-currency' value={item.course_price? item.course_price: item.event_price} displayType="text" prefix="$ " thousandSeparator="," decimalSeparator="." fixedDecimalScale={true} decimalScale={2}/>
                                     </div>
                                 </div>
                               </li>
@@ -42,15 +43,15 @@ export default function Checkout() {
                     <div className="checkout-total">
                         <div className="checkout-subtotal">
                             <p>SubTotal</p>
-                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.price, 0)}displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.event_price + item.course_price, 0)}displayType="text" prefix="$ " thousandSeparator="," decimalSeparator="." fixedDecimalScale={true} decimalScale={2}/>
                         </div>
                         <div className="checkout-gst">
                             <p>GST</p>
-                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.price, 0) * GST }displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.course_price + item.event_price, 0) * GST }displayType="text" prefix="$ " thousandSeparator="," decimalSeparator="." fixedDecimalScale={true} decimalScale={2}/>
                         </div>
-                        <div className="checkout-gst">
+                        <div className="checkout-total">
                             <p>Total Price</p>
-                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.price, 0) * GST + product.reduce((amount, item) => amount + item.price, 0)}displayType="text" prefix="$ " thousandSeparator="." decimalSeparator="," fixedDecimalScale={true} decimalScale={2}/>
+                            <CurrencyFormat value={product.reduce((amount, item) => amount + item.course_price + item.event_price, 0) * GST + product.reduce((amount, item) => amount + item.course_price + item.price, 0)}displayType="text" prefix="$ " thousandSeparator="," decimalSeparator="." fixedDecimalScale={true} decimalScale={2}/>
                         </div>
                     </div>
                     <div className="checkout-button-container">

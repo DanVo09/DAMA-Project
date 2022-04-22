@@ -2,7 +2,6 @@
 import React  from 'react'
 
 import Posts from '../components/posts/Posts'
-import PostsSideBar from '../components/posts/PostsSideBar'
 
 export default function Newsletter() {
 

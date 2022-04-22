@@ -34,6 +34,7 @@ export default function Cartitem({item}) {
                       <CurrencyFormat className='cartItem-currency' value={item.course_price} displayType="text" prefix="$ " thousandSeparator="," decimalSeparator="." fixedDecimalScale={true} decimalScale={2}/>
                     }
                     
+                    
                     <DeleteIcon className='CartItem-delete' onClick={() => removeItem(item.id)}>
                       Remove
                     </DeleteIcon>

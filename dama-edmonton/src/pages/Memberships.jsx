@@ -1,7 +1,4 @@
-import React, {useContext} from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import CartContext from '../context/cart/CartContext';
+import React from 'react';
 import CheckIcon from '@mui/icons-material/Check';
 import Membershipcards from '../components/membershipOptionsCard/MembershipCards';
 
