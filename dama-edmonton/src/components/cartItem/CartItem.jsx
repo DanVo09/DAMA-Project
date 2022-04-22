@@ -18,7 +18,8 @@ export default function Cartitem({item}) {
                     {item.course_name}
                   </p>
                   <p>
-                    {item.eventSpeaker} {item.course_type_name}
+                    {item.eventSpeaker}
+                    {item.course_type_name}
                   </p>
                   <p>
                     {item.event_date}
