@@ -1,16 +1,10 @@
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import React, {useEffect, useState}  from 'react'
+
+import React, {useEffect}  from 'react'
 import {Link, useNavigate } from 'react-router-dom';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import FolderSharedIcon from '@mui/icons-material/FolderShared';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import FeedBackForm from '../components/feedbackForm/feedbackForm';
 import CourseHistoryList from '../components/dashboard/coursehistoryList';
 import UserProfileCard from '../components/dashboard/userprofilecard';
+import DashBoardSideBar from '../components/dashboard/dashboard-sidebar';
 export default function Dashboard() {
 
   const navigate = useNavigate();
@@ -21,39 +15,10 @@ export default function Dashboard() {
       }
   })
 
-  const [click, setClick] = useState(false);
-
-  function toggleHamburger() {
-
-    document.querySelector('.dashboard-sidebar').classList.toggle('show');
-    return setClick(null)
-  }
-
-    function logOut(){
-      localStorage.clear();
-      navigate('/login')
-  }
-
-  
-
     return (
       <>
         <div className='dashboard-page'>
-          <div className='side-bar-button'>
-            <button  onClick={toggleHamburger}>My Account</button>
-            {click === null?  <KeyboardArrowUpIcon  className='arrow-btn-icon'/>  :  <KeyboardArrowDownIcon  className='arrow-btn-icon'/> }
-           
-          </div>
-          
-          <aside className='dashboard-sidebar'>
-            <h2>My Account</h2>
-            <Link to="/profile" className='sidebar-icon'><FolderSharedIcon className="upload-icon"/><p>Profile</p></Link>
-            <Link to="/coursehistory" className='sidebar-icon'><BookOutlinedIcon className="courses-icon"/><p>Courses History</p></Link>
-            <Link to="/eventhistory" className='sidebar-icon'><CalendarTodayIcon className="calendar-icon"/><p>Events History</p></Link>
-            <Link to="/jobsboard" className='sidebar-icon'><WorkOutlineIcon className="job-icon"/><p>Job Postings</p></Link>
-            <Link to="/changepassword" className='sidebar-icon'><LockOpenIcon className="courses-icon"/><p>Change Password</p></Link>
-            <Link to="/jobsboard" className='sidebar-icon'><ExitToAppIcon className="courses-icon"/><p onClick={logOut}>Sign-out</p></Link>
-          </aside>
+          <DashBoardSideBar/>
           <div className='dashboard-cards' id="profile">
             <UserProfileCard/>
             <CourseHistoryList/>

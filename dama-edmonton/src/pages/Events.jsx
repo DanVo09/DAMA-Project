@@ -1,8 +1,6 @@
 
 import React from 'react'
 import EventList from '../components/Events/Events-list';
-
-import FeedBackForm from '../components/feedbackForm/feedbackForm';
 import EventSideBar from '../components/Events/event-sidebar';
 import EventSearchBar from '../components/searchBar/event-searchBar';
 
@@ -20,9 +18,6 @@ export default function EventPages() {
                <EventSideBar/>
                 <EventList/>
             </div>
-            {/* <div className='feedback'>
-                <FeedBackForm/>
-            </div> */}
         
         </div>  
         </>

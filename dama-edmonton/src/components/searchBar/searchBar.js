@@ -58,10 +58,10 @@ export default function SearchBar(){
         {filteredData.length !=0 &&(
              <div className="dataResult">
 
-                {filteredData.slice(0,10).map((value,id)=>{
+                {filteredData.slice(0,10).map((value,course_id)=>{
                     return(
                         <div>
-                            <Link to={`/courses/${value.id}`}>{value.course_name}</Link> 
+                            <Link to={`/courses/${value.course_id}`}>{value.course_name}</Link> 
                         </div>
                     )
                 })}

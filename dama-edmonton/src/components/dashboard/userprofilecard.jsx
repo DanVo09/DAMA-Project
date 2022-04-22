@@ -14,14 +14,13 @@ export default function UserProfileCard() {
   })
 
   const [name, setName] = useState(() => {
-    // getting stored value
     const saved = localStorage.getItem("user-info");
     const initialValue = JSON.parse(saved);
     return initialValue || "";
   });
 
   const userId = Number(name.map(obj => obj.user_id))
-  console.log(userId)
+
 
     const [userMembership, setUserMembershipData] = useState([]);
     useEffect(async ()=> {
@@ -30,9 +29,6 @@ export default function UserProfileCard() {
         setUserMembershipData(result);
 
     },[])
-
-
-    console.log(userMembership)
     
     return (
       <>

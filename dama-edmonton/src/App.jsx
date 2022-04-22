@@ -32,6 +32,7 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import ApplyJob from './components/jobs/applyjob';
 import UserJobList from './components/jobs/userJoblist';
 import JobDetail from './components/jobs/jobdetail';
+import Editprofile from './components/dashboard/editprofile';
 
 
 const PAYPAL_KEY = process.env.REACT_APP_PAYPAL_CLIENT_ID
@@ -55,7 +56,8 @@ function App() {
                     <Route path="/aboutus" element={<About />}/>
                     <Route path="/register" element={<Register />}/>
                     <Route path="/memberships" element={<Memberships />}/> 
-                    <Route path="/dashboard" element={<Dashboard />}/> 
+                    <Route path="/dashboard" exact element={<Dashboard />}/> 
+                    <Route path="/dashboard/:id" element={<Editprofile />}/> 
                     <Route path="/newsletter" element={<Newsletter />}/> 
                     <Route path="/events" exact element={<EventPages />}/> 
                     <Route path="/events/:id" element={<EventDetail />}/> 
